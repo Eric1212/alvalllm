@@ -1,0 +1,26 @@
+{
+  "_frame": "Copie ce fichier vers data/params.json puis remplis tes valeurs. Le fichier params.json n'est PAS versionné — tes paramètres perso restent en local. (JSON sans commentaires: utilise _prefixe pour annoter)",
+  "grille": {
+    "_note": "Pallier de conversion II -> points par II. Max 100 paliers. Paliers semi-ouverts [min, max[ : un II appartient au palier dont min <= II < max (le dernier palier est ouvert vers le haut). Ordre croissant sans chevauchement ; les trous sont toleres (repli sur le palier inferieur).",
+    "palliers": [
+      { "min": 0,  "max": 30, "points_par_ii": 1 },
+      { "min": 40, "max": 50, "points_par_ii": 2 },
+      { "min": 50, "max": 55, "points_par_ii": 4 },
+      { "min": 55, "max": 60, "points_par_ii": 8 },
+      { "min": 60, "max": 999, "points_par_ii": 10 }
+    ]
+  },
+  "profils": {
+    "_note": "Ratios reels de consommation. Somme = 1.0. cache = cache read, cache_write = cache creation.",
+    "defaut": { "cache": 0.988, "cache_write": 0.0095, "input": 0.0001, "output": 0.0021 },
+    "normal": { "cache": 0.924, "cache_write": 0.0,    "input": 0.071,  "output": 0.004 }
+  },
+  "profil_defaut": "defaut",
+  "tables": {
+    "_note": "Mapping table -> filtre sur la BD. null = tous les modeles.",
+    "1": { "nom": "generale", "filtre": null },
+    "2": { "nom": "gratuite", "filtre": "gratuit" },
+    "3": { "nom": "frontier", "filtre": "frontier" }
+  },
+  "ffsr": { "onglet": 9 }
+}

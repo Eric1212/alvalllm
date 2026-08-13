@@ -1,0 +1,11 @@
+# binaire compilé
+alvalllm
+*.o
+
+# notes perso / hors dépôt
+CLAUDE.md
+
+# paramètres perso de l'utilisateur (jamais diffusés)
+data/params.json
+# données locales de collecte
+data/*.cache.json
