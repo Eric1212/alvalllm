@@ -4,6 +4,7 @@ alvalllm
 
 # notes perso / hors dépôt
 CLAUDE.md
+memory/
 
 # paramètres perso de l'utilisateur (jamais diffusés)
 data/params.json
