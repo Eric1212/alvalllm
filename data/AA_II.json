@@ -1,0 +1,842 @@
+[
+ {
+  "slug": "claude-opus-5",
+  "ii": 63.05,
+  "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+  "url": "/models/claude-opus-5"
+ },
+ {
+  "slug": "claude-opus-5-xhigh",
+  "ii": 62.52,
+  "name": "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)",
+  "url": "/models/claude-opus-5-xhigh"
+ },
+ {
+  "slug": "claude-fable-5",
+  "ii": 62.07,
+  "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
+  "url": "/models/claude-fable-5"
+ },
+ {
+  "slug": "claude-opus-5-high",
+  "ii": 61.48,
+  "name": "Claude Opus 5 (Adaptive Reasoning, High Effort)",
+  "url": "/models/claude-opus-5-high"
+ },
+ {
+  "slug": "claude-opus-5-medium",
+  "ii": 58.64,
+  "name": "Claude Opus 5 (Adaptive Reasoning, Medium Effort)",
+  "url": "/models/claude-opus-5-medium"
+ },
+ {
+  "slug": "claude-opus-4-8",
+  "ii": 57.33,
+  "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
+  "url": "/models/claude-opus-4-8"
+ },
+ {
+  "slug": "claude-sonnet-5",
+  "ii": 55.26,
+  "name": "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)",
+  "url": "/models/claude-sonnet-5"
+ },
+ {
+  "slug": "claude-opus-4-7",
+  "ii": 54.96,
+  "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
+  "url": "/models/claude-opus-4-7"
+ },
+ {
+  "slug": "claude-opus-5-low",
+  "ii": 52.46,
+  "name": "Claude Opus 5 (Adaptive Reasoning, Low Effort)",
+  "url": "/models/claude-opus-5-low"
+ },
+ {
+  "slug": "claude-sonnet-4-6-adaptive",
+  "ii": 48.37,
+  "name": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
+  "url": "/models/claude-sonnet-4-6-adaptive"
+ },
+ {
+  "slug": "claude-sonnet-5-non-reasoning",
+  "ii": 42.57,
+  "name": "Claude Sonnet 5 (Non-reasoning, High Effort)",
+  "url": "/models/claude-sonnet-5-non-reasoning"
+ },
+ {
+  "slug": "claude-4-5-sonnet-thinking",
+  "ii": 37.39,
+  "name": "Claude 4.5 Sonnet (Reasoning)",
+  "url": "/models/claude-4-5-sonnet-thinking"
+ },
+ {
+  "slug": "claude-4-5-haiku-reasoning",
+  "ii": 29.89,
+  "name": "Claude 4.5 Haiku (Reasoning)",
+  "url": "/models/claude-4-5-haiku-reasoning"
+ },
+ {
+  "slug": "gpt-5-6-sol",
+  "ii": 60.93,
+  "name": "GPT-5.6 Sol (max)",
+  "url": "/models/gpt-5-6-sol"
+ },
+ {
+  "slug": "gpt-5-6-sol-xhigh",
+  "ii": 59.01,
+  "name": "GPT-5.6 Sol (xhigh)",
+  "url": "/models/gpt-5-6-sol-xhigh"
+ },
+ {
+  "slug": "gpt-5-6-sol-high",
+  "ii": 57.33,
+  "name": "GPT-5.6 Sol (high)",
+  "url": "/models/gpt-5-6-sol-high"
+ },
+ {
+  "slug": "gpt-5-6-terra",
+  "ii": 56.58,
+  "name": "GPT-5.6 Terra (max)",
+  "url": "/models/gpt-5-6-terra"
+ },
+ {
+  "slug": "gpt-5-5",
+  "ii": 56.31,
+  "name": "GPT-5.5 (xhigh)",
+  "url": "/models/gpt-5-5"
+ },
+ {
+  "slug": "gpt-5-6-sol-medium",
+  "ii": 55.57,
+  "name": "GPT-5.6 Sol (medium)",
+  "url": "/models/gpt-5-6-sol-medium"
+ },
+ {
+  "slug": "gpt-5-5-high",
+  "ii": 54.67,
+  "name": "GPT-5.5 (high)",
+  "url": "/models/gpt-5-5-high"
+ },
+ {
+  "slug": "gpt-5-4",
+  "ii": 53.12,
+  "name": "GPT-5.4 (xhigh)",
+  "url": "/models/gpt-5-4"
+ },
+ {
+  "slug": "gpt-5-6-terra-xhigh",
+  "ii": 52.77,
+  "name": "GPT-5.6 Terra (xhigh)",
+  "url": "/models/gpt-5-6-terra-xhigh"
+ },
+ {
+  "slug": "gpt-5-6-luna",
+  "ii": 52.32,
+  "name": "GPT-5.6 Luna (max)",
+  "url": "/models/gpt-5-6-luna"
+ },
+ {
+  "slug": "gpt-5-5-medium",
+  "ii": 51.42,
+  "name": "GPT-5.5 (medium)",
+  "url": "/models/gpt-5-5-medium"
+ },
+ {
+  "slug": "gpt-5-6-sol-low",
+  "ii": 50.73,
+  "name": "GPT-5.6 Sol (low)",
+  "url": "/models/gpt-5-6-sol-low"
+ },
+ {
+  "slug": "gpt-5-6-terra-high",
+  "ii": 50.11,
+  "name": "GPT-5.6 Terra (high)",
+  "url": "/models/gpt-5-6-terra-high"
+ },
+ {
+  "slug": "gpt-5-6-luna-xhigh",
+  "ii": 50.06,
+  "name": "GPT-5.6 Luna (xhigh)",
+  "url": "/models/gpt-5-6-luna-xhigh"
+ },
+ {
+  "slug": "gpt-5-6-luna-high",
+  "ii": 46.96,
+  "name": "GPT-5.6 Luna (high)",
+  "url": "/models/gpt-5-6-luna-high"
+ },
+ {
+  "slug": "gpt-5-6-terra-medium",
+  "ii": 46.76,
+  "name": "GPT-5.6 Terra (medium)",
+  "url": "/models/gpt-5-6-terra-medium"
+ },
+ {
+  "slug": "gpt-5-5-low",
+  "ii": 44.5,
+  "name": "GPT-5.5 (low)",
+  "url": "/models/gpt-5-5-low"
+ },
+ {
+  "slug": "gpt-5-6-sol-non-reasoning",
+  "ii": 41.88,
+  "name": "GPT-5.6 Sol (Non-reasoning)",
+  "url": "/models/gpt-5-6-sol-non-reasoning"
+ },
+ {
+  "slug": "gpt-5-6-terra-low",
+  "ii": 41.3,
+  "name": "GPT-5.6 Terra (low)",
+  "url": "/models/gpt-5-6-terra-low"
+ },
+ {
+  "slug": "gpt-5-4-mini",
+  "ii": 40.94,
+  "name": "GPT-5.4 mini (xhigh)",
+  "url": "/models/gpt-5-4-mini"
+ },
+ {
+  "slug": "gpt-5-4-nano",
+  "ii": 39.71,
+  "name": "GPT-5.4 nano (xhigh)",
+  "url": "/models/gpt-5-4-nano"
+ },
+ {
+  "slug": "gpt-5-6-luna-medium",
+  "ii": 38.91,
+  "name": "GPT-5.6 Luna (medium)",
+  "url": "/models/gpt-5-6-luna-medium"
+ },
+ {
+  "slug": "gpt-5-1",
+  "ii": 37.47,
+  "name": "GPT-5.1 (high)",
+  "url": "/models/gpt-5-1"
+ },
+ {
+  "slug": "gpt-5-5-non-reasoning",
+  "ii": 35.75,
+  "name": "GPT-5.5 (Non-reasoning)",
+  "url": "/models/gpt-5-5-non-reasoning"
+ },
+ {
+  "slug": "gpt-5",
+  "ii": 35.31,
+  "name": "GPT-5 (high)",
+  "url": "/models/gpt-5"
+ },
+ {
+  "slug": "gpt-5-6-terra-non-reasoning",
+  "ii": 34.62,
+  "name": "GPT-5.6 Terra (Non-reasoning)",
+  "url": "/models/gpt-5-6-terra-non-reasoning"
+ },
+ {
+  "slug": "gpt-5-6-luna-low",
+  "ii": 33.85,
+  "name": "GPT-5.6 Luna (low)",
+  "url": "/models/gpt-5-6-luna-low"
+ },
+ {
+  "slug": "gpt-5-5-instant-06-26",
+  "ii": 29.23,
+  "name": "GPT-5.5 Instant (June 2026)",
+  "url": "/models/gpt-5-5-instant-06-26"
+ },
+ {
+  "slug": "gpt-5-6-luna-non-reasoning",
+  "ii": 26.84,
+  "name": "GPT-5.6 Luna (Non-reasoning)",
+  "url": "/models/gpt-5-6-luna-non-reasoning"
+ },
+ {
+  "slug": "gpt-5-mini",
+  "ii": 25.8,
+  "name": "GPT-5 mini (high)",
+  "url": "/models/gpt-5-mini"
+ },
+ {
+  "slug": "gpt-oss-120b",
+  "ii": 24.13,
+  "name": "gpt-oss-120b (high)",
+  "url": "/models/gpt-oss-120b"
+ },
+ {
+  "slug": "gpt-oss-20b",
+  "ii": 15.23,
+  "name": "gpt-oss-20b (high)",
+  "url": "/models/gpt-oss-20b"
+ },
+ {
+  "slug": "gpt-oss-120b-low",
+  "ii": 14.93,
+  "name": "gpt-oss-120b (low)",
+  "url": "/models/gpt-oss-120b-low"
+ },
+ {
+  "slug": "gpt-4-1-mini",
+  "ii": 14.82,
+  "name": "GPT-4.1 mini",
+  "url": "/models/gpt-4-1-mini"
+ },
+ {
+  "slug": "gpt-4-1-nano",
+  "ii": 9.64,
+  "name": "GPT-4.1 nano",
+  "url": "/models/gpt-4-1-nano"
+ },
+ {
+  "slug": "grok-4-6",
+  "ii": 60.92,
+  "name": "Grok 4.6 (high)",
+  "url": "/models/grok-4-6"
+ },
+ {
+  "slug": "grok-4-5",
+  "ii": 55.76,
+  "name": "Grok 4.5 (high)",
+  "url": "/models/grok-4-5"
+ },
+ {
+  "slug": "grok-build-0-1-06-16",
+  "ii": 40.65,
+  "name": "Grok Build 0.1 0616",
+  "url": "/models/grok-build-0-1-06-16"
+ },
+ {
+  "slug": "grok-4-3",
+  "ii": 37.95,
+  "name": "Grok 4.3 (high)",
+  "url": "/models/grok-4-3"
+ },
+ {
+  "slug": "grok-4-3-non-reasoning",
+  "ii": 25.01,
+  "name": "Grok 4.3 (Non-reasoning)",
+  "url": "/models/grok-4-3-non-reasoning"
+ },
+ {
+  "slug": "kimi-k3",
+  "ii": 59.7,
+  "name": "Kimi K3 (max)",
+  "url": "/models/kimi-k3"
+ },
+ {
+  "slug": "kimi-k3-low",
+  "ii": 48.25,
+  "name": "Kimi K3 (low)",
+  "url": "/models/kimi-k3-low"
+ },
+ {
+  "slug": "kimi-k2-6",
+  "ii": 45.14,
+  "name": "Kimi K2.6",
+  "url": "/models/kimi-k2-6"
+ },
+ {
+  "slug": "kimi-k2-7-code",
+  "ii": 43.02,
+  "name": "Kimi K2.7 Code",
+  "url": "/models/kimi-k2-7-code"
+ },
+ {
+  "slug": "kimi-k2-5",
+  "ii": 36.02,
+  "name": "Kimi K2.5 (Reasoning)",
+  "url": "/models/kimi-k2-5"
+ },
+ {
+  "slug": "qwen3-8-max",
+  "ii": 58.08,
+  "name": "Qwen3.8 Max",
+  "url": "/models/qwen3-8-max"
+ },
+ {
+  "slug": "qwen3-8-2-4t-a95b",
+  "ii": 57.7,
+  "name": "Qwen3.8 2.4T A95B",
+  "url": "/models/qwen3-8-2-4t-a95b"
+ },
+ {
+  "slug": "qwen3-7-max",
+  "ii": 46.71,
+  "name": "Qwen3.7 Max",
+  "url": "/models/qwen3-7-max"
+ },
+ {
+  "slug": "qwen3-6-plus",
+  "ii": 40.49,
+  "name": "Qwen3.6 Plus",
+  "url": "/models/qwen3-6-plus"
+ },
+ {
+  "slug": "qwen3-7-plus",
+  "ii": 39.37,
+  "name": "Qwen3.7 Plus",
+  "url": "/models/qwen3-7-plus"
+ },
+ {
+  "slug": "qwen3-6-27b",
+  "ii": 37.7,
+  "name": "Qwen3.6 27B (Reasoning)",
+  "url": "/models/qwen3-6-27b"
+ },
+ {
+  "slug": "qwen3-5-397b-a17b",
+  "ii": 34.26,
+  "name": "Qwen3.5 397B A17B (Reasoning)",
+  "url": "/models/qwen3-5-397b-a17b"
+ },
+ {
+  "slug": "qwen3-5-122b-a10b",
+  "ii": 32.85,
+  "name": "Qwen3.5 122B A10B (Reasoning)",
+  "url": "/models/qwen3-5-122b-a10b"
+ },
+ {
+  "slug": "qwen3-6-35b-a3b",
+  "ii": 32.13,
+  "name": "Qwen3.6 35B A3B (Reasoning)",
+  "url": "/models/qwen3-6-35b-a3b"
+ },
+ {
+  "slug": "qwen3-6-27b-non-reasoning",
+  "ii": 31.33,
+  "name": "Qwen3.6 27B (Non-reasoning)",
+  "url": "/models/qwen3-6-27b-non-reasoning"
+ },
+ {
+  "slug": "qwen3-5-122b-a10b-non-reasoning",
+  "ii": 28.18,
+  "name": "Qwen3.5 122B A10B (Non-reasoning)",
+  "url": "/models/qwen3-5-122b-a10b-non-reasoning"
+ },
+ {
+  "slug": "qwen3-5-35b-a3b-non-reasoning",
+  "ii": 24.32,
+  "name": "Qwen3.5 35B A3B (Non-reasoning)",
+  "url": "/models/qwen3-5-35b-a3b-non-reasoning"
+ },
+ {
+  "slug": "qwen3-5-9b",
+  "ii": 21.79,
+  "name": "Qwen3.5 9B (Reasoning)",
+  "url": "/models/qwen3-5-9b"
+ },
+ {
+  "slug": "qwen3-coder-next",
+  "ii": 21.29,
+  "name": "Qwen3 Coder Next",
+  "url": "/models/qwen3-coder-next"
+ },
+ {
+  "slug": "qwen3-235b-a22b-instruct-2507-reasoning",
+  "ii": 19.89,
+  "name": "Qwen3 235B A22B 2507 (Reasoning)",
+  "url": "/models/qwen3-235b-a22b-instruct-2507-reasoning"
+ },
+ {
+  "slug": "qwen3-next-80b-a3b-reasoning",
+  "ii": 16.87,
+  "name": "Qwen3 Next 80B A3B (Reasoning)",
+  "url": "/models/qwen3-next-80b-a3b-reasoning"
+ },
+ {
+  "slug": "qwen3-30b-a3b-2507-reasoning",
+  "ii": 14.57,
+  "name": "Qwen3 30B A3B 2507 (Reasoning)",
+  "url": "/models/qwen3-30b-a3b-2507-reasoning"
+ },
+ {
+  "slug": "muse-spark-1-2",
+  "ii": 56.76,
+  "name": "Muse Spark 1.2 (xhigh)",
+  "url": "/models/muse-spark-1-2"
+ },
+ {
+  "slug": "muse-spark-1-1",
+  "ii": 53.2,
+  "name": "Muse Spark 1.1 (xhigh)",
+  "url": "/models/muse-spark-1-1"
+ },
+ {
+  "slug": "muse-glimmer",
+  "ii": 35.06,
+  "name": "Muse Glimmer (high)",
+  "url": "/models/muse-glimmer"
+ },
+ {
+  "slug": "llama-4-maverick",
+  "ii": 14.48,
+  "name": "Llama 4 Maverick",
+  "url": "/models/llama-4-maverick"
+ },
+ {
+  "slug": "llama-4-scout",
+  "ii": 10.26,
+  "name": "Llama 4 Scout",
+  "url": "/models/llama-4-scout"
+ },
+ {
+  "slug": "gemini-3-7-flash",
+  "ii": 56.03,
+  "name": "Gemini 3.7 Flash (high)",
+  "url": "/models/gemini-3-7-flash"
+ },
+ {
+  "slug": "gemini-3-7-flash-medium",
+  "ii": 53.42,
+  "name": "Gemini 3.7 Flash (medium)",
+  "url": "/models/gemini-3-7-flash-medium"
+ },
+ {
+  "slug": "gemini-3-5-flash",
+  "ii": 51.96,
+  "name": "Gemini 3.5 Flash (high)",
+  "url": "/models/gemini-3-5-flash"
+ },
+ {
+  "slug": "gemini-3-6-flash",
+  "ii": 51.58,
+  "name": "Gemini 3.6 Flash (high)",
+  "url": "/models/gemini-3-6-flash"
+ },
+ {
+  "slug": "gemini-3-7-flash-low",
+  "ii": 50.94,
+  "name": "Gemini 3.7 Flash (low)",
+  "url": "/models/gemini-3-7-flash-low"
+ },
+ {
+  "slug": "gemini-3-1-pro-preview",
+  "ii": 47.74,
+  "name": "Gemini 3.1 Pro Preview",
+  "url": "/models/gemini-3-1-pro-preview"
+ },
+ {
+  "slug": "gemini-3-5-flash-lite",
+  "ii": 37.44,
+  "name": "Gemini 3.5 Flash-Lite",
+  "url": "/models/gemini-3-5-flash-lite"
+ },
+ {
+  "slug": "gemma-4-31b",
+  "ii": 29.69,
+  "name": "Gemma 4 31B (Reasoning)",
+  "url": "/models/gemma-4-31b"
+ },
+ {
+  "slug": "gemma-4-26b-a4b",
+  "ii": 26.07,
+  "name": "Gemma 4 26B A4B (Reasoning)",
+  "url": "/models/gemma-4-26b-a4b"
+ },
+ {
+  "slug": "gemini-2-5-pro",
+  "ii": 25.91,
+  "name": "Gemini 2.5 Pro",
+  "url": "/models/gemini-2-5-pro"
+ },
+ {
+  "slug": "gemini-3-1-flash-lite-preview",
+  "ii": 25.61,
+  "name": "Gemini 3.1 Flash-Lite",
+  "url": "/models/gemini-3-1-flash-lite-preview"
+ },
+ {
+  "slug": "gemma-4-31b-non-reasoning",
+  "ii": 22.25,
+  "name": "Gemma 4 31B (Non-reasoning)",
+  "url": "/models/gemma-4-31b-non-reasoning"
+ },
+ {
+  "slug": "gemma-3-27b",
+  "ii": 7.36,
+  "name": "Gemma 3 27B Instruct",
+  "url": "/models/gemma-3-27b"
+ },
+ {
+  "slug": "gemma-3-12b",
+  "ii": 5.51,
+  "name": "Gemma 3 12B Instruct",
+  "url": "/models/gemma-3-12b"
+ },
+ {
+  "slug": "deepseek-v4-pro",
+  "ii": 53.2,
+  "name": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",
+  "url": "/models/deepseek-v4-pro"
+ },
+ {
+  "slug": "deepseek-v4-flash",
+  "ii": 51.77,
+  "name": "DeepSeek V4 Flash 0731 (Reasoning, Max Effort)",
+  "url": "/models/deepseek-v4-flash"
+ },
+ {
+  "slug": "deepseek-v4-pro-0424",
+  "ii": 45.27,
+  "name": "DeepSeek V4 Pro (Reasoning, Max Effort)",
+  "url": "/models/deepseek-v4-pro-0424"
+ },
+ {
+  "slug": "deepseek-v4-pro-0424-high",
+  "ii": 43.75,
+  "name": "DeepSeek V4 Pro (Reasoning, High Effort)",
+  "url": "/models/deepseek-v4-pro-0424-high"
+ },
+ {
+  "slug": "deepseek-v4-flash-0420",
+  "ii": 42.12,
+  "name": "DeepSeek V4 Flash (Reasoning, Max Effort)",
+  "url": "/models/deepseek-v4-flash-0420"
+ },
+ {
+  "slug": "deepseek-v4-flash-0420-high",
+  "ii": 39.01,
+  "name": "DeepSeek V4 Flash (Reasoning, High Effort)",
+  "url": "/models/deepseek-v4-flash-0420-high"
+ },
+ {
+  "slug": "deepseek-r1-0120",
+  "ii": 18.59,
+  "name": "DeepSeek R1 (Jan '25)",
+  "url": "/models/deepseek-r1-0120"
+ },
+ {
+  "slug": "deepseek-v3-0324",
+  "ii": 15.23,
+  "name": "DeepSeek V3 0324",
+  "url": "/models/deepseek-v3-0324"
+ },
+ {
+  "slug": "deepseek-v3",
+  "ii": 14.22,
+  "name": "DeepSeek V3 (Dec '24)",
+  "url": "/models/deepseek-v3"
+ },
+ {
+  "slug": "glm-5-2",
+  "ii": 52.64,
+  "name": "GLM-5.2 (max)",
+  "url": "/models/glm-5-2"
+ },
+ {
+  "slug": "glm-5-1",
+  "ii": 40.97,
+  "name": "GLM-5.1 (Reasoning)",
+  "url": "/models/glm-5-1"
+ },
+ {
+  "slug": "glm-4-7",
+  "ii": 34.46,
+  "name": "GLM-4.7 (Reasoning)",
+  "url": "/models/glm-4-7"
+ },
+ {
+  "slug": "glm-4-6-reasoning",
+  "ii": 29.3,
+  "name": "GLM-4.6 (Reasoning)",
+  "url": "/models/glm-4-6-reasoning"
+ },
+ {
+  "slug": "minimax-m3",
+  "ii": 45.4,
+  "name": "MiniMax-M3",
+  "url": "/models/minimax-m3"
+ },
+ {
+  "slug": "minimax-m2-7",
+  "ii": 38.87,
+  "name": "MiniMax-M2.7",
+  "url": "/models/minimax-m2-7"
+ },
+ {
+  "slug": "mimo-v2-5-pro",
+  "ii": 42.88,
+  "name": "MiMo-V2.5-Pro",
+  "url": "/models/mimo-v2-5-pro"
+ },
+ {
+  "slug": "mimo-v2-5-0424",
+  "ii": 38.04,
+  "name": "MiMo-V2.5",
+  "url": "/models/mimo-v2-5-0424"
+ },
+ {
+  "slug": "inkling",
+  "ii": 42.29,
+  "name": "Inkling (xhigh)",
+  "url": "/models/inkling"
+ },
+ {
+  "slug": "inkling-small",
+  "ii": 41.18,
+  "name": "Inkling Small",
+  "url": "/models/inkling-small"
+ },
+ {
+  "slug": "hy3",
+  "ii": 42.21,
+  "name": "Hy3",
+  "url": "/models/hy3"
+ },
+ {
+  "slug": "solar-pro4",
+  "ii": 41.64,
+  "name": "Solar Pro 4",
+  "url": "/models/solar-pro4"
+ },
+ {
+  "slug": "solar-pro-3",
+  "ii": 14.49,
+  "name": "Solar Pro 3",
+  "url": "/models/solar-pro-3"
+ },
+ {
+  "slug": "nvidia-nemotron-3-ultra-550b-a55b",
+  "ii": 38.32,
+  "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
+  "url": "/models/nvidia-nemotron-3-ultra-550b-a55b"
+ },
+ {
+  "slug": "nvidia-nemotron-3-super-120b-a12b",
+  "ii": 25.67,
+  "name": "Nemotron 3 Super 120B A12B (Reasoning)",
+  "url": "/models/nvidia-nemotron-3-super-120b-a12b"
+ },
+ {
+  "slug": "nemotron-3-5-lightning",
+  "ii": 23.63,
+  "name": "Nemotron 3.5 Lightning",
+  "url": "/models/nemotron-3-5-lightning"
+ },
+ {
+  "slug": "nvidia-nemotron-3-nano-30b-a3b-reasoning",
+  "ii": 14.54,
+  "name": "NVIDIA Nemotron 3 Nano 30B A3B (Reasoning)",
+  "url": "/models/nvidia-nemotron-3-nano-30b-a3b-reasoning"
+ },
+ {
+  "slug": "ling-3-0-flash",
+  "ii": 37.82,
+  "name": "Ling 3.0 Flash",
+  "url": "/models/ling-3-0-flash"
+ },
+ {
+  "slug": "ling-3-0-tiny",
+  "ii": 24.52,
+  "name": "Ling 3.0 Tiny",
+  "url": "/models/ling-3-0-tiny"
+ },
+ {
+  "slug": "step-3-7-flash",
+  "ii": 30.9,
+  "name": "Step 3.7 Flash",
+  "url": "/models/step-3-7-flash"
+ },
+ {
+  "slug": "mistral-medium-3-5",
+  "ii": 30.39,
+  "name": "Mistral Medium 3.5",
+  "url": "/models/mistral-medium-3-5"
+ },
+ {
+  "slug": "mistral-small-4",
+  "ii": 19.71,
+  "name": "Mistral Small 4 (Reasoning)",
+  "url": "/models/mistral-small-4"
+ },
+ {
+  "slug": "devstral-2",
+  "ii": 19.24,
+  "name": "Devstral 2",
+  "url": "/models/devstral-2"
+ },
+ {
+  "slug": "magistral-medium-2509",
+  "ii": 18.05,
+  "name": "Magistral Medium 1.2",
+  "url": "/models/magistral-medium-2509"
+ },
+ {
+  "slug": "devstral-small-2",
+  "ii": 17.72,
+  "name": "Devstral Small 2",
+  "url": "/models/devstral-small-2"
+ },
+ {
+  "slug": "mistral-large-3",
+  "ii": 15.92,
+  "name": "Mistral Large 3",
+  "url": "/models/mistral-large-3"
+ },
+ {
+  "slug": "mistral-small-3-1",
+  "ii": 14.87,
+  "name": "Mistral Small 3.1",
+  "url": "/models/mistral-small-3-1"
+ },
+ {
+  "slug": "mistral-medium-3-1",
+  "ii": 14.73,
+  "name": "Mistral Medium 3.1",
+  "url": "/models/mistral-medium-3-1"
+ },
+ {
+  "slug": "magistral-small-2509",
+  "ii": 11.46,
+  "name": "Magistral Small 1.2",
+  "url": "/models/magistral-small-2509"
+ },
+ {
+  "slug": "ministral-3-14b",
+  "ii": 11.24,
+  "name": "Ministral 3 14B",
+  "url": "/models/ministral-3-14b"
+ },
+ {
+  "slug": "mistral-small-3-2",
+  "ii": 10.66,
+  "name": "Mistral Small 3.2",
+  "url": "/models/mistral-small-3-2"
+ },
+ {
+  "slug": "ministral-3-8b",
+  "ii": 8.97,
+  "name": "Ministral 3 8B",
+  "url": "/models/ministral-3-8b"
+ },
+ {
+  "slug": "ministral-3-3b",
+  "ii": 7.07,
+  "name": "Ministral 3 3B",
+  "url": "/models/ministral-3-3b"
+ },
+ {
+  "slug": "command-a-plus",
+  "ii": 22.77,
+  "name": "Command A+",
+  "url": "/models/command-a-plus"
+ },
+ {
+  "slug": "north-mini-code",
+  "ii": 20.17,
+  "name": "North Mini Code",
+  "url": "/models/north-mini-code"
+ },
+ {
+  "slug": "mercury-2",
+  "ii": 21.9,
+  "name": "Mercury 2",
+  "url": "/models/mercury-2"
+ },
+ {
+  "slug": "celeris-1",
+  "ii": 12.35,
+  "name": "Celeris-1",
+  "url": "/models/celeris-1"
+ }
+]
