@@ -10,7 +10,8 @@ __pycache__/
 CLAUDE.md
 memory/
 
-# paramètres perso de l'utilisateur (jamais diffusés)
-data/params.json
-# données locales de collecte
-data/*.cache.json
+# data/ : seul params.json.example est versionné.
+# Le reste (models, collectes, params perso) est généré par les scripts
+# (collect_models.py + couplage.py) et/ou local — jamais synchronisé.
+data/*
+!data/params.json.example
