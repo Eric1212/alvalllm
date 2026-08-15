@@ -2,14 +2,15 @@
  * alvalllm — main.c
  * CLI: help | table [1-3] | tables
  *
- *   table        -> table par défaut (générale = 1)
- *   table 1      -> générale   (tous modèles, coût pondéré par ratios réels)
- *   table 2      -> free (modèles gratuits)
+ *   table        -> default table (general = 1)
+ *   table 1      -> general  (all models, cost weighted by real ratios)
+ *   table 2      -> free (free models)
  *   table 3      -> frontier
- *   tables       -> les 3 tables
+ *   tables       -> all 3 tables
+ *   <cmd> v      -> sort by VAL (instead of CAP)
  *
- * Dépend de ffsr pour la collecte (breadcrumb). Les calculs utilisent
- * la grille non-linéaire et les profils de ratios de params.json.
+ * Depends on ffsr for collection (breadcrumb). Calculations use the
+ * non-linear grid and the ratio profiles from params.json.
  */
 
 #include "params.h"
@@ -22,30 +23,30 @@
 
 static void usage(void)
 {
-    printf("alvalllm — Algorithme de valeur LLM (CLI, dépend de ffsr)\n"
+    printf("alvalllm — LLM value algorithm (CLI, depends on ffsr)\n"
            "\n"
            "Usage:\n"
-           "  alvalllm help             cette aide\n"
-           "  alvalllm table            table par défaut (= 1)\n"
+           "  alvalllm help             this help\n"
+           "  alvalllm table            default table (= 1)\n"
            "  alvalllm table <n>        table 1-3\n"
-           "  alvalllm tables           les 3 tables\n"
-           "  alvalllm table <n> v      trié par VAL (au lieu de II)\n"
-           "  alvalllm tables v         les 3 tables triées par VAL\n"
-           "  alvalllm fetch <src>      collecte les données de la source\n"
-           "  alvalllm coupling <src>   couplage II AA -> data/models.json\n"
-           "  alvalllm build <src>      fetch + coupling (chaînés)\n"
+           "  alvalllm tables           all 3 tables\n"
+           "  alvalllm table <n> v      sorted by VAL (instead of CAP)\n"
+           "  alvalllm tables v         all 3 tables sorted by VAL\n"
+           "  alvalllm fetch <src>      collect source data\n"
+           "  alvalllm coupling <src>   couple AA II -> data/models.json\n"
+           "  alvalllm build <src>      fetch + coupling (chained)\n"
            "\n"
            "Sources:\n"
-           "  OC  = opencode (collecte + couplage via scripts/)\n"
+           "  OC  = opencode (collection + coupling via scripts/)\n"
            "\n"
            "Tables:\n"
-           "  1 = general    (tous modèles, coût pondéré par ratios réels)\n"
-           "  2 = free       (modèles gratuits)\n"
-           "  3 = frontier   (modèles frontier / phares de lab)\n"
+           "  1 = general    (all models, cost weighted by real ratios)\n"
+           "  2 = free       (free models)\n"
+           "  3 = frontier   (frontier / per-lab flagship models)\n"
            "\n"
-           "Paramètres : data/params.json (non versionné) — copier depuis "
+           "Settings: data/params.json (not versioned) — copy from "
            "data/params.json.example.\n"
-           "Base de modèles : data/models.json.\n");
+           "Model base: data/models.json.\n");
 }
 
 /* ---- sources (fetch/coupling/build) ---- */
@@ -92,7 +93,7 @@ static int cmd_pipeline(const char *cmd, const char *nom_src)
         }
     }
     if (!src) {
-        fprintf(stderr, "alvalllm: source inconnue '%s' — disponibles :",
+        fprintf(stderr, "alvalllm: unknown source '%s' — available:",
                 nom_src);
         for (i = 0; i < sizeof(sources) / sizeof(sources[0]); i++)
             fprintf(stderr, " %s", sources[i].nom);
@@ -175,8 +176,7 @@ static void fmt_ii(char *out, size_t sz, double v)
 /* affiche une table. Les valeurs brutes restent la vérité ; les couleurs
  * (vert/cyan/jaune) sont un bonus de repérage sur les meilleurs. Les
  * mauvais ne sont pas colorés : inutile de leur donner de l'attention.
- * Si par_val != 0, la table est triée par VAL (décroissant) au lieu de
- * l'ordre naturel (celui de la base, II décroissant). */
+ * Tri décroissant par CAP par défaut ; par VAL si par_val != 0. */
 static int afficher_table(const Parametres *p, const Base *b,
                           const Profil *pr, const char *filtre, int par_val)
 {
@@ -195,10 +195,11 @@ static int afficher_table(const Parametres *p, const Base *b,
 
     double vmin = 0, vmax = 0;
     int n = 0, i;
-    int ordre[MAX_MODELES]; /* indices triés si par_val */
+    int ordre[MAX_MODELES];
+    double cls[MAX_MODELES]; /* clé de tri : CAP ou VAL */
 
-    /* pré-calcul : min/max des valeurs pour l'échelle de couleur,
-     * et indices des modèles filtrés (ordre de tri si par_val) */
+    /* pré-calcul : min/max des valeurs (échelle de couleur), indices
+     * des modèles filtrés et clé de tri (CAP par défaut, VAL si v) */
     for (i = 0; i < b->nb_modeles; i++) {
         const Modele *m = &b->modeles[i];
         double cp, cap, v;
@@ -209,30 +210,23 @@ static int afficher_table(const Parametres *p, const Base *b,
         v = cap / (cp > 0 ? cp : 1.0);
         if (n == 0 || v < vmin) vmin = v;
         if (n == 0 || v > vmax) vmax = v;
-        ordre[n++] = i;
+        ordre[n] = i;
+        cls[n] = par_val ? v : cap;
+        n++;
     }
 
-    if (par_val) {
-        /* tri décroissant par VAL : insertion (n <= MAX_MODELES) */
-        double vals[MAX_MODELES];
-        for (i = 0; i < n; i++) {
-            const Modele *m = &b->modeles[ordre[i]];
-            double cp = cout_pondere(m, pr);
-            double cap = grille_appliquer(&p->grille, m->ii);
-            vals[i] = cap / (cp > 0 ? cp : 1.0);
+    /* tri décroissant par insertion (n <= MAX_MODELES) */
+    for (i = 1; i < n; i++) {
+        int j = i;
+        int idx = ordre[i];
+        double v = cls[i];
+        while (j > 0 && cls[j - 1] < v) {
+            ordre[j] = ordre[j - 1];
+            cls[j] = cls[j - 1];
+            j--;
         }
-        for (i = 1; i < n; i++) {
-            int j = i;
-            int idx = ordre[i];
-            double v = vals[i];
-            while (j > 0 && vals[j - 1] < v) {
-                ordre[j] = ordre[j - 1];
-                vals[j] = vals[j - 1];
-                j--;
-            }
-            ordre[j] = idx;
-            vals[j] = v;
-        }
+        ordre[j] = idx;
+        cls[j] = v;
     }
 
     printf("%-12s %-32s %6s %7s %8s %8s\n",
@@ -293,15 +287,15 @@ chemin_params = chemin_donnees("params.json");
     if (strcmp(cmd, "fetch") == 0 || strcmp(cmd, "coupling") == 0 ||
         strcmp(cmd, "build") == 0) {
         if (argc < 3) {
-            fprintf(stderr, "alvalllm: '%s' requiert une source "
-                            "(ex: alvalllm %s OC)\n", cmd, cmd);
+            fprintf(stderr, "alvalllm: '%s' requires a source "
+                            "(e.g. alvalllm %s OC)\n", cmd, cmd);
             return 2;
         }
         return cmd_pipeline(cmd, argv[2]);
     }
 
     if (strcmp(cmd, "table") != 0 && strcmp(cmd, "tables") != 0) {
-        fprintf(stderr, "alvalllm: commande inconnue '%s' (voir: alvalllm help)\n",
+        fprintf(stderr, "alvalllm: unknown command '%s' (see: alvalllm help)\n",
                 cmd);
         return 2;
     }
@@ -310,8 +304,8 @@ chemin_params = chemin_donnees("params.json");
         return 1;
 
     if (base_charger(chemin_base, &base) != 0) {
-        fprintf(stderr, "alvalllm: base introuvable — lance la collecte "
-                        "via ffsr (fetch) ou fournis data/models.json\n");
+        fprintf(stderr, "alvalllm: base not found — run the collection "
+                        "via ffsr (fetch) or provide data/models.json\n");
         return 1;
     }
     profil = profil_par_nom(&params, params.profil_defaut);
@@ -340,14 +334,14 @@ chemin_params = chemin_donnees("params.json");
             par_val = 1;
         for (i = 0; i < MAX_TABLES; i++) {
             printf("== table %d (%s)%s ==\n",
-                   i + 1, params.tables[i].nom, par_val ? " — trié par VAL" : "");
+                   i + 1, params.tables[i].nom, par_val ? " — sorted by VAL" : "");
             afficher_table(&params, &base, profil, params.tables[i].filtre, par_val);
             printf("\n");
         }
         return 0;
     }
 
-    fprintf(stderr, "alvalllm: commande inconnue '%s' (voir: alvalllm help)\n",
+    fprintf(stderr, "alvalllm: unknown command '%s' (see: alvalllm help)\n",
             cmd);
     return 2;
 }
