@@ -489,6 +489,17 @@ def main():
         # If model ends with -free, try without -free suffix
         if not lab and nom_lower.endswith("-free"):
             lab = labs.get(nom_lower[:-5], "")
+        # Résolution via le slug AA couplé : 'nvidia-nemotron-3-ultra'
+        # -> OC_LABS a 'nemotron-3-ultra-550b-a55b': nvidia. Le préfixe
+        # lab ('nvidia-') est retiré du slug AA pour retrouver la clé.
+        if not lab and r.get("aa_slug"):
+            aa_slug = r["aa_slug"]
+            for pref in sorted(set(labs.values()), key=len, reverse=True):
+                if aa_slug.startswith(pref + "-"):
+                    lab = labs.get(aa_slug[len(pref) + 1:], pref)
+                    break
+            if not lab:
+                lab = labs.get(aa_slug, "")
         modeles.append({
             "nom": r["nom"],
             "lab": lab,
@@ -501,6 +512,17 @@ def main():
             "gratuit": 1 if r.get("input", 0) == 0 or "free" in r["nom"].lower() else 0,
             "frontier": 0,
         })
+
+    # Frontier : pour chaque lab, le modèle avec le II le plus élevé.
+    # Les modèles sans lab (lab vide) et les II absents (<= 0) sont exclus.
+    best_par_lab = {}
+    for m in modeles:
+        if m["lab"] and m["ii"] > 0:
+            cur = best_par_lab.get(m["lab"])
+            if cur is None or m["ii"] > cur["ii"]:
+                best_par_lab[m["lab"]] = m
+    for m in best_par_lab.values():
+        m["frontier"] = 1
 
     out = {"modeles": modeles, "_source": "opencode+AA", "ii_from": "aa"}
     (DATA / "models.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))

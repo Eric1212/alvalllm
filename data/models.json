@@ -8,7 +8,7 @@
    "prix_out": 25.0,
    "prix_cache": 0.5,
    "gratuit": 0,
-   "frontier": 0
+   "frontier": 1
   },
   {
    "nom": "claude-fable-5",
@@ -28,7 +28,7 @@
    "prix_out": 45.0,
    "prix_cache": 1.0,
    "gratuit": 0,
-   "frontier": 0
+   "frontier": 1
   },
   {
    "nom": "grok-4.6",
@@ -38,7 +38,7 @@
    "prix_out": 12.0,
    "prix_cache": 1.0,
    "gratuit": 0,
-   "frontier": 0
+   "frontier": 1
   },
   {
    "nom": "kimi-k3",
@@ -48,7 +48,7 @@
    "prix_out": 15.0,
    "prix_cache": 0.3,
    "gratuit": 0,
-   "frontier": 0
+   "frontier": 1
   },
   {
    "nom": "qwen3.8-max",
@@ -58,7 +58,7 @@
    "prix_out": 6.0,
    "prix_cache": 0.25,
    "gratuit": 0,
-   "frontier": 0
+   "frontier": 1
   },
   {
    "nom": "claude-opus-4-8",
@@ -78,7 +78,7 @@
    "prix_out": 4.25,
    "prix_cache": 0.15,
    "gratuit": 0,
-   "frontier": 0
+   "frontier": 1
   },
   {
    "nom": "gpt-5.6-terra",
@@ -118,7 +118,7 @@
    "prix_out": 7.5,
    "prix_cache": 0.15,
    "gratuit": 0,
-   "frontier": 0
+   "frontier": 1
   },
   {
    "nom": "grok-4.5",
@@ -158,7 +158,7 @@
    "prix_out": 3.48,
    "prix_cache": 0.145,
    "gratuit": 0,
-   "frontier": 0
+   "frontier": 1
   },
   {
    "nom": "gpt-5.4",
@@ -188,7 +188,7 @@
    "prix_out": 4.4,
    "prix_cache": 0.26,
    "gratuit": 0,
-   "frontier": 0
+   "frontier": 1
   },
   {
    "nom": "gpt-5.6-luna",
@@ -288,7 +288,7 @@
    "prix_out": 1.2,
    "prix_cache": 0.06,
    "gratuit": 0,
-   "frontier": 0
+   "frontier": 1
   },
   {
    "nom": "kimi-k2.6",
@@ -338,7 +338,7 @@
    "prix_out": 0.87,
    "prix_cache": 0.003625,
    "gratuit": 0,
-   "frontier": 0
+   "frontier": 1
   },
   {
    "nom": "hy3-free",
@@ -348,7 +348,7 @@
    "prix_out": 0.58,
    "prix_cache": 0.035,
    "gratuit": 1,
-   "frontier": 0
+   "frontier": 1
   },
   {
    "nom": "hy3",
@@ -512,13 +512,13 @@
   },
   {
    "nom": "nemotron-3-ultra-free",
-   "lab": "",
+   "lab": "nvidia",
    "ii": 38.3185469149774,
    "prix_in": 2.0,
    "prix_out": 10.0,
    "prix_cache": 0.5,
    "gratuit": 1,
-   "frontier": 0
+   "frontier": 1
   },
   {
    "nom": "mimo-v2.5-free",
@@ -718,7 +718,7 @@
    "prix_out": 10.0,
    "prix_cache": 0.5,
    "gratuit": 1,
-   "frontier": 0
+   "frontier": 1
   }
  ],
  "_source": "opencode+AA",
