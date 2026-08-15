@@ -1,26 +1,32 @@
 {
-  "_frame": "Copie ce fichier vers data/params.json puis remplis tes valeurs. Le fichier params.json n'est PAS versionné — tes paramètres perso restent en local. (JSON sans commentaires: utilise _prefixe pour annoter)",
-  "grille": {
-    "_note": "Pallier de conversion II -> points par II. Max 100 paliers. Paliers semi-ouverts [min, max[ : un II appartient au palier dont min <= II < max (le dernier palier est ouvert vers le haut). Ordre croissant sans chevauchement ; les trous sont toleres (repli sur le palier inferieur).",
-    "palliers": [
-      { "min": 0,  "max": 30, "points_par_ii": 1 },
-      { "min": 40, "max": 50, "points_par_ii": 2 },
-      { "min": 50, "max": 55, "points_par_ii": 4 },
-      { "min": 55, "max": 60, "points_par_ii": 8 },
-      { "min": 60, "max": 999, "points_par_ii": 10 }
+  "_frame": "Copy this file to data/params.json and fill in your values. params.json is NOT versioned — your personal settings stay local. (JSON has no comments: use a _prefix to annotate.)",
+
+  "grid": {
+    "_note": "Grid converting an II (Intelligence Index) into points. Tiers are half-open [min, max[ : an II belongs to the tier whose min <= II < max (the last tier is open upward). Tiers must be ascending without overlap; gaps are tolerated (fall back to the nearest lower tier). Max 100 tiers.",
+    "tiers": [
+      { "min": 0,  "max": 20, "points_per_ii": 1 },
+      { "min": 20, "max": 50, "points_per_ii": 2 },
+      { "min": 50, "max": 999, "points_per_ii": 100 }
     ]
   },
-  "profils": {
-    "_note": "Ratios reels de consommation. Somme = 1.0. cache = cache read, cache_write = cache creation.",
-    "defaut": { "cache": 0.988, "cache_write": 0.0095, "input": 0.0001, "output": 0.0021 },
-    "normal": { "cache": 0.924, "cache_write": 0.0,    "input": 0.071,  "output": 0.004 }
+
+  "profiles": {
+    "_note": "Real usage ratios of each price component. Weighted cost = cache*price_cache + input*price_in + output*price_out + cache_write*price_cw (prices from data/models.json, per 1M tokens). The 4 ratios should sum to 1.0. Each key is a profile name.",
+    "default": { "cache": 0.988, "cache_write": 0.0095, "input": 0.0001, "output": 0.0021 },
+    "normal":  { "cache": 0.924, "cache_write": 0.0,    "input": 0.071,  "output": 0.004 }
   },
-  "profil_defaut": "defaut",
+
+  "default_profile": "default",
+
   "tables": {
-    "_note": "Mapping table -> filtre sur la BD. null = tous les modeles.",
-    "1": { "nom": "generale", "filtre": null },
-    "2": { "nom": "gratuite", "filtre": "gratuit" },
-    "3": { "nom": "frontier", "filtre": "frontier" }
+    "_note": "Map each table (1-3) to a name and a filter over data/models.json. filter: null = all models, \"free\" = free models only, \"frontier\" = top model per lab (highest II).",
+    "1": { "name": "general",  "filter": null },
+    "2": { "name": "free",     "filter": "free" },
+    "3": { "name": "frontier", "filter": "frontier" }
   },
-  "ffsr": { "onglet": 9 }
+
+  "ffsr": {
+    "_note": "ffsr browser tab used for data collection (build/fetch). Tabs 0-9 are persistent.",
+    "tab": 9
+  }
 }

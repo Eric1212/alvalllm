@@ -4,7 +4,7 @@
  *
  *   table        -> table par défaut (générale = 1)
  *   table 1      -> générale   (tous modèles, coût pondéré par ratios réels)
- *   table 2      -> gratuite
+ *   table 2      -> free (modèles gratuits)
  *   table 3      -> frontier
  *   tables       -> les 3 tables
  *
@@ -36,8 +36,8 @@ static void usage(void)
            "  OC  = opencode (collecte + couplage via scripts/)\n"
            "\n"
            "Tables:\n"
-           "  1 = generale   (tous modèles, coût pondéré par ratios réels)\n"
-           "  2 = gratuite   (modèles gratuits)\n"
+           "  1 = general    (tous modèles, coût pondéré par ratios réels)\n"
+           "  2 = free       (modèles gratuits)\n"
            "  3 = frontier   (modèles frontier / phares de lab)\n"
            "\n"
            "Paramètres : data/params.json (non versionné) — copier depuis "
@@ -131,7 +131,7 @@ static const Profil *profil_par_nom(const Parametres *p, const char *nom)
 static int modele_passe(const Modele *m, const char *filtre)
 {
     if (filtre[0] == '\0') return 1;
-    if (strcmp(filtre, "gratuit") == 0) return m->gratuit;
+    if (strcmp(filtre, "free") == 0) return m->gratuit;
     if (strcmp(filtre, "frontier") == 0) return m->frontier;
     return 1;
 }
@@ -141,13 +141,12 @@ static int afficher_table(const Parametres *p, const Base *b,
                           const Profil *pr, const char *filtre)
 {
     int i;
-    printf("%-32s %5s %6s %10s %12s\n",
+    printf("%-32s %6s %7s %10s %12s\n",
            "Modèle", "II", "Cap.", "$/1M pond", "Valeur");
     printf("%s\n", "------------------------------------------------------------------");
     for (i = 0; i < b->nb_modeles; i++) {
         const Modele *m = &b->modeles[i];
-        double cp, val;
-        int cap;
+        double cp, val, cap;
 
         if (!modele_passe(m, filtre)) continue;
 
@@ -155,7 +154,7 @@ static int afficher_table(const Parametres *p, const Base *b,
         cap = grille_appliquer(&p->grille, m->ii);
         val = cap / (cp > 0 ? cp : 1.0);
 
-        printf("%-32s %5d %6d %10.4f %12.0f\n",
+        printf("%-32s %6.1f %7.0f %10.4f %12.0f\n",
                m->nom, m->ii, cap, cp, val);
     }
     return 0;

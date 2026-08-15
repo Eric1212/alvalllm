@@ -43,7 +43,7 @@ typedef struct {
 
 /* ---- mapping table -> filtre ---- */
 typedef struct {
-    char nom[4];
+    char nom[NOM_TABLE_LEN];
     char filtre[NOM_TABLE_LEN]; /* "" = tous */
 } TableDef;
 
@@ -61,7 +61,7 @@ typedef struct {
 typedef struct {
     char    nom[MAX_MODELE_NOM];
     char    lab[MAX_MODELE_LAB];
-    int     ii;
+    double  ii;           /* Intelligence Index (AA), réel */
     double  prix_in;      /* $ / 1M tokens */
     double  prix_out;
     double  prix_cache;   /* cache read */
@@ -94,6 +94,6 @@ int params_charger(const char *chemin, Parametres *p);
 int base_charger(const char *chemin, Base *b);
 
 /* Applique la grille à un II -> capacité pondérée (II * points_par_ii). */
-int grille_appliquer(const Grille *g, int ii);
+double grille_appliquer(const Grille *g, double ii);
 
 #endif /* ALVALLM_PARAMS_H */
