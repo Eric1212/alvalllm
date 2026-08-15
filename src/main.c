@@ -13,6 +13,7 @@
  */
 
 #include "params.h"
+#include <unistd.h>
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -136,17 +137,83 @@ static int modele_passe(const Modele *m, const char *filtre)
     return 1;
 }
 
-/* affiche une table */
+/* format : 36628 -> "36 628" (séparateur de milliers) */
+static void fmt_milliers(char *out, size_t sz, double v)
+{
+    char tmp[64];
+    int len, i, o = 0;
+
+    snprintf(tmp, sizeof(tmp), "%.0f", v);
+    len = (int)strlen(tmp);
+    for (i = 0; i < len && (size_t)o + 2 < sz; i++) {
+        if (i > 0 && (len - i) % 3 == 0)
+            out[o++] = ' ';
+        out[o++] = tmp[i];
+    }
+    out[o] = '\0';
+}
+
+/* format : 51.766577 -> "51 767" (3 décimales, le point devient un espace) */
+static void fmt_ii(char *out, size_t sz, double v)
+{
+    char tmp[64];
+    size_t len, i, o = 0;
+
+    snprintf(tmp, sizeof(tmp), "%.3f", v);
+    len = strlen(tmp);
+    for (i = 0; i < len && o + 1 < sz; i++) {
+        if (tmp[i] == '.')
+            out[o++] = ' ';
+        else
+            out[o++] = tmp[i];
+    }
+    out[o] = '\0';
+}
+
+/* affiche une table. Les valeurs brutes restent la vérité ; les couleurs
+ * (vert/cyan/jaune) sont un bonus de repérage sur les meilleurs. Les
+ * mauvais ne sont pas colorés : inutile de leur donner de l'attention. */
 static int afficher_table(const Parametres *p, const Base *b,
                           const Profil *pr, const char *filtre)
 {
-    int i;
-    printf("%-32s %6s %7s %10s %12s\n",
-           "Modèle", "II", "Cap.", "$/1M pond", "Valeur");
+    static const char *C_VERT  = "\033[32m";
+    static const char *C_CYAN  = "\033[36m";
+    static const char *C_JAUNE = "\033[33m";
+    static const char *C_RESET = "\033[0m";
+    static const char *C_BLANC = "";
+    static int couleur_ok = -1; /* -1 : pas encore déterminé */
+
+    if (couleur_ok < 0)
+        couleur_ok = isatty(STDOUT_FILENO) ? 1 : 0;
+    if (!couleur_ok) {
+        C_VERT = C_CYAN = C_JAUNE = C_RESET = C_BLANC;
+    }
+
+    double vmin = 0, vmax = 0;
+    int n = 0, i;
+
+    /* pré-calcul : min/max des valeurs pour l'échelle de couleur */
+    for (i = 0; i < b->nb_modeles; i++) {
+        const Modele *m = &b->modeles[i];
+        double cp, cap, v;
+
+        if (!modele_passe(m, filtre)) continue;
+        cp  = cout_pondere(m, pr);
+        cap = grille_appliquer(&p->grille, m->ii);
+        v = cap / (cp > 0 ? cp : 1.0);
+        if (n == 0 || v < vmin) vmin = v;
+        if (n == 0 || v > vmax) vmax = v;
+        n++;
+    }
+
+    printf("%-32s %6s %7s %8s %8s\n",
+           "Modèle", "II ", "CAP", "$/1M", "VAL");
     printf("%s\n", "------------------------------------------------------------------");
     for (i = 0; i < b->nb_modeles; i++) {
         const Modele *m = &b->modeles[i];
-        double cp, val, cap;
+        double cp, cap, val;
+        const char *col = "";
+        char buf[32], buf2[32], buf3[32], buf4[32];
 
         if (!modele_passe(m, filtre)) continue;
 
@@ -154,8 +221,20 @@ static int afficher_table(const Parametres *p, const Base *b,
         cap = grille_appliquer(&p->grille, m->ii);
         val = cap / (cp > 0 ? cp : 1.0);
 
-        printf("%-32s %6.1f %7.0f %10.4f %12.0f\n",
-               m->nom, m->ii, cap, cp, val);
+        /* couleur par quartile sur l'échelle [0..1] (min/max de la table) */
+        if (vmax > vmin) {
+            double q = (val - vmin) / (vmax - vmin);
+            if (q >= 0.75)      col = C_VERT;
+            else if (q >= 0.50) col = C_CYAN;
+            else if (q >= 0.25) col = C_JAUNE;
+        }
+
+        fmt_ii(buf3, sizeof(buf3), m->ii);
+        fmt_milliers(buf2, sizeof(buf2), cap);
+        fmt_milliers(buf, sizeof(buf), val);
+        snprintf(buf4, sizeof(buf4), "%.4f", cp);
+        printf("%s%-32s %6s %7s %8s %8s%s\n",
+               col, m->nom, buf3, buf2, buf4, buf, C_RESET);
     }
     return 0;
 }
