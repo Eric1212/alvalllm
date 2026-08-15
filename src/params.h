@@ -82,6 +82,10 @@ typedef struct {
  *  sinon "" (par défaut). */
 const char *chemin_donnees(const char *fichier);
 
+/* Résout le dossier des scripts python (transitoire) :
+ *  ALVALLM_SCRIPTS sinon 'scripts/' relatif au cwd. */
+const char *chemin_scripts(void);
+
 /* Charge params.json ; échoue (retourne -1) seulement si le fichier
  * existe mais est invalide. Si absent -> valeurs par défaut. */
 int params_charger(const char *chemin, Parametres *p);

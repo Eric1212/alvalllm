@@ -17,6 +17,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/wait.h>
 
 static void usage(void)
 {
@@ -27,6 +28,12 @@ static void usage(void)
            "  alvalllm table            table par défaut (= 1)\n"
            "  alvalllm table <n>        table 1-3\n"
            "  alvalllm tables           les 3 tables\n"
+           "  alvalllm fetch <src>      collecte les données de la source\n"
+           "  alvalllm coupling <src>   couplage II AA -> data/models.json\n"
+           "  alvalllm build <src>      fetch + coupling (chaînés)\n"
+           "\n"
+           "Sources:\n"
+           "  OC  = opencode (collecte + couplage via scripts/)\n"
            "\n"
            "Tables:\n"
            "  1 = generale   (tous modèles, coût pondéré par ratios réels)\n"
@@ -36,6 +43,70 @@ static void usage(void)
            "Paramètres : data/params.json (non versionné) — copier depuis "
            "data/params.json.example.\n"
            "Base de modèles : data/models.json.\n");
+}
+
+/* ---- sources (fetch/coupling/build) ---- */
+
+typedef struct {
+    const char *nom;          /* "OC" */
+    const char *fetch_script; /* collecte (ex. collect_models.py) */
+    const char *coup_script;  /* couplage (ex. couplage.py) */
+} Source;
+
+static const Source sources[] = {
+    { "OC", "collect_models.py", "couplage.py" },
+};
+
+/* exécute un script python transitoire, retourne son code de sortie */
+static int exec_script(const char *script)
+{
+    char cmd[2048];
+    int rc;
+
+    snprintf(cmd, sizeof(cmd), "python3 %s/%s", chemin_scripts(), script);
+    printf("alvalllm: %s\n", cmd);
+    rc = system(cmd);
+    if (rc == -1) {
+        perror("alvalllm: system");
+        return 1;
+    }
+    if (WIFEXITED(rc))
+        return WEXITSTATUS(rc);
+    return 1;
+}
+
+/* fetch | coupling | build <src> */
+static int cmd_pipeline(const char *cmd, const char *nom_src)
+{
+    const Source *src = NULL;
+    size_t i;
+    int rc;
+
+    for (i = 0; i < sizeof(sources) / sizeof(sources[0]); i++) {
+        if (strcmp(sources[i].nom, nom_src) == 0) {
+            src = &sources[i];
+            break;
+        }
+    }
+    if (!src) {
+        fprintf(stderr, "alvalllm: source inconnue '%s' — disponibles :",
+                nom_src);
+        for (i = 0; i < sizeof(sources) / sizeof(sources[0]); i++)
+            fprintf(stderr, " %s", sources[i].nom);
+        fprintf(stderr, "\n");
+        return 2;
+    }
+
+    if (strcmp(cmd, "fetch") == 0)
+        return exec_script(src->fetch_script);
+
+    if (strcmp(cmd, "coupling") == 0)
+        return exec_script(src->coup_script);
+
+    /* build = fetch puis coupling */
+    rc = exec_script(src->fetch_script);
+    if (rc != 0) return rc;
+    return exec_script(src->coup_script);
 }
 
 /* coût pondéré par 1M tokens pour un modèle et un profil de ratios */
@@ -99,11 +170,8 @@ int main(int argc, char **argv)
     const char *cmd;
     int table = 0;
 
-    chemin_params = chemin_donnees("params.json");
+chemin_params = chemin_donnees("params.json");
     chemin_base   = chemin_donnees("models.json");
-
-    if (params_charger(chemin_params, &params) != 0)
-        return 1;
 
     if (argc < 2) { usage(); return 0; }
 
@@ -111,11 +179,27 @@ int main(int argc, char **argv)
 
     /* help et commandes inconnues ne nécessitent pas la base */
     if (strcmp(cmd, "help") == 0) { usage(); return 0; }
+
+    /* fetch/coupling/build : pipeline de données — n'exigent ni
+     * params.json ni models.json (ils les produisent). */
+    if (strcmp(cmd, "fetch") == 0 || strcmp(cmd, "coupling") == 0 ||
+        strcmp(cmd, "build") == 0) {
+        if (argc < 3) {
+            fprintf(stderr, "alvalllm: '%s' requiert une source "
+                            "(ex: alvalllm %s OC)\n", cmd, cmd);
+            return 2;
+        }
+        return cmd_pipeline(cmd, argv[2]);
+    }
+
     if (strcmp(cmd, "table") != 0 && strcmp(cmd, "tables") != 0) {
         fprintf(stderr, "alvalllm: commande inconnue '%s' (voir: alvalllm help)\n",
                 cmd);
         return 2;
     }
+
+    if (params_charger(chemin_params, &params) != 0)
+        return 1;
 
     if (base_charger(chemin_base, &base) != 0) {
         fprintf(stderr, "alvalllm: base introuvable — lance la collecte "

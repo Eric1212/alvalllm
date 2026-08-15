@@ -68,6 +68,21 @@ const char *chemin_donnees(const char *fichier)
     return buf;
 }
 
+/* Dossier des scripts de collecte/couplage (transitoire : python).
+ * ALVALLM_SCRIPTS sinon 'scripts/' relatif au cwd. */
+const char *chemin_scripts(void)
+{
+    static char buf[1024];
+    const char *env = getenv("ALVALLM_SCRIPTS");
+
+    if (env && *env) {
+        snprintf(buf, sizeof(buf), "%s", env);
+        return buf;
+    }
+    snprintf(buf, sizeof(buf), "scripts");
+    return buf;
+}
+
 /* ---------- grille ---------- */
 
 int grille_appliquer(const Grille *g, int ii)
