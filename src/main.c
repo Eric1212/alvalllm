@@ -29,6 +29,8 @@ static void usage(void)
            "  alvalllm table            table par défaut (= 1)\n"
            "  alvalllm table <n>        table 1-3\n"
            "  alvalllm tables           les 3 tables\n"
+           "  alvalllm table <n> v      trié par VAL (au lieu de II)\n"
+           "  alvalllm tables v         les 3 tables triées par VAL\n"
            "  alvalllm fetch <src>      collecte les données de la source\n"
            "  alvalllm coupling <src>   couplage II AA -> data/models.json\n"
            "  alvalllm build <src>      fetch + coupling (chaînés)\n"
@@ -172,9 +174,11 @@ static void fmt_ii(char *out, size_t sz, double v)
 
 /* affiche une table. Les valeurs brutes restent la vérité ; les couleurs
  * (vert/cyan/jaune) sont un bonus de repérage sur les meilleurs. Les
- * mauvais ne sont pas colorés : inutile de leur donner de l'attention. */
+ * mauvais ne sont pas colorés : inutile de leur donner de l'attention.
+ * Si par_val != 0, la table est triée par VAL (décroissant) au lieu de
+ * l'ordre naturel (celui de la base, II décroissant). */
 static int afficher_table(const Parametres *p, const Base *b,
-                          const Profil *pr, const char *filtre)
+                          const Profil *pr, const char *filtre, int par_val)
 {
     static const char *C_VERT  = "\033[32m";
     static const char *C_CYAN  = "\033[36m";
@@ -191,8 +195,10 @@ static int afficher_table(const Parametres *p, const Base *b,
 
     double vmin = 0, vmax = 0;
     int n = 0, i;
+    int ordre[MAX_MODELES]; /* indices triés si par_val */
 
-    /* pré-calcul : min/max des valeurs pour l'échelle de couleur */
+    /* pré-calcul : min/max des valeurs pour l'échelle de couleur,
+     * et indices des modèles filtrés (ordre de tri si par_val) */
     for (i = 0; i < b->nb_modeles; i++) {
         const Modele *m = &b->modeles[i];
         double cp, cap, v;
@@ -203,20 +209,41 @@ static int afficher_table(const Parametres *p, const Base *b,
         v = cap / (cp > 0 ? cp : 1.0);
         if (n == 0 || v < vmin) vmin = v;
         if (n == 0 || v > vmax) vmax = v;
-        n++;
+        ordre[n++] = i;
+    }
+
+    if (par_val) {
+        /* tri décroissant par VAL : insertion (n <= MAX_MODELES) */
+        double vals[MAX_MODELES];
+        for (i = 0; i < n; i++) {
+            const Modele *m = &b->modeles[ordre[i]];
+            double cp = cout_pondere(m, pr);
+            double cap = grille_appliquer(&p->grille, m->ii);
+            vals[i] = cap / (cp > 0 ? cp : 1.0);
+        }
+        for (i = 1; i < n; i++) {
+            int j = i;
+            int idx = ordre[i];
+            double v = vals[i];
+            while (j > 0 && vals[j - 1] < v) {
+                ordre[j] = ordre[j - 1];
+                vals[j] = vals[j - 1];
+                j--;
+            }
+            ordre[j] = idx;
+            vals[j] = v;
+        }
     }
 
     printf("%-12s %-32s %6s %7s %8s %8s\n",
            "LAB", "LLM", "II ", "CAP", "$/1M", "VAL");
     printf("%s\n", "------------------------------------------------------------------------------------");
-    for (i = 0; i < b->nb_modeles; i++) {
-        const Modele *m = &b->modeles[i];
+    for (i = 0; i < n; i++) {
+        const Modele *m = &b->modeles[ordre[i]];
         double cp, cap, val;
         const char *col = "";
         char buf[32], buf2[32], buf3[32], buf4[32];
         const char *lab;
-
-        if (!modele_passe(m, filtre)) continue;
 
         cp  = cout_pondere(m, pr);
         cap = grille_appliquer(&p->grille, m->ii);
@@ -290,20 +317,31 @@ chemin_params = chemin_donnees("params.json");
     profil = profil_par_nom(&params, params.profil_defaut);
 
     if (strcmp(cmd, "table") == 0) {
-        if (argc >= 3)
-            table = atoi(argv[2]);
-        if (table < 1 || table > MAX_TABLES)
-            table = 1; /* par défaut : générale */
-        afficher_table(&params, &base, profil, params.tables[table - 1].filtre);
+        int par_val = 0;
+        if (argc >= 3) {
+            if (strcmp(argv[2], "v") == 0) {
+                par_val = 1;
+            } else {
+                table = atoi(argv[2]);
+                if (table < 1 || table > MAX_TABLES)
+                    table = 1; /* par défaut : générale */
+                if (argc >= 4 && strcmp(argv[3], "v") == 0)
+                    par_val = 1;
+            }
+        }
+        afficher_table(&params, &base, profil, params.tables[table - 1].filtre, par_val);
         return 0;
     }
 
     if (strcmp(cmd, "tables") == 0) {
         int i;
+        int par_val = 0;
+        if (argc >= 3 && strcmp(argv[2], "v") == 0)
+            par_val = 1;
         for (i = 0; i < MAX_TABLES; i++) {
-            printf("== table %d (%s) ==\n",
-                   i + 1, params.tables[i].nom);
-            afficher_table(&params, &base, profil, params.tables[i].filtre);
+            printf("== table %d (%s)%s ==\n",
+                   i + 1, params.tables[i].nom, par_val ? " — trié par VAL" : "");
+            afficher_table(&params, &base, profil, params.tables[i].filtre, par_val);
             printf("\n");
         }
         return 0;
