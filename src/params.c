@@ -191,7 +191,7 @@ static int parse_grille(json_t *root, Parametres *p)
         Pallier *d = &p->grille.palliers[i];
         if (lire_int(pa, "min", &d->min_ii, "grille.tiers") ||
             lire_int(pa, "max", &d->max_ii, "grille.tiers") ||
-            lire_int(pa, "points_per_ii", &d->points_par_ii, "grille.tiers"))
+            lire_double(pa, "points_per_ii", &d->points_par_ii, "grille.tiers"))
             return -1;
     }
     return grille_valider(&p->grille);

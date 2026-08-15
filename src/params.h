@@ -22,9 +22,9 @@
 
 /* ---- grille (paliers non linéaires II -> points par II) ---- */
 typedef struct {
-    int min_ii;
-    int max_ii;          /* inclusif; dernier palier ouvert vers le haut */
-    int points_par_ii;
+    int    min_ii;
+    int    max_ii;          /* inclusif; dernier palier ouvert vers le haut */
+    double points_par_ii;
 } Pallier;
 
 typedef struct {
