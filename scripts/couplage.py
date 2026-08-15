@@ -36,7 +36,7 @@ DATA = Path(__file__).resolve().parent.parent / "data"
 FUSION = [
     "non-reasoning", "nonreasoning", "highspeed", "reasoning",
     "thinking", "high", "low", "medium", "xhigh", "adaptive",
-    "instruct", "it",
+    "instruct", "it", "preview",
 ]
 
 # Suffixes de VARIANTE de modèle : modèles distincts, ne PAS fusionner.
@@ -219,13 +219,16 @@ def charger_labs() -> dict:
     return labs_map
 
 
-def charger_aa() -> list:
+def charger_aa(labs: dict = None) -> list:
     """Charge les modèles AA et les regroupe en FAMILLES.
 
     Une famille = même nom de base (suffixes de réglage d'effort ignorés,
     ex. claude-opus-5 / claude-opus-5-xhigh / -high / -medium / -low).
     La famille est désignée par sa variante au II maximum : son slug devient
     le slug de la famille, et le II de la famille est ce II maximum.
+
+    labs (optionnel) : non utilisé ici — le retrait du préfixe lab superflu
+    (nvidia-nemotron-...) se fait côté couplage, avec le contexte opencode.
 
     Retourne une liste de familles au même format qu'avant :
         [{"slug": <basename>, "ii": <max_ii>, ...}]
@@ -235,11 +238,19 @@ def charger_aa() -> list:
     for a in json.loads((DATA / "AA_II.json").read_text()):
         base = strip_reglages(a["slug"])
         base = strip_date_full(base)
+        # Attributs de taille : MoE (-550b-a55b) et taille simple (-27b).
+        # AA route vers le plus gros modèle inféré ; le nom sans taille désigne
+        # la même famille (nemotron-3-ultra-550b-a55b == nemotron-3-ultra).
+        base = re.sub(r"-\d+b-a\d+b$", "", base)
+        base = re.sub(r"-\d+b$", "", base)
         f = familles.setdefault(base, {"slug": base, "ii": -1})
-        if a["ii"] > f["ii"]:
+        if a["ii"] is not None and a["ii"] > f["ii"]:
             f["slug"] = base
             f["ii"] = a["ii"]
-    return list(familles.values())
+    # Seules les familles avec un II réel (ii>0) sont candidates au match.
+    # Les familles sans II (null chez AA) restent à -1 -> exclues, sinon
+    # elles matcheraient des OC mais avec ii=-1 (absurde).
+    return [f for f in familles.values() if f["ii"] > 0]
 
 
 def coupler(oc: list, aa: list, labs: dict) -> list:
@@ -265,6 +276,10 @@ def coupler(oc: list, aa: list, labs: dict) -> list:
     base_only = {c: lst[0] for c, lst in bybase.items() if len(lst) == 1}
 
     rows = []
+
+    # 2 passes : d'abord tous les matchs directs, ensuite les fallbacks
+    # (le min lab n'est stable qu'une fois tous les directs couplés).
+    pendings = []
     for modele in oc:
         c = strip_date(canon(modele["nom"]))
         if c in aa_idx:
@@ -346,6 +361,35 @@ def coupler(oc: list, aa: list, labs: dict) -> list:
             })
             continue
 
+        # Préfixe lab AA superflu : opencode 'nemotron-3-ultra-free' (lab
+        # nvidia, nom sans lab) vs AA 'nvidia-nemotron-3-ultra-550b-a55b'
+        # (nom avec préfixe lab). On retire le préfixe lab AA pour tenter
+        # un match, sur tous les labs connus du mapping OC_LABS.
+        # NB: le suffixe -free est retiré ici (routage gratuit) pour que
+        # 'nemotron-3-ultra-free' se couple à 'nvidia-nemotron-3-ultra'.
+        nom_base = re.sub(r"-free$", "", modele["nom"])
+        matched_lab = False
+        for lab in set(labs.values()):
+            if nom_base.lower().startswith(lab + "-"):
+                continue  # le modèle porte déjà le lab dans son nom
+            c_nolab = canon(norm_oc(nom_base))
+            cands = [a for a in aa
+                     if canon(norm_oc(a["slug"].replace(lab + "-", ""))) == c_nolab]
+            if cands:
+                best = max(cands, key=lambda a: a["ii"])
+                rows.append({
+                    "nom": modele["nom"],
+                    "ii": best["ii"],
+                    "aa_slug": best["slug"],
+                    "input": modele.get("input"),
+                    "output": modele.get("output"),
+                    "cache_read": modele.get("cache_read"),
+                })
+                matched_lab = True
+                break
+        if matched_lab:
+            continue
+
         # -latest : opencode 'X-latest' = la meilleure version dispo de la
         # famille X -> on prend le max II de la famille chez AA. Le strip
         # de version élargi (-d simple) est utilisé ICI uniquement, c'est
@@ -385,13 +429,48 @@ def coupler(oc: list, aa: list, labs: dict) -> list:
                         "output": modele.get("output"),
                         "cache_read": modele.get("cache_read"),
                     })
+            continue
+
+        # Pas de match direct -> on le garde pour la passe fallback
+        pendings.append(modele)
+
+    # Passe 2 : fallback (min du lab, sinon min global) — appliqué sur
+    # tous les pendings une fois les directs couplés, min stable.
+    for modele in pendings:
+        fb = fallback_ii(rows, modele, labs)
+        rows.append({
+            "nom": modele["nom"],
+            "ii": fb,
+            "aa_slug": "",
+            "input": modele.get("input"),
+            "output": modele.get("output"),
+            "cache_read": modele.get("cache_read"),
+        })
     return rows
+
+
+def fallback_ii(rows: list, modele: dict, labs: dict) -> float:
+    """II de repli pour un modèle non couplé : le plus petit II des modèles
+    déjà couplés du MÊME lab (anti-contamination : on ne met jamais un II
+    plus élevé que le minimum du lab). Si le lab est inconnu ou n'a aucun
+    couplé, fallback sur le minimum GLOBAL des couplés.
+    Retourne -1 si aucun couplé valide (ii>0)."""
+    nom = modele["nom"]
+    lab = labs.get(nom.lower(), "") or (
+        labs.get(nom.lower()[:-5], "") if nom.lower().endswith("-free") else "")
+    valides = [r["ii"] for r in rows if r["ii"] > 0]
+    if lab:
+        lab_iis = [r["ii"] for r in rows
+                   if r["ii"] > 0 and (labs.get(r["nom"].lower(), "") == lab)]
+        if lab_iis:
+            return min(lab_iis)
+    return min(valides) if valides else -1
 
 
 def main():
     oc = charger_opencode()
-    aa = charger_aa()
     labs = charger_labs()
+    aa = charger_aa(labs)
     rows = coupler(oc, aa, labs)
     rows.sort(key=lambda r: -r["ii"])
 
@@ -417,7 +496,6 @@ def main():
             "prix_in": r.get("input", 0),
             "prix_out": r.get("output", 0),
             "prix_cache": r.get("cache_read", 0),
-            "prix_cw": 0,
             "gratuit": 1 if r.get("input", 0) == 0 else 0,
             "frontier": 0,
         })
