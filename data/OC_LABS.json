@@ -338,17 +338,6 @@
   "glm-4.5v": "zhipuai",
   "glm-4.5-flash": "zhipuai",
   "glm-4.5-air": "zhipuai",
-  "glm-4.5": "zhipuai",
-  "big-pickle": "opencode",
-  "claude-sonnet-4": "anthropic",
-  "deepseek-v4-flash-free": "deepseek",
-  "gemini-3-flash": "google",
-  "gemini-3.1-pro": "google",
-  "hy3-free": "tencent",
-  "laguna-s-2.1-free": "poolside",
-  "mimo-v2.5-free": "xiaomi",
-  "nemotron-3-ultra-free": "nvidia",
-  "nemotron-3.5-lightning-free": "nvidia",
-  "nemotron-3-ultra": "nvidia"
+  "glm-4.5": "zhipuai"
  }
 }

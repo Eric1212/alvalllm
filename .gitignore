@@ -2,6 +2,10 @@
 alvalllm
 *.o
 
+# artefacts Python
+__pycache__/
+*.pyc
+
 # notes perso / hors dépôt
 CLAUDE.md
 memory/

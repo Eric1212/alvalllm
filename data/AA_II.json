@@ -1,842 +1,3042 @@
 [
  {
   "slug": "claude-opus-5",
-  "ii": 63.05,
-  "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+  "ii": 63.0532452071291,
   "url": "/models/claude-opus-5"
  },
  {
   "slug": "claude-opus-5-xhigh",
-  "ii": 62.52,
-  "name": "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)",
+  "ii": 62.52047429879,
   "url": "/models/claude-opus-5-xhigh"
  },
  {
   "slug": "claude-fable-5",
-  "ii": 62.07,
-  "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
+  "ii": 62.0726622017462,
   "url": "/models/claude-fable-5"
  },
  {
   "slug": "claude-opus-5-high",
-  "ii": 61.48,
-  "name": "Claude Opus 5 (Adaptive Reasoning, High Effort)",
+  "ii": 61.4751191473465,
   "url": "/models/claude-opus-5-high"
  },
  {
-  "slug": "claude-opus-5-medium",
-  "ii": 58.64,
-  "name": "Claude Opus 5 (Adaptive Reasoning, Medium Effort)",
-  "url": "/models/claude-opus-5-medium"
- },
- {
-  "slug": "claude-opus-4-8",
-  "ii": 57.33,
-  "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
-  "url": "/models/claude-opus-4-8"
- },
- {
-  "slug": "claude-sonnet-5",
-  "ii": 55.26,
-  "name": "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)",
-  "url": "/models/claude-sonnet-5"
- },
- {
-  "slug": "claude-opus-4-7",
-  "ii": 54.96,
-  "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
-  "url": "/models/claude-opus-4-7"
- },
- {
-  "slug": "claude-opus-5-low",
-  "ii": 52.46,
-  "name": "Claude Opus 5 (Adaptive Reasoning, Low Effort)",
-  "url": "/models/claude-opus-5-low"
- },
- {
-  "slug": "claude-sonnet-4-6-adaptive",
-  "ii": 48.37,
-  "name": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
-  "url": "/models/claude-sonnet-4-6-adaptive"
- },
- {
-  "slug": "claude-sonnet-5-non-reasoning",
-  "ii": 42.57,
-  "name": "Claude Sonnet 5 (Non-reasoning, High Effort)",
-  "url": "/models/claude-sonnet-5-non-reasoning"
- },
- {
-  "slug": "claude-4-5-sonnet-thinking",
-  "ii": 37.39,
-  "name": "Claude 4.5 Sonnet (Reasoning)",
-  "url": "/models/claude-4-5-sonnet-thinking"
- },
- {
-  "slug": "claude-4-5-haiku-reasoning",
-  "ii": 29.89,
-  "name": "Claude 4.5 Haiku (Reasoning)",
-  "url": "/models/claude-4-5-haiku-reasoning"
- },
- {
   "slug": "gpt-5-6-sol",
-  "ii": 60.93,
-  "name": "GPT-5.6 Sol (max)",
+  "ii": 60.9298701329203,
   "url": "/models/gpt-5-6-sol"
  },
  {
-  "slug": "gpt-5-6-sol-xhigh",
-  "ii": 59.01,
-  "name": "GPT-5.6 Sol (xhigh)",
-  "url": "/models/gpt-5-6-sol-xhigh"
- },
- {
-  "slug": "gpt-5-6-sol-high",
-  "ii": 57.33,
-  "name": "GPT-5.6 Sol (high)",
-  "url": "/models/gpt-5-6-sol-high"
- },
- {
-  "slug": "gpt-5-6-terra",
-  "ii": 56.58,
-  "name": "GPT-5.6 Terra (max)",
-  "url": "/models/gpt-5-6-terra"
- },
- {
-  "slug": "gpt-5-5",
-  "ii": 56.31,
-  "name": "GPT-5.5 (xhigh)",
-  "url": "/models/gpt-5-5"
- },
- {
-  "slug": "gpt-5-6-sol-medium",
-  "ii": 55.57,
-  "name": "GPT-5.6 Sol (medium)",
-  "url": "/models/gpt-5-6-sol-medium"
- },
- {
-  "slug": "gpt-5-5-high",
-  "ii": 54.67,
-  "name": "GPT-5.5 (high)",
-  "url": "/models/gpt-5-5-high"
- },
- {
-  "slug": "gpt-5-4",
-  "ii": 53.12,
-  "name": "GPT-5.4 (xhigh)",
-  "url": "/models/gpt-5-4"
- },
- {
-  "slug": "gpt-5-6-terra-xhigh",
-  "ii": 52.77,
-  "name": "GPT-5.6 Terra (xhigh)",
-  "url": "/models/gpt-5-6-terra-xhigh"
- },
- {
-  "slug": "gpt-5-6-luna",
-  "ii": 52.32,
-  "name": "GPT-5.6 Luna (max)",
-  "url": "/models/gpt-5-6-luna"
- },
- {
-  "slug": "gpt-5-5-medium",
-  "ii": 51.42,
-  "name": "GPT-5.5 (medium)",
-  "url": "/models/gpt-5-5-medium"
- },
- {
-  "slug": "gpt-5-6-sol-low",
-  "ii": 50.73,
-  "name": "GPT-5.6 Sol (low)",
-  "url": "/models/gpt-5-6-sol-low"
- },
- {
-  "slug": "gpt-5-6-terra-high",
-  "ii": 50.11,
-  "name": "GPT-5.6 Terra (high)",
-  "url": "/models/gpt-5-6-terra-high"
- },
- {
-  "slug": "gpt-5-6-luna-xhigh",
-  "ii": 50.06,
-  "name": "GPT-5.6 Luna (xhigh)",
-  "url": "/models/gpt-5-6-luna-xhigh"
- },
- {
-  "slug": "gpt-5-6-luna-high",
-  "ii": 46.96,
-  "name": "GPT-5.6 Luna (high)",
-  "url": "/models/gpt-5-6-luna-high"
- },
- {
-  "slug": "gpt-5-6-terra-medium",
-  "ii": 46.76,
-  "name": "GPT-5.6 Terra (medium)",
-  "url": "/models/gpt-5-6-terra-medium"
- },
- {
-  "slug": "gpt-5-5-low",
-  "ii": 44.5,
-  "name": "GPT-5.5 (low)",
-  "url": "/models/gpt-5-5-low"
- },
- {
-  "slug": "gpt-5-6-sol-non-reasoning",
-  "ii": 41.88,
-  "name": "GPT-5.6 Sol (Non-reasoning)",
-  "url": "/models/gpt-5-6-sol-non-reasoning"
- },
- {
-  "slug": "gpt-5-6-terra-low",
-  "ii": 41.3,
-  "name": "GPT-5.6 Terra (low)",
-  "url": "/models/gpt-5-6-terra-low"
- },
- {
-  "slug": "gpt-5-4-mini",
-  "ii": 40.94,
-  "name": "GPT-5.4 mini (xhigh)",
-  "url": "/models/gpt-5-4-mini"
- },
- {
-  "slug": "gpt-5-4-nano",
-  "ii": 39.71,
-  "name": "GPT-5.4 nano (xhigh)",
-  "url": "/models/gpt-5-4-nano"
- },
- {
-  "slug": "gpt-5-6-luna-medium",
-  "ii": 38.91,
-  "name": "GPT-5.6 Luna (medium)",
-  "url": "/models/gpt-5-6-luna-medium"
- },
- {
-  "slug": "gpt-5-1",
-  "ii": 37.47,
-  "name": "GPT-5.1 (high)",
-  "url": "/models/gpt-5-1"
- },
- {
-  "slug": "gpt-5-5-non-reasoning",
-  "ii": 35.75,
-  "name": "GPT-5.5 (Non-reasoning)",
-  "url": "/models/gpt-5-5-non-reasoning"
- },
- {
-  "slug": "gpt-5",
-  "ii": 35.31,
-  "name": "GPT-5 (high)",
-  "url": "/models/gpt-5"
- },
- {
-  "slug": "gpt-5-6-terra-non-reasoning",
-  "ii": 34.62,
-  "name": "GPT-5.6 Terra (Non-reasoning)",
-  "url": "/models/gpt-5-6-terra-non-reasoning"
- },
- {
-  "slug": "gpt-5-6-luna-low",
-  "ii": 33.85,
-  "name": "GPT-5.6 Luna (low)",
-  "url": "/models/gpt-5-6-luna-low"
- },
- {
-  "slug": "gpt-5-5-instant-06-26",
-  "ii": 29.23,
-  "name": "GPT-5.5 Instant (June 2026)",
-  "url": "/models/gpt-5-5-instant-06-26"
- },
- {
-  "slug": "gpt-5-6-luna-non-reasoning",
-  "ii": 26.84,
-  "name": "GPT-5.6 Luna (Non-reasoning)",
-  "url": "/models/gpt-5-6-luna-non-reasoning"
- },
- {
-  "slug": "gpt-5-mini",
-  "ii": 25.8,
-  "name": "GPT-5 mini (high)",
-  "url": "/models/gpt-5-mini"
- },
- {
-  "slug": "gpt-oss-120b",
-  "ii": 24.13,
-  "name": "gpt-oss-120b (high)",
-  "url": "/models/gpt-oss-120b"
- },
- {
-  "slug": "gpt-oss-20b",
-  "ii": 15.23,
-  "name": "gpt-oss-20b (high)",
-  "url": "/models/gpt-oss-20b"
- },
- {
-  "slug": "gpt-oss-120b-low",
-  "ii": 14.93,
-  "name": "gpt-oss-120b (low)",
-  "url": "/models/gpt-oss-120b-low"
- },
- {
-  "slug": "gpt-4-1-mini",
-  "ii": 14.82,
-  "name": "GPT-4.1 mini",
-  "url": "/models/gpt-4-1-mini"
- },
- {
-  "slug": "gpt-4-1-nano",
-  "ii": 9.64,
-  "name": "GPT-4.1 nano",
-  "url": "/models/gpt-4-1-nano"
- },
- {
   "slug": "grok-4-6",
-  "ii": 60.92,
-  "name": "Grok 4.6 (high)",
+  "ii": 60.92297113115,
   "url": "/models/grok-4-6"
  },
  {
-  "slug": "grok-4-5",
-  "ii": 55.76,
-  "name": "Grok 4.5 (high)",
-  "url": "/models/grok-4-5"
- },
- {
-  "slug": "grok-build-0-1-06-16",
-  "ii": 40.65,
-  "name": "Grok Build 0.1 0616",
-  "url": "/models/grok-build-0-1-06-16"
- },
- {
-  "slug": "grok-4-3",
-  "ii": 37.95,
-  "name": "Grok 4.3 (high)",
-  "url": "/models/grok-4-3"
- },
- {
-  "slug": "grok-4-3-non-reasoning",
-  "ii": 25.01,
-  "name": "Grok 4.3 (Non-reasoning)",
-  "url": "/models/grok-4-3-non-reasoning"
- },
- {
   "slug": "kimi-k3",
-  "ii": 59.7,
-  "name": "Kimi K3 (max)",
+  "ii": 59.6994671342592,
   "url": "/models/kimi-k3"
  },
  {
-  "slug": "kimi-k3-low",
-  "ii": 48.25,
-  "name": "Kimi K3 (low)",
-  "url": "/models/kimi-k3-low"
+  "slug": "gpt-5-6-sol-xhigh",
+  "ii": 59.0090363705536,
+  "url": "/models/gpt-5-6-sol-xhigh"
  },
  {
-  "slug": "kimi-k2-6",
-  "ii": 45.14,
-  "name": "Kimi K2.6",
-  "url": "/models/kimi-k2-6"
- },
- {
-  "slug": "kimi-k2-7-code",
-  "ii": 43.02,
-  "name": "Kimi K2.7 Code",
-  "url": "/models/kimi-k2-7-code"
- },
- {
-  "slug": "kimi-k2-5",
-  "ii": 36.02,
-  "name": "Kimi K2.5 (Reasoning)",
-  "url": "/models/kimi-k2-5"
+  "slug": "claude-opus-5-medium",
+  "ii": 58.6354597438038,
+  "url": "/models/claude-opus-5-medium"
  },
  {
   "slug": "qwen3-8-max",
-  "ii": 58.08,
-  "name": "Qwen3.8 Max",
+  "ii": 58.0774404479668,
   "url": "/models/qwen3-8-max"
  },
  {
   "slug": "qwen3-8-2-4t-a95b",
-  "ii": 57.7,
-  "name": "Qwen3.8 2.4T A95B",
+  "ii": 57.7043243271128,
   "url": "/models/qwen3-8-2-4t-a95b"
  },
  {
-  "slug": "qwen3-7-max",
-  "ii": 46.71,
-  "name": "Qwen3.7 Max",
-  "url": "/models/qwen3-7-max"
+  "slug": "gpt-5-6-sol-high",
+  "ii": 57.3317210962224,
+  "url": "/models/gpt-5-6-sol-high"
  },
  {
-  "slug": "qwen3-6-plus",
-  "ii": 40.49,
-  "name": "Qwen3.6 Plus",
-  "url": "/models/qwen3-6-plus"
- },
- {
-  "slug": "qwen3-7-plus",
-  "ii": 39.37,
-  "name": "Qwen3.7 Plus",
-  "url": "/models/qwen3-7-plus"
- },
- {
-  "slug": "qwen3-6-27b",
-  "ii": 37.7,
-  "name": "Qwen3.6 27B (Reasoning)",
-  "url": "/models/qwen3-6-27b"
- },
- {
-  "slug": "qwen3-5-397b-a17b",
-  "ii": 34.26,
-  "name": "Qwen3.5 397B A17B (Reasoning)",
-  "url": "/models/qwen3-5-397b-a17b"
- },
- {
-  "slug": "qwen3-5-122b-a10b",
-  "ii": 32.85,
-  "name": "Qwen3.5 122B A10B (Reasoning)",
-  "url": "/models/qwen3-5-122b-a10b"
- },
- {
-  "slug": "qwen3-6-35b-a3b",
-  "ii": 32.13,
-  "name": "Qwen3.6 35B A3B (Reasoning)",
-  "url": "/models/qwen3-6-35b-a3b"
- },
- {
-  "slug": "qwen3-6-27b-non-reasoning",
-  "ii": 31.33,
-  "name": "Qwen3.6 27B (Non-reasoning)",
-  "url": "/models/qwen3-6-27b-non-reasoning"
- },
- {
-  "slug": "qwen3-5-122b-a10b-non-reasoning",
-  "ii": 28.18,
-  "name": "Qwen3.5 122B A10B (Non-reasoning)",
-  "url": "/models/qwen3-5-122b-a10b-non-reasoning"
- },
- {
-  "slug": "qwen3-5-35b-a3b-non-reasoning",
-  "ii": 24.32,
-  "name": "Qwen3.5 35B A3B (Non-reasoning)",
-  "url": "/models/qwen3-5-35b-a3b-non-reasoning"
- },
- {
-  "slug": "qwen3-5-9b",
-  "ii": 21.79,
-  "name": "Qwen3.5 9B (Reasoning)",
-  "url": "/models/qwen3-5-9b"
- },
- {
-  "slug": "qwen3-coder-next",
-  "ii": 21.29,
-  "name": "Qwen3 Coder Next",
-  "url": "/models/qwen3-coder-next"
- },
- {
-  "slug": "qwen3-235b-a22b-instruct-2507-reasoning",
-  "ii": 19.89,
-  "name": "Qwen3 235B A22B 2507 (Reasoning)",
-  "url": "/models/qwen3-235b-a22b-instruct-2507-reasoning"
- },
- {
-  "slug": "qwen3-next-80b-a3b-reasoning",
-  "ii": 16.87,
-  "name": "Qwen3 Next 80B A3B (Reasoning)",
-  "url": "/models/qwen3-next-80b-a3b-reasoning"
- },
- {
-  "slug": "qwen3-30b-a3b-2507-reasoning",
-  "ii": 14.57,
-  "name": "Qwen3 30B A3B 2507 (Reasoning)",
-  "url": "/models/qwen3-30b-a3b-2507-reasoning"
+  "slug": "claude-opus-4-8",
+  "ii": 57.3304158758428,
+  "url": "/models/claude-opus-4-8"
  },
  {
   "slug": "muse-spark-1-2",
-  "ii": 56.76,
-  "name": "Muse Spark 1.2 (xhigh)",
+  "ii": 56.7615911905642,
   "url": "/models/muse-spark-1-2"
  },
  {
-  "slug": "muse-spark-1-1",
-  "ii": 53.2,
-  "name": "Muse Spark 1.1 (xhigh)",
-  "url": "/models/muse-spark-1-1"
+  "slug": "gpt-5-6-terra",
+  "ii": 56.5755675890213,
+  "url": "/models/gpt-5-6-terra"
  },
  {
-  "slug": "muse-glimmer",
-  "ii": 35.06,
-  "name": "Muse Glimmer (high)",
-  "url": "/models/muse-glimmer"
- },
- {
-  "slug": "llama-4-maverick",
-  "ii": 14.48,
-  "name": "Llama 4 Maverick",
-  "url": "/models/llama-4-maverick"
- },
- {
-  "slug": "llama-4-scout",
-  "ii": 10.26,
-  "name": "Llama 4 Scout",
-  "url": "/models/llama-4-scout"
+  "slug": "gpt-5-5",
+  "ii": 56.3066851860359,
+  "url": "/models/gpt-5-5"
  },
  {
   "slug": "gemini-3-7-flash",
-  "ii": 56.03,
-  "name": "Gemini 3.7 Flash (high)",
+  "ii": 56.0301180773699,
   "url": "/models/gemini-3-7-flash"
  },
  {
+  "slug": "grok-4-5",
+  "ii": 55.7588993916902,
+  "url": "/models/grok-4-5"
+ },
+ {
+  "slug": "gpt-5-6-sol-medium",
+  "ii": 55.5729051710609,
+  "url": "/models/gpt-5-6-sol-medium"
+ },
+ {
+  "slug": "claude-sonnet-5",
+  "ii": 55.261211717405,
+  "url": "/models/claude-sonnet-5"
+ },
+ {
+  "slug": "claude-opus-4-7",
+  "ii": 54.9641493964167,
+  "url": "/models/claude-opus-4-7"
+ },
+ {
+  "slug": "gpt-5-5-high",
+  "ii": 54.6668082793663,
+  "url": "/models/gpt-5-5-high"
+ },
+ {
   "slug": "gemini-3-7-flash-medium",
-  "ii": 53.42,
-  "name": "Gemini 3.7 Flash (medium)",
+  "ii": 53.416679420117,
   "url": "/models/gemini-3-7-flash-medium"
  },
  {
-  "slug": "gemini-3-5-flash",
-  "ii": 51.96,
-  "name": "Gemini 3.5 Flash (high)",
-  "url": "/models/gemini-3-5-flash"
- },
- {
-  "slug": "gemini-3-6-flash",
-  "ii": 51.58,
-  "name": "Gemini 3.6 Flash (high)",
-  "url": "/models/gemini-3-6-flash"
- },
- {
-  "slug": "gemini-3-7-flash-low",
-  "ii": 50.94,
-  "name": "Gemini 3.7 Flash (low)",
-  "url": "/models/gemini-3-7-flash-low"
- },
- {
-  "slug": "gemini-3-1-pro-preview",
-  "ii": 47.74,
-  "name": "Gemini 3.1 Pro Preview",
-  "url": "/models/gemini-3-1-pro-preview"
- },
- {
-  "slug": "gemini-3-5-flash-lite",
-  "ii": 37.44,
-  "name": "Gemini 3.5 Flash-Lite",
-  "url": "/models/gemini-3-5-flash-lite"
- },
- {
-  "slug": "gemma-4-31b",
-  "ii": 29.69,
-  "name": "Gemma 4 31B (Reasoning)",
-  "url": "/models/gemma-4-31b"
- },
- {
-  "slug": "gemma-4-26b-a4b",
-  "ii": 26.07,
-  "name": "Gemma 4 26B A4B (Reasoning)",
-  "url": "/models/gemma-4-26b-a4b"
- },
- {
-  "slug": "gemini-2-5-pro",
-  "ii": 25.91,
-  "name": "Gemini 2.5 Pro",
-  "url": "/models/gemini-2-5-pro"
- },
- {
-  "slug": "gemini-3-1-flash-lite-preview",
-  "ii": 25.61,
-  "name": "Gemini 3.1 Flash-Lite",
-  "url": "/models/gemini-3-1-flash-lite-preview"
- },
- {
-  "slug": "gemma-4-31b-non-reasoning",
-  "ii": 22.25,
-  "name": "Gemma 4 31B (Non-reasoning)",
-  "url": "/models/gemma-4-31b-non-reasoning"
- },
- {
-  "slug": "gemma-3-27b",
-  "ii": 7.36,
-  "name": "Gemma 3 27B Instruct",
-  "url": "/models/gemma-3-27b"
- },
- {
-  "slug": "gemma-3-12b",
-  "ii": 5.51,
-  "name": "Gemma 3 12B Instruct",
-  "url": "/models/gemma-3-12b"
+  "slug": "muse-spark-1-1",
+  "ii": 53.1989553356511,
+  "url": "/models/muse-spark-1-1"
  },
  {
   "slug": "deepseek-v4-pro",
-  "ii": 53.2,
-  "name": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",
+  "ii": 53.1976849297815,
   "url": "/models/deepseek-v4-pro"
  },
  {
-  "slug": "deepseek-v4-flash",
-  "ii": 51.77,
-  "name": "DeepSeek V4 Flash 0731 (Reasoning, Max Effort)",
-  "url": "/models/deepseek-v4-flash"
+  "slug": "gpt-5-4",
+  "ii": 53.1231377466063,
+  "url": "/models/gpt-5-4"
  },
  {
-  "slug": "deepseek-v4-pro-0424",
-  "ii": 45.27,
-  "name": "DeepSeek V4 Pro (Reasoning, Max Effort)",
-  "url": "/models/deepseek-v4-pro-0424"
- },
- {
-  "slug": "deepseek-v4-pro-0424-high",
-  "ii": 43.75,
-  "name": "DeepSeek V4 Pro (Reasoning, High Effort)",
-  "url": "/models/deepseek-v4-pro-0424-high"
- },
- {
-  "slug": "deepseek-v4-flash-0420",
-  "ii": 42.12,
-  "name": "DeepSeek V4 Flash (Reasoning, Max Effort)",
-  "url": "/models/deepseek-v4-flash-0420"
- },
- {
-  "slug": "deepseek-v4-flash-0420-high",
-  "ii": 39.01,
-  "name": "DeepSeek V4 Flash (Reasoning, High Effort)",
-  "url": "/models/deepseek-v4-flash-0420-high"
- },
- {
-  "slug": "deepseek-r1-0120",
-  "ii": 18.59,
-  "name": "DeepSeek R1 (Jan '25)",
-  "url": "/models/deepseek-r1-0120"
- },
- {
-  "slug": "deepseek-v3-0324",
-  "ii": 15.23,
-  "name": "DeepSeek V3 0324",
-  "url": "/models/deepseek-v3-0324"
- },
- {
-  "slug": "deepseek-v3",
-  "ii": 14.22,
-  "name": "DeepSeek V3 (Dec '24)",
-  "url": "/models/deepseek-v3"
+  "slug": "gpt-5-6-terra-xhigh",
+  "ii": 52.7732451128074,
+  "url": "/models/gpt-5-6-terra-xhigh"
  },
  {
   "slug": "glm-5-2",
-  "ii": 52.64,
-  "name": "GLM-5.2 (max)",
+  "ii": 52.6409563457385,
   "url": "/models/glm-5-2"
  },
  {
-  "slug": "glm-5-1",
-  "ii": 40.97,
-  "name": "GLM-5.1 (Reasoning)",
-  "url": "/models/glm-5-1"
+  "slug": "claude-opus-5-low",
+  "ii": 52.4569136808453,
+  "url": "/models/claude-opus-5-low"
  },
  {
-  "slug": "glm-4-7",
-  "ii": 34.46,
-  "name": "GLM-4.7 (Reasoning)",
-  "url": "/models/glm-4-7"
+  "slug": "gpt-5-6-luna",
+  "ii": 52.3180827840984,
+  "url": "/models/gpt-5-6-luna"
  },
  {
-  "slug": "glm-4-6-reasoning",
-  "ii": 29.3,
-  "name": "GLM-4.6 (Reasoning)",
-  "url": "/models/glm-4-6-reasoning"
+  "slug": "gemini-3-5-flash",
+  "ii": 51.96360747017,
+  "url": "/models/gemini-3-5-flash"
+ },
+ {
+  "slug": "deepseek-v4-flash",
+  "ii": 51.7665776089032,
+  "url": "/models/deepseek-v4-flash"
+ },
+ {
+  "slug": "gemini-3-6-flash",
+  "ii": 51.5819376989529,
+  "url": "/models/gemini-3-6-flash"
+ },
+ {
+  "slug": "gpt-5-5-medium",
+  "ii": 51.4222518389803,
+  "url": "/models/gpt-5-5-medium"
+ },
+ {
+  "slug": "gemini-3-7-flash-low",
+  "ii": 50.9422571779375,
+  "url": "/models/gemini-3-7-flash-low"
+ },
+ {
+  "slug": "gpt-5-6-sol-low",
+  "ii": 50.7315181713702,
+  "url": "/models/gpt-5-6-sol-low"
+ },
+ {
+  "slug": "gpt-5-6-terra-high",
+  "ii": 50.1131352273405,
+  "url": "/models/gpt-5-6-terra-high"
+ },
+ {
+  "slug": "gpt-5-6-luna-xhigh",
+  "ii": 50.0587027429536,
+  "url": "/models/gpt-5-6-luna-xhigh"
+ },
+ {
+  "slug": "claude-sonnet-4-6-adaptive",
+  "ii": 48.3663341204845,
+  "url": "/models/claude-sonnet-4-6-adaptive"
+ },
+ {
+  "slug": "kimi-k3-low",
+  "ii": 48.251492150768,
+  "url": "/models/kimi-k3-low"
+ },
+ {
+  "slug": "gemini-3-1-pro-preview",
+  "ii": 47.7383260259131,
+  "url": "/models/gemini-3-1-pro-preview"
+ },
+ {
+  "slug": "motif-3",
+  "ii": 47.3602493365956,
+  "url": "/models/motif-3"
+ },
+ {
+  "slug": "gpt-5-6-luna-high",
+  "ii": 46.9604170473195,
+  "url": "/models/gpt-5-6-luna-high"
+ },
+ {
+  "slug": "gpt-5-6-terra-medium",
+  "ii": 46.7558953879266,
+  "url": "/models/gpt-5-6-terra-medium"
+ },
+ {
+  "slug": "qwen3-7-max",
+  "ii": 46.71222295444,
+  "url": "/models/qwen3-7-max"
+ },
+ {
+  "slug": "gemini-3-5-flash-medium",
+  "ii": 46.67250352634763,
+  "url": "/models/gemini-3-5-flash-medium"
+ },
+ {
+  "slug": "gpt-5-3-codex",
+  "ii": 45.511743785809365,
+  "url": "/models/gpt-5-3-codex"
  },
  {
   "slug": "minimax-m3",
-  "ii": 45.4,
-  "name": "MiniMax-M3",
+  "ii": 45.3968506399702,
   "url": "/models/minimax-m3"
  },
  {
-  "slug": "minimax-m2-7",
-  "ii": 38.87,
-  "name": "MiniMax-M2.7",
-  "url": "/models/minimax-m2-7"
+  "slug": "motif-0714",
+  "ii": 45.3163721668975,
+  "url": "/models/motif-0714"
+ },
+ {
+  "slug": "deepseek-v4-pro-0424",
+  "ii": 45.2683460762151,
+  "url": "/models/deepseek-v4-pro-0424"
+ },
+ {
+  "slug": "kimi-k2-6",
+  "ii": 45.1382483763163,
+  "url": "/models/kimi-k2-6"
+ },
+ {
+  "slug": "claude-opus-4-6-adaptive",
+  "ii": 44.93139078024076,
+  "url": "/models/claude-opus-4-6-adaptive"
+ },
+ {
+  "slug": "gpt-5-5-low",
+  "ii": 44.4981124676717,
+  "url": "/models/gpt-5-5-low"
+ },
+ {
+  "slug": "muse-spark",
+  "ii": 44.250861892879364,
+  "url": "/models/muse-spark"
+ },
+ {
+  "slug": "claude-opus-4-7-non-reasoning",
+  "ii": 43.8607805938938,
+  "url": "/models/claude-opus-4-7-non-reasoning"
+ },
+ {
+  "slug": "deepseek-v4-pro-0424-high",
+  "ii": 43.7458091419318,
+  "url": "/models/deepseek-v4-pro-0424-high"
+ },
+ {
+  "slug": "gpt-5-2",
+  "ii": 43.34364782798708,
+  "url": "/models/gpt-5-2"
+ },
+ {
+  "slug": "kimi-k2-7-code",
+  "ii": 43.0244715223736,
+  "url": "/models/kimi-k2-7-code"
  },
  {
   "slug": "mimo-v2-5-pro",
-  "ii": 42.88,
-  "name": "MiMo-V2.5-Pro",
+  "ii": 42.8796821546836,
   "url": "/models/mimo-v2-5-pro"
  },
  {
-  "slug": "mimo-v2-5-0424",
-  "ii": 38.04,
-  "name": "MiMo-V2.5",
-  "url": "/models/mimo-v2-5-0424"
+  "slug": "claude-sonnet-5-non-reasoning",
+  "ii": 42.5707970639646,
+  "url": "/models/claude-sonnet-5-non-reasoning"
  },
  {
   "slug": "inkling",
-  "ii": 42.29,
-  "name": "Inkling (xhigh)",
+  "ii": 42.2947721285326,
   "url": "/models/inkling"
  },
  {
-  "slug": "inkling-small",
-  "ii": 41.18,
-  "name": "Inkling Small",
-  "url": "/models/inkling-small"
- },
- {
   "slug": "hy3",
-  "ii": 42.21,
-  "name": "Hy3",
+  "ii": 42.2134908724756,
   "url": "/models/hy3"
  },
  {
+  "slug": "deepseek-v4-flash-0420",
+  "ii": 42.1161800751304,
+  "url": "/models/deepseek-v4-flash-0420"
+ },
+ {
+  "slug": "gpt-5-6-sol-non-reasoning",
+  "ii": 41.8779730605066,
+  "url": "/models/gpt-5-6-sol-non-reasoning"
+ },
+ {
+  "slug": "claude-opus-4-5-thinking",
+  "ii": 41.87279179848307,
+  "url": "/models/claude-opus-4-5-thinking"
+ },
+ {
+  "slug": "nex-n2-pro",
+  "ii": 41.743198267132,
+  "url": "/models/nex-n2-pro"
+ },
+ {
   "slug": "solar-pro4",
-  "ii": 41.64,
-  "name": "Solar Pro 4",
+  "ii": 41.637324367296,
   "url": "/models/solar-pro4"
  },
  {
-  "slug": "solar-pro-3",
-  "ii": 14.49,
-  "name": "Solar Pro 3",
-  "url": "/models/solar-pro-3"
+  "slug": "mimo-v2-pro",
+  "ii": 41.373858592944195,
+  "url": "/models/mimo-v2-pro"
+ },
+ {
+  "slug": "gpt-5-6-terra-low",
+  "ii": 41.2961239729374,
+  "url": "/models/gpt-5-6-terra-low"
+ },
+ {
+  "slug": "gpt-5-2-codex",
+  "ii": 41.21537465813339,
+  "url": "/models/gpt-5-2-codex"
+ },
+ {
+  "slug": "inkling-small",
+  "ii": 41.1806598798293,
+  "url": "/models/inkling-small"
+ },
+ {
+  "slug": "qwen3-6-max",
+  "ii": 41.074,
+  "url": "/models/qwen3-6-max"
+ },
+ {
+  "slug": "glm-5-1",
+  "ii": 40.9675355215124,
+  "url": "/models/glm-5-1"
+ },
+ {
+  "slug": "gpt-5-4-mini",
+  "ii": 40.9386428957853,
+  "url": "/models/gpt-5-4-mini"
+ },
+ {
+  "slug": "grok-build-0-1-06-16",
+  "ii": 40.650047316875,
+  "url": "/models/grok-build-0-1-06-16"
+ },
+ {
+  "slug": "gemini-3-pro",
+  "ii": 40.60684654386336,
+  "url": "/models/gemini-3-pro"
+ },
+ {
+  "slug": "glm-5",
+  "ii": 40.55415,
+  "url": "/models/glm-5"
+ },
+ {
+  "slug": "qwen3-6-plus",
+  "ii": 40.4880703723726,
+  "url": "/models/qwen3-6-plus"
+ },
+ {
+  "slug": "gpt-5-4-low",
+  "ii": 40.17697839295867,
+  "url": "/models/gpt-5-4-low"
+ },
+ {
+  "slug": "jt-4-1-flash-236b-a21b",
+  "ii": 39.8533597930509,
+  "url": "/models/jt-4-1-flash-236b-a21b"
+ },
+ {
+  "slug": "gpt-5-4-nano",
+  "ii": 39.7139012496964,
+  "url": "/models/gpt-5-4-nano"
+ },
+ {
+  "slug": "agnes-2-5-pro-alpha",
+  "ii": 39.7073049186574,
+  "url": "/models/agnes-2-5-pro-alpha"
+ },
+ {
+  "slug": "qwen3-7-plus",
+  "ii": 39.3745992994168,
+  "url": "/models/qwen3-7-plus"
+ },
+ {
+  "slug": "glm-5-turbo",
+  "ii": 39.05428516474749,
+  "url": "/models/glm-5-turbo"
+ },
+ {
+  "slug": "deepseek-v4-flash-0420-high",
+  "ii": 39.0138386546326,
+  "url": "/models/deepseek-v4-flash-0420-high"
+ },
+ {
+  "slug": "gpt-5-2-medium",
+  "ii": 38.94361680548068,
+  "url": "/models/gpt-5-2-medium"
+ },
+ {
+  "slug": "gpt-5-6-luna-medium",
+  "ii": 38.9050733396755,
+  "url": "/models/gpt-5-6-luna-medium"
+ },
+ {
+  "slug": "minimax-m2-7",
+  "ii": 38.8713536464198,
+  "url": "/models/minimax-m2-7"
+ },
+ {
+  "slug": "claude-opus-4-6",
+  "ii": 38.77242629044645,
+  "url": "/models/claude-opus-4-6"
+ },
+ {
+  "slug": "gemini-3-flash-reasoning",
+  "ii": 38.741970762073166,
+  "url": "/models/gemini-3-flash-reasoning"
  },
  {
   "slug": "nvidia-nemotron-3-ultra-550b-a55b",
-  "ii": 38.32,
-  "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
+  "ii": 38.3185469149774,
   "url": "/models/nvidia-nemotron-3-ultra-550b-a55b"
  },
  {
-  "slug": "nvidia-nemotron-3-super-120b-a12b",
-  "ii": 25.67,
-  "name": "Nemotron 3 Super 120B A12B (Reasoning)",
-  "url": "/models/nvidia-nemotron-3-super-120b-a12b"
+  "slug": "mimo-v2-5-0424",
+  "ii": 38.0433645155222,
+  "url": "/models/mimo-v2-5-0424"
  },
  {
-  "slug": "nemotron-3-5-lightning",
-  "ii": 23.63,
-  "name": "Nemotron 3.5 Lightning",
-  "url": "/models/nemotron-3-5-lightning"
+  "slug": "grok-4-20",
+  "ii": 37.9549,
+  "url": "/models/grok-4-20"
  },
  {
-  "slug": "nvidia-nemotron-3-nano-30b-a3b-reasoning",
-  "ii": 14.54,
-  "name": "NVIDIA Nemotron 3 Nano 30B A3B (Reasoning)",
-  "url": "/models/nvidia-nemotron-3-nano-30b-a3b-reasoning"
+  "slug": "grok-4-3",
+  "ii": 37.9469171465042,
+  "url": "/models/grok-4-3"
  },
  {
   "slug": "ling-3-0-flash",
-  "ii": 37.82,
-  "name": "Ling 3.0 Flash",
+  "ii": 37.820825176113,
   "url": "/models/ling-3-0-flash"
  },
  {
-  "slug": "ling-3-0-tiny",
-  "ii": 24.52,
-  "name": "Ling 3.0 Tiny",
-  "url": "/models/ling-3-0-tiny"
+  "slug": "qwen3-6-27b",
+  "ii": 37.7024638948414,
+  "url": "/models/qwen3-6-27b"
+ },
+ {
+  "slug": "gpt-5-1",
+  "ii": 37.4660536037291,
+  "url": "/models/gpt-5-1"
+ },
+ {
+  "slug": "gemini-3-5-flash-lite",
+  "ii": 37.4387063722681,
+  "url": "/models/gemini-3-5-flash-lite"
+ },
+ {
+  "slug": "grok-4-20-0309",
+  "ii": 37.43505,
+  "url": "/models/grok-4-20-0309"
+ },
+ {
+  "slug": "solar-open2-250b",
+  "ii": 37.4265535921632,
+  "url": "/models/solar-open2-250b"
+ },
+ {
+  "slug": "claude-4-5-sonnet-thinking",
+  "ii": 37.3917832127992,
+  "url": "/models/claude-4-5-sonnet-thinking"
+ },
+ {
+  "slug": "mimo-v2-omni-0327",
+  "ii": 37.32094308038736,
+  "url": "/models/mimo-v2-omni-0327"
+ },
+ {
+  "slug": "gpt-5-codex",
+  "ii": 37.03550333060004,
+  "url": "/models/gpt-5-codex"
+ },
+ {
+  "slug": "grok-4-3-medium",
+  "ii": 36.9152,
+  "url": "/models/grok-4-3-medium"
+ },
+ {
+  "slug": "claude-sonnet-4-6",
+  "ii": 36.80117620071165,
+  "url": "/models/claude-sonnet-4-6"
+ },
+ {
+  "slug": "grok-4-3-low",
+  "ii": 36.32810061704343,
+  "url": "/models/grok-4-3-low"
+ },
+ {
+  "slug": "glm-5-1-non-reasoning",
+  "ii": 36.261601664207205,
+  "url": "/models/glm-5-1-non-reasoning"
+ },
+ {
+  "slug": "kimi-k2-5",
+  "ii": 36.0227407548798,
+  "url": "/models/kimi-k2-5"
+ },
+ {
+  "slug": "mimo-v2-omni",
+  "ii": 35.86618615317448,
+  "url": "/models/mimo-v2-omni"
+ },
+ {
+  "slug": "gemini-3-5-flash-minimal",
+  "ii": 35.78199417942195,
+  "url": "/models/gemini-3-5-flash-minimal"
+ },
+ {
+  "slug": "gpt-5-5-non-reasoning",
+  "ii": 35.7537595975886,
+  "url": "/models/gpt-5-5-non-reasoning"
+ },
+ {
+  "slug": "gpt-5-1-codex",
+  "ii": 35.59565133224159,
+  "url": "/models/gpt-5-1-codex"
+ },
+ {
+  "slug": "claude-opus-4-5",
+  "ii": 35.572999315023736,
+  "url": "/models/claude-opus-4-5"
+ },
+ {
+  "slug": "kimi-k2-6-non-reasoning",
+  "ii": 35.43809527726428,
+  "url": "/models/kimi-k2-6-non-reasoning"
+ },
+ {
+  "slug": "glm-5v-turbo",
+  "ii": 35.34795689509973,
+  "url": "/models/glm-5v-turbo"
+ },
+ {
+  "slug": "gpt-5",
+  "ii": 35.3126896545077,
+  "url": "/models/gpt-5"
+ },
+ {
+  "slug": "claude-sonnet-4-6-non-reasoning-low-effort",
+  "ii": 35.10823790992147,
+  "url": "/models/claude-sonnet-4-6-non-reasoning-low-effort"
+ },
+ {
+  "slug": "muse-glimmer",
+  "ii": 35.0641823105374,
+  "url": "/models/muse-glimmer"
+ },
+ {
+  "slug": "a-x-k2",
+  "ii": 35.0147941618563,
+  "url": "/models/a-x-k2"
+ },
+ {
+  "slug": "glm-5-2-non-reasoning",
+  "ii": 34.8147227827453,
+  "url": "/models/glm-5-2-non-reasoning"
+ },
+ {
+  "slug": "gpt-5-6-terra-non-reasoning",
+  "ii": 34.6188674546024,
+  "url": "/models/gpt-5-6-terra-non-reasoning"
+ },
+ {
+  "slug": "qwen3-5-27b",
+  "ii": 34.60313715675002,
+  "url": "/models/qwen3-5-27b"
+ },
+ {
+  "slug": "gpt-5-medium",
+  "ii": 34.565504291733575,
+  "url": "/models/gpt-5-medium"
+ },
+ {
+  "slug": "claude-4-1-opus-thinking",
+  "ii": 34.5376733029,
+  "url": "/models/claude-4-1-opus-thinking"
+ },
+ {
+  "slug": "kat-coder-pro-v2",
+  "ii": 34.514189754348024,
+  "url": "/models/kat-coder-pro-v2"
+ },
+ {
+  "slug": "minimax-m2-5",
+  "ii": 34.474081034775786,
+  "url": "/models/minimax-m2-5"
+ },
+ {
+  "slug": "glm-4-7",
+  "ii": 34.4586566670904,
+  "url": "/models/glm-4-7"
+ },
+ {
+  "slug": "hy3-preview",
+  "ii": 34.39793404861205,
+  "url": "/models/hy3-preview"
+ },
+ {
+  "slug": "gpt-5-5-instant-05-26",
+  "ii": 34.335069719912724,
+  "url": "/models/gpt-5-5-instant-05-26"
+ },
+ {
+  "slug": "qwen3-5-397b-a17b",
+  "ii": 34.2621174573549,
+  "url": "/models/qwen3-5-397b-a17b"
+ },
+ {
+  "slug": "grok-4",
+  "ii": 34.082391206771646,
+  "url": "/models/grok-4"
+ },
+ {
+  "slug": "mimo-v2-0206",
+  "ii": 34.023963491024645,
+  "url": "/models/mimo-v2-0206"
+ },
+ {
+  "slug": "longcat-2-0",
+  "ii": 33.9692584853255,
+  "url": "/models/longcat-2-0"
+ },
+ {
+  "slug": "gemini-3-pro-low",
+  "ii": 33.87003162463072,
+  "url": "/models/gemini-3-pro-low"
+ },
+ {
+  "slug": "gpt-5-6-luna-low",
+  "ii": 33.8545605251116,
+  "url": "/models/gpt-5-6-luna-low"
+ },
+ {
+  "slug": "kimi-k2-thinking",
+  "ii": 33.4869837975773,
+  "url": "/models/kimi-k2-thinking"
+ },
+ {
+  "slug": "o3-pro",
+  "ii": 33.29403789421049,
+  "url": "/models/o3-pro"
+ },
+ {
+  "slug": "glm-5-non-reasoning",
+  "ii": 33.18140490747805,
+  "url": "/models/glm-5-non-reasoning"
+ },
+ {
+  "slug": "qwen3-5-122b-a10b",
+  "ii": 32.8466437377894,
+  "url": "/models/qwen3-5-122b-a10b"
+ },
+ {
+  "slug": "deepseek-v3-2-reasoning",
+  "ii": 32.79792676875348,
+  "url": "/models/deepseek-v3-2-reasoning"
+ },
+ {
+  "slug": "qwen3-5-397b-a17b-non-reasoning",
+  "ii": 32.73265105863069,
+  "url": "/models/qwen3-5-397b-a17b-non-reasoning"
+ },
+ {
+  "slug": "qwen3-max-thinking",
+  "ii": 32.495564589016126,
+  "url": "/models/qwen3-max-thinking"
+ },
+ {
+  "slug": "qwen3-6-35b-a3b",
+  "ii": 32.1290714769579,
+  "url": "/models/qwen3-6-35b-a3b"
+ },
+ {
+  "slug": "minimax-m2-1",
+  "ii": 32.0883090343485,
+  "url": "/models/minimax-m2-1"
+ },
+ {
+  "slug": "deepseek-v4-pro-0424-non-reasoning",
+  "ii": 31.941819081694526,
+  "url": "/models/deepseek-v4-pro-0424-non-reasoning"
+ },
+ {
+  "slug": "mimo-v2-flash-reasoning",
+  "ii": 31.919657676350862,
+  "url": "/models/mimo-v2-flash-reasoning"
+ },
+ {
+  "slug": "gpt-5-low",
+  "ii": 31.877083752007596,
+  "url": "/models/gpt-5-low"
+ },
+ {
+  "slug": "claude-4-opus-thinking",
+  "ii": 31.6898663827,
+  "url": "/models/claude-4-opus-thinking"
+ },
+ {
+  "slug": "ring-2-6-1t",
+  "ii": 31.6633644037604,
+  "url": "/models/ring-2-6-1t"
+ },
+ {
+  "slug": "g9v3-39a5b",
+  "ii": 31.6491775000389,
+  "url": "/models/g9v3-39a5b"
+ },
+ {
+  "slug": "gpt-5-mini-medium",
+  "ii": 31.62933904733917,
+  "url": "/models/gpt-5-mini-medium"
+ },
+ {
+  "slug": "qwen3-5-omni-plus",
+  "ii": 31.341786896948378,
+  "url": "/models/qwen3-5-omni-plus"
+ },
+ {
+  "slug": "gpt-5-1-codex-mini",
+  "ii": 31.334025937406896,
+  "url": "/models/gpt-5-1-codex-mini"
+ },
+ {
+  "slug": "qwen3-6-27b-non-reasoning",
+  "ii": 31.3256219686586,
+  "url": "/models/qwen3-6-27b-non-reasoning"
+ },
+ {
+  "slug": "grok-4-1-fast-reasoning",
+  "ii": 31.3232828203892,
+  "url": "/models/grok-4-1-fast-reasoning"
+ },
+ {
+  "slug": "deepseek-v3-1-terminus-reasoning",
+  "ii": 31.12938369598318,
+  "url": "/models/deepseek-v3-1-terminus-reasoning"
+ },
+ {
+  "slug": "o3",
+  "ii": 31.095582593289777,
+  "url": "/models/o3"
+ },
+ {
+  "slug": "k-exaone-2-0-0803",
+  "ii": 30.9845435318094,
+  "url": "/models/k-exaone-2-0-0803"
  },
  {
   "slug": "step-3-7-flash",
-  "ii": 30.9,
-  "name": "Step 3.7 Flash",
+  "ii": 30.8992089144321,
   "url": "/models/step-3-7-flash"
  },
  {
+  "slug": "gpt-5-4-nano-medium",
+  "ii": 30.843249132161375,
+  "url": "/models/gpt-5-4-nano-medium"
+ },
+ {
+  "slug": "gpt-5-4-mini-medium",
+  "ii": 30.482347350090482,
+  "url": "/models/gpt-5-4-mini-medium"
+ },
+ {
   "slug": "mistral-medium-3-5",
-  "ii": 30.39,
-  "name": "Mistral Medium 3.5",
+  "ii": 30.3922256057425,
   "url": "/models/mistral-medium-3-5"
  },
  {
-  "slug": "mistral-small-4",
-  "ii": 19.71,
-  "name": "Mistral Small 4 (Reasoning)",
-  "url": "/models/mistral-small-4"
+  "slug": "kimi-k2-5-non-reasoning",
+  "ii": 30.051840553728326,
+  "url": "/models/kimi-k2-5-non-reasoning"
  },
  {
-  "slug": "devstral-2",
-  "ii": 19.24,
-  "name": "Devstral 2",
-  "url": "/models/devstral-2"
+  "slug": "qwen3-5-27b-non-reasoning",
+  "ii": 29.961008736373902,
+  "url": "/models/qwen3-5-27b-non-reasoning"
  },
  {
-  "slug": "magistral-medium-2509",
-  "ii": 18.05,
-  "name": "Magistral Medium 1.2",
-  "url": "/models/magistral-medium-2509"
+  "slug": "claude-4-5-sonnet",
+  "ii": 29.926819856249086,
+  "url": "/models/claude-4-5-sonnet"
  },
  {
-  "slug": "devstral-small-2",
-  "ii": 17.72,
-  "name": "Devstral Small 2",
-  "url": "/models/devstral-small-2"
+  "slug": "qwen3-5-35b-a3b",
+  "ii": 29.90731652535122,
+  "url": "/models/qwen3-5-35b-a3b"
  },
  {
-  "slug": "mistral-large-3",
-  "ii": 15.92,
-  "name": "Mistral Large 3",
-  "url": "/models/mistral-large-3"
+  "slug": "claude-4-5-haiku-reasoning",
+  "ii": 29.8919353345764,
+  "url": "/models/claude-4-5-haiku-reasoning"
  },
  {
-  "slug": "mistral-small-3-1",
-  "ii": 14.87,
-  "name": "Mistral Small 3.1",
-  "url": "/models/mistral-small-3-1"
+  "slug": "claude-4-sonnet-thinking",
+  "ii": 29.7574141768318,
+  "url": "/models/claude-4-sonnet-thinking"
  },
  {
-  "slug": "mistral-medium-3-1",
-  "ii": 14.73,
-  "name": "Mistral Medium 3.1",
-  "url": "/models/mistral-medium-3-1"
+  "slug": "gemma-4-31b",
+  "ii": 29.6949678165957,
+  "url": "/models/gemma-4-31b"
  },
  {
-  "slug": "magistral-small-2509",
-  "ii": 11.46,
-  "name": "Magistral Small 1.2",
-  "url": "/models/magistral-small-2509"
+  "slug": "glm-4-6-reasoning",
+  "ii": 29.2968166641829,
+  "url": "/models/glm-4-6-reasoning"
  },
  {
-  "slug": "ministral-3-14b",
-  "ii": 11.24,
-  "name": "Ministral 3 14B",
-  "url": "/models/ministral-3-14b"
+  "slug": "deepseek-v4-flash-non-reasoning",
+  "ii": 29.277968146187444,
+  "url": "/models/deepseek-v4-flash-non-reasoning"
  },
  {
-  "slug": "mistral-small-3-2",
-  "ii": 10.66,
-  "name": "Mistral Small 3.2",
-  "url": "/models/mistral-small-3-2"
+  "slug": "gpt-5-5-instant-06-26",
+  "ii": 29.2327786347204,
+  "url": "/models/gpt-5-5-instant-06-26"
  },
  {
-  "slug": "ministral-3-8b",
-  "ii": 8.97,
-  "name": "Ministral 3 8B",
-  "url": "/models/ministral-3-8b"
+  "slug": "jt-35b-flash",
+  "ii": 28.977042869272534,
+  "url": "/models/jt-35b-flash"
  },
  {
-  "slug": "ministral-3-3b",
-  "ii": 7.07,
-  "name": "Ministral 3 3B",
-  "url": "/models/ministral-3-3b"
+  "slug": "minimax-m2",
+  "ii": 28.924926468808813,
+  "url": "/models/minimax-m2"
+ },
+ {
+  "slug": "kat-coder-pro-v1",
+  "ii": 28.86931792524859,
+  "url": "/models/kat-coder-pro-v1"
+ },
+ {
+  "slug": "claude-4-1-opus",
+  "ii": 28.8420594625,
+  "url": "/models/claude-4-1-opus"
+ },
+ {
+  "slug": "mimo-v2-5-pro-non-reasoning",
+  "ii": 28.44901019893985,
+  "url": "/models/mimo-v2-5-pro-non-reasoning"
+ },
+ {
+  "slug": "gpt-5-4-non-reasoning",
+  "ii": 28.26286288976976,
+  "url": "/models/gpt-5-4-non-reasoning"
+ },
+ {
+  "slug": "qwen3-5-122b-a10b-non-reasoning",
+  "ii": 28.1821800183865,
+  "url": "/models/qwen3-5-122b-a10b-non-reasoning"
+ },
+ {
+  "slug": "grok-4-fast-reasoning",
+  "ii": 27.947227137491858,
+  "url": "/models/grok-4-fast-reasoning"
+ },
+ {
+  "slug": "gemini-3-flash",
+  "ii": 27.938225136834387,
+  "url": "/models/gemini-3-flash"
+ },
+ {
+  "slug": "claude-3-7-sonnet-thinking",
+  "ii": 27.616717110769763,
+  "url": "/models/claude-3-7-sonnet-thinking"
+ },
+ {
+  "slug": "glm-4-7-non-reasoning",
+  "ii": 27.098271859928417,
+  "url": "/models/glm-4-7-non-reasoning"
+ },
+ {
+  "slug": "gpt-5-6-luna-non-reasoning",
+  "ii": 26.8448952225882,
+  "url": "/models/gpt-5-6-luna-non-reasoning"
+ },
+ {
+  "slug": "hy3-non-reasoning",
+  "ii": 26.625348921370406,
+  "url": "/models/hy3-non-reasoning"
+ },
+ {
+  "slug": "ling-2-6-1t",
+  "ii": 26.57192667536943,
+  "url": "/models/ling-2-6-1t"
+ },
+ {
+  "slug": "gpt-5-2-non-reasoning",
+  "ii": 26.535852174482585,
+  "url": "/models/gpt-5-2-non-reasoning"
+ },
+ {
+  "slug": "step-3-5-flash",
+  "ii": 26.5182,
+  "url": "/models/step-3-5-flash"
+ },
+ {
+  "slug": "doubao-seed-code",
+  "ii": 26.49236940795366,
+  "url": "/models/doubao-seed-code"
+ },
+ {
+  "slug": "gemma-4-26b-a4b",
+  "ii": 26.0656023232983,
+  "url": "/models/gemma-4-26b-a4b"
+ },
+ {
+  "slug": "o4-mini",
+  "ii": 26.052789844770324,
+  "url": "/models/o4-mini"
+ },
+ {
+  "slug": "step-3-5-flash-0202",
+  "ii": 25.99835,
+  "url": "/models/step-3-5-flash-0202"
+ },
+ {
+  "slug": "claude-4-opus",
+  "ii": 25.9942525423,
+  "url": "/models/claude-4-opus"
+ },
+ {
+  "slug": "claude-4-sonnet",
+  "ii": 25.99156698283445,
+  "url": "/models/claude-4-sonnet"
+ },
+ {
+  "slug": "deepseek-v3-2-reasoning-0925",
+  "ii": 25.941820078330394,
+  "url": "/models/deepseek-v3-2-reasoning-0925"
+ },
+ {
+  "slug": "gemini-2-5-pro",
+  "ii": 25.9110217487219,
+  "url": "/models/gemini-2-5-pro"
+ },
+ {
+  "slug": "gpt-5-mini",
+  "ii": 25.7971154138695,
+  "url": "/models/gpt-5-mini"
+ },
+ {
+  "slug": "nvidia-nemotron-3-super-120b-a12b",
+  "ii": 25.6684845978586,
+  "url": "/models/nvidia-nemotron-3-super-120b-a12b"
+ },
+ {
+  "slug": "gemini-3-1-flash-lite-preview",
+  "ii": 25.6076097099382,
+  "url": "/models/gemini-3-1-flash-lite-preview"
+ },
+ {
+  "slug": "qwen3-max-thinking-preview",
+  "ii": 25.5045001975309,
+  "url": "/models/qwen3-max-thinking-preview"
+ },
+ {
+  "slug": "mimo-v2-flash",
+  "ii": 25.13546667150026,
+  "url": "/models/mimo-v2-flash"
+ },
+ {
+  "slug": "deepseek-v3-2",
+  "ii": 25.125744971186467,
+  "url": "/models/deepseek-v3-2"
+ },
+ {
+  "slug": "grok-4-3-non-reasoning",
+  "ii": 25.0069780605367,
+  "url": "/models/grok-4-3-non-reasoning"
+ },
+ {
+  "slug": "qwen3-6-35b-a3b-non-reasoning",
+  "ii": 24.5542164054089,
+  "url": "/models/qwen3-6-35b-a3b-non-reasoning"
+ },
+ {
+  "slug": "ling-3-0-tiny",
+  "ii": 24.5183646727292,
+  "url": "/models/ling-3-0-tiny"
+ },
+ {
+  "slug": "qwen3-max",
+  "ii": 24.453586138305493,
+  "url": "/models/qwen3-max"
+ },
+ {
+  "slug": "qwen3-5-35b-a3b-non-reasoning",
+  "ii": 24.3219834008263,
+  "url": "/models/qwen3-5-35b-a3b-non-reasoning"
+ },
+ {
+  "slug": "gemini-2-5-flash-preview-09-2025-reasoning",
+  "ii": 24.23010267092448,
+  "url": "/models/gemini-2-5-flash-preview-09-2025-reasoning"
+ },
+ {
+  "slug": "claude-4-5-haiku",
+  "ii": 24.14166520585035,
+  "url": "/models/claude-4-5-haiku"
+ },
+ {
+  "slug": "gpt-oss-120b",
+  "ii": 24.126439151808,
+  "url": "/models/gpt-oss-120b"
+ },
+ {
+  "slug": "kimi-k2-0905",
+  "ii": 23.957406322843372,
+  "url": "/models/kimi-k2-0905"
+ },
+ {
+  "slug": "claude-3-7-sonnet",
+  "ii": 23.920097293729686,
+  "url": "/models/claude-3-7-sonnet"
+ },
+ {
+  "slug": "o1",
+  "ii": 23.857317277785747,
+  "url": "/models/o1"
+ },
+ {
+  "slug": "nemotron-3-5-lightning",
+  "ii": 23.632637599256,
+  "url": "/models/nemotron-3-5-lightning"
+ },
+ {
+  "slug": "gemini-2-5-pro-03-25",
+  "ii": 23.427147256973107,
+  "url": "/models/gemini-2-5-pro-03-25"
+ },
+ {
+  "slug": "glm-4-6",
+  "ii": 23.37635149334077,
+  "url": "/models/glm-4-6"
+ },
+ {
+  "slug": "glm-4-7-flash",
+  "ii": 23.284298431289574,
+  "url": "/models/glm-4-7-flash"
+ },
+ {
+  "slug": "grok-3-mini-reasoning",
+  "ii": 22.87925,
+  "url": "/models/grok-3-mini-reasoning"
+ },
+ {
+  "slug": "grok-4-20-0309-non-reasoning",
+  "ii": 22.85546992711464,
+  "url": "/models/grok-4-20-0309-non-reasoning"
  },
  {
   "slug": "command-a-plus",
-  "ii": 22.77,
-  "name": "Command A+",
+  "ii": 22.7702225702102,
   "url": "/models/command-a-plus"
  },
  {
-  "slug": "north-mini-code",
-  "ii": 20.17,
-  "name": "North Mini Code",
-  "url": "/models/north-mini-code"
+  "slug": "gemini-2-5-pro-05-06",
+  "ii": 22.71697973025894,
+  "url": "/models/gemini-2-5-pro-05-06"
+ },
+ {
+  "slug": "deepseek-v3-2-speciale",
+  "ii": 22.610054928262084,
+  "url": "/models/deepseek-v3-2-speciale"
+ },
+ {
+  "slug": "k-exaone",
+  "ii": 22.466421722994763,
+  "url": "/models/k-exaone"
+ },
+ {
+  "slug": "ernie-5-0-thinking-preview",
+  "ii": 22.280249971540247,
+  "url": "/models/ernie-5-0-thinking-preview"
+ },
+ {
+  "slug": "gemma-4-31b-non-reasoning",
+  "ii": 22.2511464625226,
+  "url": "/models/gemma-4-31b-non-reasoning"
+ },
+ {
+  "slug": "grok-4-20-non-reasoning",
+  "ii": 22.19083638191357,
+  "url": "/models/grok-4-20-non-reasoning"
+ },
+ {
+  "slug": "gemma-4-12b",
+  "ii": 22.163972838284074,
+  "url": "/models/gemma-4-12b"
+ },
+ {
+  "slug": "nova-2-0-pro-reasoning-medium",
+  "ii": 22.115567545552175,
+  "url": "/models/nova-2-0-pro-reasoning-medium"
+ },
+ {
+  "slug": "grok-code-fast-1",
+  "ii": 21.954611746819047,
+  "url": "/models/grok-code-fast-1"
  },
  {
   "slug": "mercury-2",
-  "ii": 21.9,
-  "name": "Mercury 2",
+  "ii": 21.896132938186,
   "url": "/models/mercury-2"
  },
  {
+  "slug": "qwen3-5-9b",
+  "ii": 21.7904240361763,
+  "url": "/models/qwen3-5-9b"
+ },
+ {
+  "slug": "deepseek-v3-1-terminus",
+  "ii": 21.741593523083036,
+  "url": "/models/deepseek-v3-1-terminus"
+ },
+ {
+  "slug": "deepseek-v3-2-0925",
+  "ii": 21.662457747846435,
+  "url": "/models/deepseek-v3-2-0925"
+ },
+ {
+  "slug": "apriel-v1-5-15b-thinker",
+  "ii": 21.563012395763348,
+  "url": "/models/apriel-v1-5-15b-thinker"
+ },
+ {
+  "slug": "deepseek-v3-1",
+  "ii": 21.367346730000268,
+  "url": "/models/deepseek-v3-1"
+ },
+ {
+  "slug": "qwen3-coder-next",
+  "ii": 21.2935774648729,
+  "url": "/models/qwen3-coder-next"
+ },
+ {
+  "slug": "nova-2-0-omni-reasoning-medium",
+  "ii": 21.263700775865615,
+  "url": "/models/nova-2-0-omni-reasoning-medium"
+ },
+ {
+  "slug": "deepseek-v3-1-reasoning",
+  "ii": 20.973718310986882,
+  "url": "/models/deepseek-v3-1-reasoning"
+ },
+ {
+  "slug": "qwen3-vl-235b-a22b-reasoning",
+  "ii": 20.908450185357562,
+  "url": "/models/qwen3-vl-235b-a22b-reasoning"
+ },
+ {
+  "slug": "apriel-v1-6-15b-thinker",
+  "ii": 20.846614915757137,
+  "url": "/models/apriel-v1-6-15b-thinker"
+ },
+ {
+  "slug": "nova-2-0-lite-reasoning",
+  "ii": 20.79985,
+  "url": "/models/nova-2-0-lite-reasoning"
+ },
+ {
+  "slug": "gpt-5-1-non-reasoning",
+  "ii": 20.696330317676644,
+  "url": "/models/gpt-5-1-non-reasoning"
+ },
+ {
+  "slug": "qwen3-5-9b-non-reasoning",
+  "ii": 20.614249864885874,
+  "url": "/models/qwen3-5-9b-non-reasoning"
+ },
+ {
+  "slug": "exaone-4-5-33b",
+  "ii": 20.5105537971708,
+  "url": "/models/exaone-4-5-33b"
+ },
+ {
+  "slug": "gemma-4-26b-a4b-non-reasoning",
+  "ii": 20.380067926751384,
+  "url": "/models/gemma-4-26b-a4b-non-reasoning"
+ },
+ {
+  "slug": "qwen3-5-4b",
+  "ii": 20.370436153891156,
+  "url": "/models/qwen3-5-4b"
+ },
+ {
+  "slug": "deepseek-r1",
+  "ii": 20.365653755857274,
+  "url": "/models/deepseek-r1"
+ },
+ {
+  "slug": "gemini-2-5-flash-reasoning",
+  "ii": 20.337894669820336,
+  "url": "/models/gemini-2-5-flash-reasoning"
+ },
+ {
+  "slug": "north-mini-code",
+  "ii": 20.1690287982621,
+  "url": "/models/north-mini-code"
+ },
+ {
+  "slug": "gpt-5-nano",
+  "ii": 20.14001622182779,
+  "url": "/models/gpt-5-nano"
+ },
+ {
+  "slug": "qwen3-235b-a22b-instruct-2507-reasoning",
+  "ii": 19.8886715486545,
+  "url": "/models/qwen3-235b-a22b-instruct-2507-reasoning"
+ },
+ {
+  "slug": "nova-2-0-pro-reasoning-low",
+  "ii": 19.76015,
+  "url": "/models/nova-2-0-pro-reasoning-low"
+ },
+ {
+  "slug": "glm-4.5",
+  "ii": 19.747072213396137,
+  "url": "/models/glm-4.5"
+ },
+ {
+  "slug": "mistral-small-4",
+  "ii": 19.7078460939556,
+  "url": "/models/mistral-small-4"
+ },
+ {
+  "slug": "kimi-k2",
+  "ii": 19.654377558805063,
+  "url": "/models/kimi-k2"
+ },
+ {
+  "slug": "gpt-4-1",
+  "ii": 19.611676608129425,
+  "url": "/models/gpt-4-1"
+ },
+ {
+  "slug": "qwen3-max-preview",
+  "ii": 19.429205232760513,
+  "url": "/models/qwen3-max-preview"
+ },
+ {
+  "slug": "devstral-2",
+  "ii": 19.2418392238526,
+  "url": "/models/devstral-2"
+ },
+ {
+  "slug": "nova-2-0-lite-reasoning-medium",
+  "ii": 19.2403,
+  "url": "/models/nova-2-0-lite-reasoning-medium"
+ },
+ {
+  "slug": "gpt-5-nano-medium",
+  "ii": 19.23650562446549,
+  "url": "/models/gpt-5-nano-medium"
+ },
+ {
+  "slug": "qwen3-5-omni-flash",
+  "ii": 19.225339550288876,
+  "url": "/models/qwen3-5-omni-flash"
+ },
+ {
+  "slug": "o3-mini",
+  "ii": 19.219555363058273,
+  "url": "/models/o3-mini"
+ },
+ {
+  "slug": "o1-pro",
+  "ii": 19.122328952305327,
+  "url": "/models/o1-pro"
+ },
+ {
+  "slug": "gemini-2-5-flash-preview-09-2025",
+  "ii": 19.061120393925147,
+  "url": "/models/gemini-2-5-flash-preview-09-2025"
+ },
+ {
+  "slug": "jt-mini",
+  "ii": 18.75361627619466,
+  "url": "/models/jt-mini"
+ },
+ {
+  "slug": "trinity-large-thinking",
+  "ii": 18.657997906883,
+  "url": "/models/trinity-large-thinking"
+ },
+ {
+  "slug": "deepseek-r1-0120",
+  "ii": 18.5882542832118,
+  "url": "/models/deepseek-r1-0120"
+ },
+ {
+  "slug": "grok-3",
+  "ii": 18.56451701505832,
+  "url": "/models/grok-3"
+ },
+ {
+  "slug": "seed-oss-36b-instruct",
+  "ii": 18.549289844979686,
+  "url": "/models/seed-oss-36b-instruct"
+ },
+ {
+  "slug": "qwen3-235b-a22b-instruct-2507",
+  "ii": 18.36273141699031,
+  "url": "/models/qwen3-235b-a22b-instruct-2507"
+ },
+ {
+  "slug": "hypernova-60b",
+  "ii": 18.3173546297536,
+  "url": "/models/hypernova-60b"
+ },
+ {
+  "slug": "qwen3-coder-480b-a35b-instruct",
+  "ii": 18.18276099823919,
+  "url": "/models/qwen3-coder-480b-a35b-instruct"
+ },
+ {
+  "slug": "qwen3-vl-32b-reasoning",
+  "ii": 18.12963142307823,
+  "url": "/models/qwen3-vl-32b-reasoning"
+ },
+ {
+  "slug": "magistral-medium-2509",
+  "ii": 18.0471212082495,
+  "url": "/models/magistral-medium-2509"
+ },
+ {
+  "slug": "sonar-reasoning-pro",
+  "ii": 18.040442755166207,
+  "url": "/models/sonar-reasoning-pro"
+ },
+ {
+  "slug": "nova-2-0-lite-reasoning-low",
+  "ii": 18.007713038446767,
+  "url": "/models/nova-2-0-lite-reasoning-low"
+ },
+ {
+  "slug": "minimax-m1-80k",
+  "ii": 17.861693500679518,
+  "url": "/models/minimax-m1-80k"
+ },
+ {
+  "slug": "gpt-5-4-nano-non-reasoning",
+  "ii": 17.794601452729548,
+  "url": "/models/gpt-5-4-nano-non-reasoning"
+ },
+ {
+  "slug": "nemotron-cascade-2-30b-a3b",
+  "ii": 17.7603582747428,
+  "url": "/models/nemotron-cascade-2-30b-a3b"
+ },
+ {
+  "slug": "gemini-2-5-flash-reasoning-04-2025",
+  "ii": 17.72881161245367,
+  "url": "/models/gemini-2-5-flash-reasoning-04-2025"
+ },
+ {
+  "slug": "devstral-small-2",
+  "ii": 17.7167746402175,
+  "url": "/models/devstral-small-2"
+ },
+ {
+  "slug": "k2-think-v2",
+  "ii": 17.43264247139865,
+  "url": "/models/k2-think-v2"
+ },
+ {
+  "slug": "longcat-flash-lite",
+  "ii": 17.386019544946926,
+  "url": "/models/longcat-flash-lite"
+ },
+ {
+  "slug": "gpt-5-minimal",
+  "ii": 17.34322405597771,
+  "url": "/models/gpt-5-minimal"
+ },
+ {
+  "slug": "o1-preview",
+  "ii": 17.206765658763196,
+  "url": "/models/o1-preview"
+ },
+ {
+  "slug": "hyperclova-x-seed-think-32b",
+  "ii": 17.185708337577115,
+  "url": "/models/hyperclova-x-seed-think-32b"
+ },
+ {
+  "slug": "grok-4-1-fast",
+  "ii": 17.034072009104754,
+  "url": "/models/grok-4-1-fast"
+ },
+ {
+  "slug": "glm-4-6v-reasoning",
+  "ii": 16.903157112611666,
+  "url": "/models/glm-4-6v-reasoning"
+ },
+ {
+  "slug": "k-exaone-non-reasoning",
+  "ii": 16.886913465670677,
+  "url": "/models/k-exaone-non-reasoning"
+ },
+ {
+  "slug": "qwen3-next-80b-a3b-reasoning",
+  "ii": 16.8671709898964,
+  "url": "/models/qwen3-next-80b-a3b-reasoning"
+ },
+ {
+  "slug": "gpt-5-4-mini-non-reasoning",
+  "ii": 16.766394360384492,
+  "url": "/models/gpt-5-4-mini-non-reasoning"
+ },
+ {
+  "slug": "nova-2-0-omni-reasoning-low",
+  "ii": 16.707575391459063,
+  "url": "/models/nova-2-0-omni-reasoning-low"
+ },
+ {
+  "slug": "glm-4-5-air",
+  "ii": 16.65924747930107,
+  "url": "/models/glm-4-5-air"
+ },
+ {
+  "slug": "grok-4-fast",
+  "ii": 16.611662958583306,
+  "url": "/models/grok-4-fast"
+ },
+ {
+  "slug": "mi-dm-k-2-5-pro-dec28",
+  "ii": 16.557605443203485,
+  "url": "/models/mi-dm-k-2-5-pro-dec28"
+ },
+ {
+  "slug": "ring-1t",
+  "ii": 16.289090607477107,
+  "url": "/models/ring-1t"
+ },
+ {
+  "slug": "g9v3-3b",
+  "ii": 16.1802541415755,
+  "url": "/models/g9v3-3b"
+ },
+ {
+  "slug": "qwen3-5-4b-non-reasoning",
+  "ii": 16.123062954483125,
+  "url": "/models/qwen3-5-4b-non-reasoning"
+ },
+ {
+  "slug": "mistral-large-3",
+  "ii": 15.9191533466727,
+  "url": "/models/mistral-large-3"
+ },
+ {
+  "slug": "intellect-3",
+  "ii": 15.717663630647575,
+  "url": "/models/intellect-3"
+ },
+ {
+  "slug": "o3-mini-high",
+  "ii": 15.7002273931332,
+  "url": "/models/o3-mini-high"
+ },
+ {
+  "slug": "glm-4-7-flash-non-reasoning",
+  "ii": 15.617787077579015,
+  "url": "/models/glm-4-7-flash-non-reasoning"
+ },
+ {
+  "slug": "gpt-5-chatgpt",
+  "ii": 15.395265788785299,
+  "url": "/models/gpt-5-chatgpt"
+ },
+ {
+  "slug": "solar-open-100b-reasoning",
+  "ii": 15.236044915165126,
+  "url": "/models/solar-open-100b-reasoning"
+ },
+ {
+  "slug": "deepseek-v3-0324",
+  "ii": 15.2291773658297,
+  "url": "/models/deepseek-v3-0324"
+ },
+ {
+  "slug": "gpt-oss-20b",
+  "ii": 15.2251599944346,
+  "url": "/models/gpt-oss-20b"
+ },
+ {
+  "slug": "grok-3-reasoning",
+  "ii": 15.217883455725127,
+  "url": "/models/grok-3-reasoning"
+ },
+ {
+  "slug": "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+  "ii": 15.215787918342533,
+  "url": "/models/gemini-2-5-flash-lite-preview-09-2025-reasoning"
+ },
+ {
+  "slug": "nemotron-3-nano-omni-30b-a3b",
+  "ii": 15.006841515636083,
+  "url": "/models/nemotron-3-nano-omni-30b-a3b"
+ },
+ {
+  "slug": "gpt-oss-120b-low",
+  "ii": 14.9256339397626,
+  "url": "/models/gpt-oss-120b-low"
+ },
+ {
+  "slug": "mistral-small-3-1",
+  "ii": 14.8667863104857,
+  "url": "/models/mistral-small-3-1"
+ },
+ {
+  "slug": "gpt-4-1-mini",
+  "ii": 14.8206784672014,
+  "url": "/models/gpt-4-1-mini"
+ },
+ {
+  "slug": "mistral-medium-3-1",
+  "ii": 14.7252893010292,
+  "url": "/models/mistral-medium-3-1"
+ },
+ {
+  "slug": "qwen3-30b-a3b-2507-reasoning",
+  "ii": 14.5733568757119,
+  "url": "/models/qwen3-30b-a3b-2507-reasoning"
+ },
+ {
+  "slug": "nvidia-nemotron-3-nano-30b-a3b-reasoning",
+  "ii": 14.537976286548,
+  "url": "/models/nvidia-nemotron-3-nano-30b-a3b-reasoning"
+ },
+ {
+  "slug": "solar-pro-3",
+  "ii": 14.4932929091303,
+  "url": "/models/solar-pro-3"
+ },
+ {
+  "slug": "llama-4-maverick",
+  "ii": 14.4765801754776,
+  "url": "/models/llama-4-maverick"
+ },
+ {
+  "slug": "minimax-m1-40k",
+  "ii": 14.466493983288766,
+  "url": "/models/minimax-m1-40k"
+ },
+ {
+  "slug": "nova-2-0-pro",
+  "ii": 14.41165566200852,
+  "url": "/models/nova-2-0-pro"
+ },
+ {
+  "slug": "gpt-oss-20b-low",
+  "ii": 14.399093772025296,
+  "url": "/models/gpt-oss-20b-low"
+ },
+ {
+  "slug": "qwen3-vl-235b-a22b-instruct",
+  "ii": 14.36618435778845,
+  "url": "/models/qwen3-vl-235b-a22b-instruct"
+ },
+ {
+  "slug": "gpt-5-mini-minimal",
+  "ii": 14.302489064360579,
+  "url": "/models/gpt-5-mini-minimal"
+ },
+ {
+  "slug": "k2-v2",
+  "ii": 14.235752754577163,
+  "url": "/models/k2-v2"
+ },
+ {
+  "slug": "deepseek-v3",
+  "ii": 14.217005735659,
+  "url": "/models/deepseek-v3"
+ },
+ {
+  "slug": "ling-2-6-flash",
+  "ii": 14.2167363200319,
+  "url": "/models/ling-2-6-flash"
+ },
+ {
+  "slug": "gemini-2-5-flash",
+  "ii": 14.188845389941957,
+  "url": "/models/gemini-2-5-flash"
+ },
+ {
+  "slug": "o1-mini",
+  "ii": 14.020990389787437,
+  "url": "/models/o1-mini"
+ },
+ {
+  "slug": "qwen3-next-80b-a3b-instruct",
+  "ii": 13.754401655544385,
+  "url": "/models/qwen3-next-80b-a3b-instruct"
+ },
+ {
+  "slug": "tri-21b-think-preview",
+  "ii": 13.645989390480988,
+  "url": "/models/tri-21b-think-preview"
+ },
+ {
+  "slug": "qwen3-coder-30b-a3b-instruct",
+  "ii": 13.63217909580086,
+  "url": "/models/qwen3-coder-30b-a3b-instruct"
+ },
+ {
+  "slug": "gpt-4-5",
+  "ii": 13.612774898810923,
+  "url": "/models/gpt-4-5"
+ },
+ {
+  "slug": "diffusiongemma-26b-a4b",
+  "ii": 13.4728406699029,
+  "url": "/models/diffusiongemma-26b-a4b"
+ },
+ {
+  "slug": "qwen3-235b-a22b-instruct-reasoning",
+  "ii": 13.450675476511158,
+  "url": "/models/qwen3-235b-a22b-instruct-reasoning"
+ },
+ {
+  "slug": "qwq-32b",
+  "ii": 13.391963339078304,
+  "url": "/models/qwq-32b"
+ },
+ {
+  "slug": "qwen3-vl-30b-a3b-reasoning",
+  "ii": 13.351378673479756,
+  "url": "/models/qwen3-vl-30b-a3b-reasoning"
+ },
+ {
+  "slug": "gemini-2-0-flash-thinking-exp-0121",
+  "ii": 13.276733200974126,
+  "url": "/models/gemini-2-0-flash-thinking-exp-0121"
+ },
+ {
+  "slug": "gemma-4-12b-non-reasoning",
+  "ii": 13.195003760507658,
+  "url": "/models/gemma-4-12b-non-reasoning"
+ },
+ {
+  "slug": "gemini-2-5-flash-lite-preview-09-2025",
+  "ii": 13.102550084300983,
+  "url": "/models/gemini-2-5-flash-lite-preview-09-2025"
+ },
+ {
+  "slug": "motif-2-12-7b",
+  "ii": 12.779843720649533,
+  "url": "/models/motif-2-12-7b"
+ },
+ {
+  "slug": "ling-1t",
+  "ii": 12.746332038645084,
+  "url": "/models/ling-1t"
+ },
+ {
+  "slug": "nova-premier",
+  "ii": 12.71806623726513,
+  "url": "/models/nova-premier"
+ },
+ {
+  "slug": "solar-pro-2-preview-reasoning",
+  "ii": 12.523463226100896,
+  "url": "/models/solar-pro-2-preview-reasoning"
+ },
+ {
+  "slug": "magistral-medium",
+  "ii": 12.488270807654763,
+  "url": "/models/magistral-medium"
+ },
+ {
+  "slug": "mistral-medium-3",
+  "ii": 12.474307781603978,
+  "url": "/models/mistral-medium-3"
+ },
+ {
+  "slug": "k2-v2-medium",
+  "ii": 12.404802004092819,
+  "url": "/models/k2-v2-medium"
+ },
+ {
+  "slug": "llama-nemotron-super-49b-v1-5-reasoning",
+  "ii": 12.40128714371672,
+  "url": "/models/llama-nemotron-super-49b-v1-5-reasoning"
+ },
+ {
+  "slug": "devstral-medium",
+  "ii": 12.382442259203609,
+  "url": "/models/devstral-medium"
+ },
+ {
   "slug": "celeris-1",
-  "ii": 12.35,
-  "name": "Celeris-1",
+  "ii": 12.3530161840426,
   "url": "/models/celeris-1"
+ },
+ {
+  "slug": "mistral-small-4-non-reasoning",
+  "ii": 12.34783519434287,
+  "url": "/models/mistral-small-4-non-reasoning"
+ },
+ {
+  "slug": "tri-21b-think-v0-5",
+  "ii": 12.341120184927739,
+  "url": "/models/tri-21b-think-v0-5"
+ },
+ {
+  "slug": "gpt-4o-chatgpt-03-25",
+  "ii": 12.285392658235127,
+  "url": "/models/gpt-4o-chatgpt-03-25"
+ },
+ {
+  "slug": "gemini-2-0-flash",
+  "ii": 12.240389191825587,
+  "url": "/models/gemini-2-0-flash"
+ },
+ {
+  "slug": "claude-3-5-haiku",
+  "ii": 12.233608337066505,
+  "url": "/models/claude-3-5-haiku"
+ },
+ {
+  "slug": "llama-3-3-nemotron-super-49b-reasoning",
+  "ii": 12.222018207082465,
+  "url": "/models/llama-3-3-nemotron-super-49b-reasoning"
+ },
+ {
+  "slug": "gemma-4-e4b",
+  "ii": 12.181335187329356,
+  "url": "/models/gemma-4-e4b"
+ },
+ {
+  "slug": "qwen3-4b-2507-instruct-reasoning",
+  "ii": 11.922243376842005,
+  "url": "/models/qwen3-4b-2507-instruct-reasoning"
+ },
+ {
+  "slug": "minicpm5-1b",
+  "ii": 11.918248010975487,
+  "url": "/models/minicpm5-1b"
+ },
+ {
+  "slug": "sarvam-105b",
+  "ii": 11.904615067898042,
+  "url": "/models/sarvam-105b"
+ },
+ {
+  "slug": "gemini-2-0-pro-experimental-02-05",
+  "ii": 11.805195578527552,
+  "url": "/models/gemini-2-0-pro-experimental-02-05"
+ },
+ {
+  "slug": "nova-2-0-lite",
+  "ii": 11.783639029100605,
+  "url": "/models/nova-2-0-lite"
+ },
+ {
+  "slug": "devstral-small-2505",
+  "ii": 11.780083821077035,
+  "url": "/models/devstral-small-2505"
+ },
+ {
+  "slug": "claude-3-opus",
+  "ii": 11.7552179413,
+  "url": "/models/claude-3-opus"
+ },
+ {
+  "slug": "minicpm5-1b-non-reasoning",
+  "ii": 11.68936571040475,
+  "url": "/models/minicpm5-1b-non-reasoning"
+ },
+ {
+  "slug": "sonar-reasoning",
+  "ii": 11.639121457259668,
+  "url": "/models/sonar-reasoning"
+ },
+ {
+  "slug": "gemini-2-5-flash-04-2025",
+  "ii": 11.607882581239329,
+  "url": "/models/gemini-2-5-flash-04-2025"
+ },
+ {
+  "slug": "magistral-small-2509",
+  "ii": 11.4605343038176,
+  "url": "/models/magistral-small-2509"
+ },
+ {
+  "slug": "qwen3-32b-instruct-reasoning",
+  "ii": 11.4452517478734,
+  "url": "/models/qwen3-32b-instruct-reasoning"
+ },
+ {
+  "slug": "gemini-2-5-flash-lite-reasoning",
+  "ii": 11.35116185792231,
+  "url": "/models/gemini-2-5-flash-lite-reasoning"
+ },
+ {
+  "slug": "ministral-3-14b",
+  "ii": 11.2430177720022,
+  "url": "/models/ministral-3-14b"
+ },
+ {
+  "slug": "gpt-4o",
+  "ii": 11.112866138576571,
+  "url": "/models/gpt-4o"
+ },
+ {
+  "slug": "nanbeige4-1-3b",
+  "ii": 11.019725519373175,
+  "url": "/models/nanbeige4-1-3b"
+ },
+ {
+  "slug": "qwen3-vl-32b-instruct",
+  "ii": 10.986842730550622,
+  "url": "/models/qwen3-vl-32b-instruct"
+ },
+ {
+  "slug": "deepseek-r1-distill-qwen-32b",
+  "ii": 10.964205576829057,
+  "url": "/models/deepseek-r1-distill-qwen-32b"
+ },
+ {
+  "slug": "glm-4-6v",
+  "ii": 10.901298642822765,
+  "url": "/models/glm-4-6v"
+ },
+ {
+  "slug": "qwen3-235b-a22b-instruct",
+  "ii": 10.772685962989351,
+  "url": "/models/qwen3-235b-a22b-instruct"
+ },
+ {
+  "slug": "mistral-small-3-2",
+  "ii": 10.657675054106,
+  "url": "/models/mistral-small-3-2"
+ },
+ {
+  "slug": "magistral-small",
+  "ii": 10.608140306653818,
+  "url": "/models/magistral-small"
+ },
+ {
+  "slug": "gemini-2-0-flash-experimental",
+  "ii": 10.59188663170846,
+  "url": "/models/gemini-2-0-flash-experimental"
+ },
+ {
+  "slug": "exaone-4-0-32b-reasoning",
+  "ii": 10.5004288173956,
+  "url": "/models/exaone-4-0-32b-reasoning"
+ },
+ {
+  "slug": "qwen3-vl-8b-reasoning",
+  "ii": 10.486142746143525,
+  "url": "/models/qwen3-vl-8b-reasoning"
+ },
+ {
+  "slug": "qwen3-14b-instruct-reasoning",
+  "ii": 10.443839915797,
+  "url": "/models/qwen3-14b-instruct-reasoning"
+ },
+ {
+  "slug": "nova-2-0-omni",
+  "ii": 10.435683117886146,
+  "url": "/models/nova-2-0-omni"
+ },
+ {
+  "slug": "deepseek-r1-qwen3-8b",
+  "ii": 10.265505447516407,
+  "url": "/models/deepseek-r1-qwen3-8b"
+ },
+ {
+  "slug": "llama-4-scout",
+  "ii": 10.2562963744468,
+  "url": "/models/llama-4-scout"
+ },
+ {
+  "slug": "qwen-2-5-max",
+  "ii": 10.125270147764526,
+  "url": "/models/qwen-2-5-max"
+ },
+ {
+  "slug": "qwen3-vl-30b-a3b-instruct",
+  "ii": 9.901179461747983,
+  "url": "/models/qwen3-vl-30b-a3b-instruct"
+ },
+ {
+  "slug": "hermes-4-llama-3-1-70b-reasoning",
+  "ii": 9.851683191903687,
+  "url": "/models/hermes-4-llama-3-1-70b-reasoning"
+ },
+ {
+  "slug": "gemini-1-5-pro",
+  "ii": 9.851090235220585,
+  "url": "/models/gemini-1-5-pro"
+ },
+ {
+  "slug": "solar-pro-2-preview",
+  "ii": 9.851090235220585,
+  "url": "/models/solar-pro-2-preview"
+ },
+ {
+  "slug": "deepseek-r1-distill-llama-70b",
+  "ii": 9.809384968534586,
+  "url": "/models/deepseek-r1-distill-llama-70b"
+ },
+ {
+  "slug": "claude-35-sonnet",
+  "ii": 9.78728734216847,
+  "url": "/models/claude-35-sonnet"
+ },
+ {
+  "slug": "deepseek-r1-distill-qwen-14b",
+  "ii": 9.709078497563267,
+  "url": "/models/deepseek-r1-distill-qwen-14b"
+ },
+ {
+  "slug": "falcon-h1r-7b",
+  "ii": 9.663089562977284,
+  "url": "/models/falcon-h1r-7b"
+ },
+ {
+  "slug": "gpt-4-1-nano",
+  "ii": 9.63928958877614,
+  "url": "/models/gpt-4-1-nano"
+ },
+ {
+  "slug": "ling-flash-2-0",
+  "ii": 9.613787392401488,
+  "url": "/models/ling-flash-2-0"
+ },
+ {
+  "slug": "gemma-4-e2b",
+  "ii": 9.533454244041467,
+  "url": "/models/gemma-4-e2b"
+ },
+ {
+  "slug": "qwen3-omni-30b-a3b-reasoning",
+  "ii": 9.50022159824687,
+  "url": "/models/qwen3-omni-30b-a3b-reasoning"
+ },
+ {
+  "slug": "gpt-4o-2024-08-06",
+  "ii": 9.448626870719057,
+  "url": "/models/gpt-4o-2024-08-06"
+ },
+ {
+  "slug": "qwen2-5-72b-instruct",
+  "ii": 9.43688124111721,
+  "url": "/models/qwen2-5-72b-instruct"
+ },
+ {
+  "slug": "sonar",
+  "ii": 9.375182546725268,
+  "url": "/models/sonar"
+ },
+ {
+  "slug": "step-3-vl-10b",
+  "ii": 9.336408790389278,
+  "url": "/models/step-3-vl-10b"
+ },
+ {
+  "slug": "llama-3-3-instruct-70b",
+  "ii": 9.26237834279053,
+  "url": "/models/llama-3-3-instruct-70b"
+ },
+ {
+  "slug": "qwen3-30b-a3b-instruct-reasoning",
+  "ii": 9.169463008561774,
+  "url": "/models/qwen3-30b-a3b-instruct-reasoning"
+ },
+ {
+  "slug": "sonar-pro",
+  "ii": 9.12191428309954,
+  "url": "/models/sonar-pro"
+ },
+ {
+  "slug": "devstral-small",
+  "ii": 9.110659215966695,
+  "url": "/models/devstral-small"
+ },
+ {
+  "slug": "QwQ-32B-Preview",
+  "ii": 9.072544655653603,
+  "url": "/models/QwQ-32B-Preview"
+ },
+ {
+  "slug": "glm-4-5v-reasoning",
+  "ii": 8.995853972569371,
+  "url": "/models/glm-4-5v-reasoning"
+ },
+ {
+  "slug": "mistral-large-2",
+  "ii": 8.994544750437003,
+  "url": "/models/mistral-large-2"
+ },
+ {
+  "slug": "ministral-3-8b",
+  "ii": 8.97359592754602,
+  "url": "/models/ministral-3-8b"
+ },
+ {
+  "slug": "llama-3-1-nemotron-ultra-253b-v1-reasoning",
+  "ii": 8.924474751850626,
+  "url": "/models/llama-3-1-nemotron-ultra-253b-v1-reasoning"
+ },
+ {
+  "slug": "qwen3-30b-a3b-2507",
+  "ii": 8.908474897507471,
+  "url": "/models/qwen3-30b-a3b-2507"
+ },
+ {
+  "slug": "ernie-4-5-300b-a47b",
+  "ii": 8.867066671698169,
+  "url": "/models/ernie-4-5-300b-a47b"
+ },
+ {
+  "slug": "hermes-4-llama-3-1-405b-reasoning",
+  "ii": 8.8433,
+  "url": "/models/hermes-4-llama-3-1-405b-reasoning"
+ },
+ {
+  "slug": "solar-pro-2-reasoning",
+  "ii": 8.835106320100763,
+  "url": "/models/solar-pro-2-reasoning"
+ },
+ {
+  "slug": "nvidia-nemotron-nano-12b-v2-vl-reasoning",
+  "ii": 8.800702245872152,
+  "url": "/models/nvidia-nemotron-nano-12b-v2-vl-reasoning"
+ },
+ {
+  "slug": "gemma-4-e4b-non-reasoning",
+  "ii": 8.749733093630631,
+  "url": "/models/gemma-4-e4b-non-reasoning"
+ },
+ {
+  "slug": "granite-4-1-30b",
+  "ii": 8.697658245329212,
+  "url": "/models/granite-4-1-30b"
+ },
+ {
+  "slug": "nvidia-nemotron-nano-9b-v2-reasoning",
+  "ii": 8.677229089853508,
+  "url": "/models/nvidia-nemotron-nano-9b-v2-reasoning"
+ },
+ {
+  "slug": "hermes-4-llama-3-1-405b",
+  "ii": 8.63536,
+  "url": "/models/hermes-4-llama-3-1-405b"
+ },
+ {
+  "slug": "gemini-2-0-flash-lite-001",
+  "ii": 8.624713579640757,
+  "url": "/models/gemini-2-0-flash-lite-001"
+ },
+ {
+  "slug": "nvidia-nemotron-3-nano-4b",
+  "ii": 8.558060479236028,
+  "url": "/models/nvidia-nemotron-3-nano-4b"
+ },
+ {
+  "slug": "llama-nemotron-super-49b-v1-5",
+  "ii": 8.514358395733872,
+  "url": "/models/llama-nemotron-super-49b-v1-5"
+ },
+ {
+  "slug": "qwen3-32b-instruct",
+  "ii": 8.46342547445309,
+  "url": "/models/qwen3-32b-instruct"
+ },
+ {
+  "slug": "gpt-4o-2024-05-13",
+  "ii": 8.431380200064332,
+  "url": "/models/gpt-4o-2024-05-13"
+ },
+ {
+  "slug": "gemini-2-0-flash-lite-preview",
+  "ii": 8.420517296129354,
+  "url": "/models/gemini-2-0-flash-lite-preview"
+ },
+ {
+  "slug": "k2-v2-low",
+  "ii": 8.379540542853006,
+  "url": "/models/k2-v2-low"
+ },
+ {
+  "slug": "llama-3-1-nemotron-nano-4b-reasoning",
+  "ii": 8.369867202047628,
+  "url": "/models/llama-3-1-nemotron-nano-4b-reasoning"
+ },
+ {
+  "slug": "kimi-linear-48b-a3b-instruct",
+  "ii": 8.351686674927354,
+  "url": "/models/kimi-linear-48b-a3b-instruct"
+ },
+ {
+  "slug": "llama-3-1-instruct-405b",
+  "ii": 8.32345,
+  "url": "/models/llama-3-1-instruct-405b"
+ },
+ {
+  "slug": "qwen3-8b-instruct-reasoning",
+  "ii": 8.29033695844877,
+  "url": "/models/qwen3-8b-instruct-reasoning"
+ },
+ {
+  "slug": "llama-3-3-nemotron-super-49b",
+  "ii": 8.287237105630155,
+  "url": "/models/llama-3-3-nemotron-super-49b"
+ },
+ {
+  "slug": "qwen3-vl-8b-instruct",
+  "ii": 8.244281140386681,
+  "url": "/models/qwen3-vl-8b-instruct"
+ },
+ {
+  "slug": "qwen3-4b-instruct-reasoning",
+  "ii": 8.167627314682118,
+  "url": "/models/qwen3-4b-instruct-reasoning"
+ },
+ {
+  "slug": "lfm2-5-8b-a1b",
+  "ii": 8.13668573449005,
+  "url": "/models/lfm2-5-8b-a1b"
+ },
+ {
+  "slug": "claude-35-sonnet-june-24",
+  "ii": 8.119810823461304,
+  "url": "/models/claude-35-sonnet-june-24"
+ },
+ {
+  "slug": "tulu3-405b",
+  "ii": 8.091517331445374,
+  "url": "/models/tulu3-405b"
+ },
+ {
+  "slug": "gpt-4o-chatgpt",
+  "ii": 8.059758927495702,
+  "url": "/models/gpt-4o-chatgpt"
+ },
+ {
+  "slug": "ring-flash-2-0",
+  "ii": 7.974024233002205,
+  "url": "/models/ring-flash-2-0"
+ },
+ {
+  "slug": "pixtral-large-2411",
+  "ii": 7.958319922960595,
+  "url": "/models/pixtral-large-2411"
+ },
+ {
+  "slug": "olmo-3-1-32b-think",
+  "ii": 7.896855389655699,
+  "url": "/models/olmo-3-1-32b-think"
+ },
+ {
+  "slug": "grok-2-1212",
+  "ii": 7.849943015427204,
+  "url": "/models/grok-2-1212"
+ },
+ {
+  "slug": "gpt-5-nano-minimal",
+  "ii": 7.806183719848221,
+  "url": "/models/gpt-5-nano-minimal"
+ },
+ {
+  "slug": "gemini-1-5-flash",
+  "ii": 7.760047018064542,
+  "url": "/models/gemini-1-5-flash"
+ },
+ {
+  "slug": "qwen3-vl-4b-reasoning",
+  "ii": 7.70173547360899,
+  "url": "/models/qwen3-vl-4b-reasoning"
+ },
+ {
+  "slug": "gpt-4-turbo",
+  "ii": 7.687886471527627,
+  "url": "/models/gpt-4-turbo"
+ },
+ {
+  "slug": "solar-pro-2",
+  "ii": 7.569324799962991,
+  "url": "/models/solar-pro-2"
+ },
+ {
+  "slug": "nova-pro",
+  "ii": 7.4637637523192835,
+  "url": "/models/nova-pro"
+ },
+ {
+  "slug": "command-a",
+  "ii": 7.463435641463724,
+  "url": "/models/command-a"
+ },
+ {
+  "slug": "qwen3-5-2b",
+  "ii": 7.42624348930079,
+  "url": "/models/qwen3-5-2b"
+ },
+ {
+  "slug": "llama-3-1-nemotron-instruct-70b",
+  "ii": 7.425410629950453,
+  "url": "/models/llama-3-1-nemotron-instruct-70b"
+ },
+ {
+  "slug": "llama-3-1-instruct-8b",
+  "ii": 7.398093964814081,
+  "url": "/models/llama-3-1-instruct-8b"
+ },
+ {
+  "slug": "gemma-3-27b",
+  "ii": 7.35899977327916,
+  "url": "/models/gemma-3-27b"
+ },
+ {
+  "slug": "grok-beta",
+  "ii": 7.27646631195808,
+  "url": "/models/grok-beta"
+ },
+ {
+  "slug": "qwen2.5-32b-instruct",
+  "ii": 7.233400267736521,
+  "url": "/models/qwen2.5-32b-instruct"
+ },
+ {
+  "slug": "nvidia-nemotron-3-nano-30b-a3b",
+  "ii": 7.170056355327669,
+  "url": "/models/nvidia-nemotron-3-nano-30b-a3b"
+ },
+ {
+  "slug": "nvidia-nemotron-nano-9b-v2",
+  "ii": 7.160086111849902,
+  "url": "/models/nvidia-nemotron-nano-9b-v2"
+ },
+ {
+  "slug": "ministral-3-3b",
+  "ii": 7.07375743219686,
+  "url": "/models/ministral-3-3b"
+ },
+ {
+  "slug": "mistral-large-2407",
+  "ii": 7.040277206853455,
+  "url": "/models/mistral-large-2407"
+ },
+ {
+  "slug": "qwen3-4b-2507-instruct",
+  "ii": 6.8922315443344715,
+  "url": "/models/qwen3-4b-2507-instruct"
+ },
+ {
+  "slug": "qwen2-5-coder-32b-instruct",
+  "ii": 6.881261147068546,
+  "url": "/models/qwen2-5-coder-32b-instruct"
+ },
+ {
+  "slug": "qwen3-14b-instruct",
+  "ii": 6.77956805672628,
+  "url": "/models/qwen3-14b-instruct"
+ },
+ {
+  "slug": "gpt-4",
+  "ii": 6.775644439911995,
+  "url": "/models/gpt-4"
+ },
+ {
+  "slug": "glm-4-5v",
+  "ii": 6.7623312037473795,
+  "url": "/models/glm-4-5v"
+ },
+ {
+  "slug": "mistral-small-3",
+  "ii": 6.692887374770937,
+  "url": "/models/mistral-small-3"
+ },
+ {
+  "slug": "gemini-2-5-flash-lite",
+  "ii": 6.685580586688295,
+  "url": "/models/gemini-2-5-flash-lite"
+ },
+ {
+  "slug": "nova-lite",
+  "ii": 6.677895273287777,
+  "url": "/models/nova-lite"
+ },
+ {
+  "slug": "gpt-4o-mini",
+  "ii": 6.674100588435986,
+  "url": "/models/gpt-4o-mini"
+ },
+ {
+  "slug": "hermes-4-llama-3-1-70b",
+  "ii": 6.657424882679896,
+  "url": "/models/hermes-4-llama-3-1-70b"
+ },
+ {
+  "slug": "qwen3-30b-a3b-instruct",
+  "ii": 6.559879859757473,
+  "url": "/models/qwen3-30b-a3b-instruct"
+ },
+ {
+  "slug": "deepseek-v2-5",
+  "ii": 6.545241314865277,
+  "url": "/models/deepseek-v2-5"
+ },
+ {
+  "slug": "qwen3-4b-instruct",
+  "ii": 6.526500062226768,
+  "url": "/models/qwen3-4b-instruct"
+ },
+ {
+  "slug": "llama-3-1-instruct-70b",
+  "ii": 6.508940242603085,
+  "url": "/models/llama-3-1-instruct-70b"
+ },
+ {
+  "slug": "granite-4-1-8b",
+  "ii": 6.420896217941189,
+  "url": "/models/granite-4-1-8b"
+ },
+ {
+  "slug": "sarvam-30b",
+  "ii": 6.386709663180205,
+  "url": "/models/sarvam-30b"
+ },
+ {
+  "slug": "gemini-2-0-flash-thinking-exp-1219",
+  "ii": 6.374550798300922,
+  "url": "/models/gemini-2-0-flash-thinking-exp-1219"
+ },
+ {
+  "slug": "deepseek-v2-5-sep-2024",
+  "ii": 6.368390159706641,
+  "url": "/models/deepseek-v2-5-sep-2024"
+ },
+ {
+  "slug": "olmo-3-1-32b-instruct",
+  "ii": 6.211952049270634,
+  "url": "/models/olmo-3-1-32b-instruct"
+ },
+ {
+  "slug": "mistral-saba",
+  "ii": 6.182044158745243,
+  "url": "/models/mistral-saba"
+ },
+ {
+  "slug": "deepseek-r1-distill-llama-8b",
+  "ii": 6.154802862296942,
+  "url": "/models/deepseek-r1-distill-llama-8b"
+ },
+ {
+  "slug": "gemma-4-e2b-non-reasoning",
+  "ii": 6.152607513968107,
+  "url": "/models/gemma-4-e2b-non-reasoning"
+ },
+ {
+  "slug": "olmo-3-32b-think",
+  "ii": 6.145120837465376,
+  "url": "/models/olmo-3-32b-think"
+ },
+ {
+  "slug": "gemini-1-5-pro-may-2024",
+  "ii": 6.055468547354799,
+  "url": "/models/gemini-1-5-pro-may-2024"
+ },
+ {
+  "slug": "r1-1776",
+  "ii": 6.049476427200174,
+  "url": "/models/r1-1776"
+ },
+ {
+  "slug": "qwen-turbo",
+  "ii": 6.0345083206627415,
+  "url": "/models/qwen-turbo"
+ },
+ {
+  "slug": "reka-flash",
+  "ii": 6.028527321454098,
+  "url": "/models/reka-flash"
+ },
+ {
+  "slug": "llama-3-2-instruct-90b-vision",
+  "ii": 5.965910268908535,
+  "url": "/models/llama-3-2-instruct-90b-vision"
+ },
+ {
+  "slug": "solar-mini",
+  "ii": 5.965909951303876,
+  "url": "/models/solar-mini"
+ },
+ {
+  "slug": "grok-1",
+  "ii": 5.765510169312311,
+  "url": "/models/grok-1"
+ },
+ {
+  "slug": "qwen2-72b-instruct",
+  "ii": 5.739254835402712,
+  "url": "/models/qwen2-72b-instruct"
+ },
+ {
+  "slug": "phi-4-mini",
+  "ii": 5.739013435529571,
+  "url": "/models/phi-4-mini"
+ },
+ {
+  "slug": "exaone-4-0-32b",
+  "ii": 5.732225241562234,
+  "url": "/models/exaone-4-0-32b"
+ },
+ {
+  "slug": "gemma-3-12b",
+  "ii": 5.51457304221751,
+  "url": "/models/gemma-3-12b"
+ },
+ {
+  "slug": "qwen3-5-2b-non-reasoning",
+  "ii": 5.328841924087609,
+  "url": "/models/qwen3-5-2b-non-reasoning"
+ },
+ {
+  "slug": "gemini-1-5-flash-8b",
+  "ii": 5.235332462646253,
+  "url": "/models/gemini-1-5-flash-8b"
+ },
+ {
+  "slug": "qwen3-5-0-8b",
+  "ii": 5.162925553041752,
+  "url": "/models/qwen3-5-0-8b"
+ },
+ {
+  "slug": "deephermes-3-mistral-24b-preview",
+  "ii": 5.004273783406074,
+  "url": "/models/deephermes-3-mistral-24b-preview"
+ },
+ {
+  "slug": "jamba-1-7-large",
+  "ii": 4.99479889312148,
+  "url": "/models/jamba-1-7-large"
+ },
+ {
+  "slug": "granite-4-0-h-small",
+  "ii": 4.930850226770671,
+  "url": "/models/granite-4-0-h-small"
+ },
+ {
+  "slug": "jamba-1-5-large",
+  "ii": 4.820931937038692,
+  "url": "/models/jamba-1-5-large"
+ },
+ {
+  "slug": "qwen3-omni-30b-a3b-instruct",
+  "ii": 4.803236354052263,
+  "url": "/models/qwen3-omni-30b-a3b-instruct"
+ },
+ {
+  "slug": "hermes-3-llama-3-1-70b",
+  "ii": 4.7756069001982535,
+  "url": "/models/hermes-3-llama-3-1-70b"
+ },
+ {
+  "slug": "qwen3-8b-instruct",
+  "ii": 4.761577810033406,
+  "url": "/models/qwen3-8b-instruct"
+ },
+ {
+  "slug": "deepseek-coder-v2",
+  "ii": 4.7384323759797,
+  "url": "/models/deepseek-coder-v2"
+ },
+ {
+  "slug": "olmo-2-32b",
+  "ii": 4.698539495592296,
+  "url": "/models/olmo-2-32b"
+ },
+ {
+  "slug": "jamba-1-6-large",
+  "ii": 4.688199835803134,
+  "url": "/models/jamba-1-6-large"
+ },
+ {
+  "slug": "lfm2-24b-a2b",
+  "ii": 4.62891176329845,
+  "url": "/models/lfm2-24b-a2b"
+ },
+ {
+  "slug": "gemini-1-5-flash-may-2024",
+  "ii": 4.598934603160203,
+  "url": "/models/gemini-1-5-flash-may-2024"
+ },
+ {
+  "slug": "phi-4",
+  "ii": 4.554208249808115,
+  "url": "/models/phi-4"
+ },
+ {
+  "slug": "claude-3-sonnet",
+  "ii": 4.417649449076059,
+  "url": "/models/claude-3-sonnet"
+ },
+ {
+  "slug": "nova-micro",
+  "ii": 4.415725816088815,
+  "url": "/models/nova-micro"
+ },
+ {
+  "slug": "granite-4-1-3b",
+  "ii": 4.371452189831648,
+  "url": "/models/granite-4-1-3b"
+ },
+ {
+  "slug": "mistral-small",
+  "ii": 4.330794512723878,
+  "url": "/models/mistral-small"
+ },
+ {
+  "slug": "gemini-1-0-ultra",
+  "ii": 4.300324793226204,
+  "url": "/models/gemini-1-0-ultra"
+ },
+ {
+  "slug": "phi-3-mini",
+  "ii": 4.256707634099662,
+  "url": "/models/phi-3-mini"
+ },
+ {
+  "slug": "nvidia-nemotron-nano-12b-v2-vl",
+  "ii": 4.245900608081831,
+  "url": "/models/nvidia-nemotron-nano-12b-v2-vl"
+ },
+ {
+  "slug": "gemma-3n-e4b-preview-0520",
+  "ii": 4.217028090259777,
+  "url": "/models/gemma-3n-e4b-preview-0520"
+ },
+ {
+  "slug": "phi-4-multimodal",
+  "ii": 4.199451881920248,
+  "url": "/models/phi-4-multimodal"
+ },
+ {
+  "slug": "qwen2-5-coder-7b-instruct",
+  "ii": 4.144422714833021,
+  "url": "/models/qwen2-5-coder-7b-instruct"
+ },
+ {
+  "slug": "mistral-large",
+  "ii": 4.074844863424127,
+  "url": "/models/mistral-large"
+ },
+ {
+  "slug": "mistral-8x22b-instruct",
+  "ii": 4.01315359785479,
+  "url": "/models/mistral-8x22b-instruct"
+ },
+ {
+  "slug": "llama-2-chat-7b",
+  "ii": 3.9128545639002987,
+  "url": "/models/llama-2-chat-7b"
+ },
+ {
+  "slug": "llama-3-2-instruct-3b",
+  "ii": 3.87835237141565,
+  "url": "/models/llama-3-2-instruct-3b"
+ },
+ {
+  "slug": "minicpm-v4-6-1-3b",
+  "ii": 3.8462360768491886,
+  "url": "/models/minicpm-v4-6-1-3b"
+ },
+ {
+  "slug": "jamba-reasoning-3b",
+  "ii": 3.778049140791259,
+  "url": "/models/jamba-reasoning-3b"
+ },
+ {
+  "slug": "qwen3-vl-4b-instruct",
+  "ii": 3.737661149066723,
+  "url": "/models/qwen3-vl-4b-instruct"
+ },
+ {
+  "slug": "qwen1.5-110b-chat",
+  "ii": 3.7321582277764724,
+  "url": "/models/qwen1.5-110b-chat"
+ },
+ {
+  "slug": "reka-flash-3",
+  "ii": 3.7086693490969416,
+  "url": "/models/reka-flash-3"
+ },
+ {
+  "slug": "olmo-3-7b-think",
+  "ii": 3.617678993112095,
+  "url": "/models/olmo-3-7b-think"
+ },
+ {
+  "slug": "claude-21",
+  "ii": 3.519978717983947,
+  "url": "/models/claude-21"
+ },
+ {
+  "slug": "claude-3-haiku",
+  "ii": 3.4967119746654705,
+  "url": "/models/claude-3-haiku"
+ },
+ {
+  "slug": "olmo-2-7b",
+  "ii": 3.4934934209184205,
+  "url": "/models/olmo-2-7b"
+ },
+ {
+  "slug": "molmo-7b-d",
+  "ii": 3.446844030896038,
+  "url": "/models/molmo-7b-d"
+ },
+ {
+  "slug": "ling-mini-2-0",
+  "ii": 3.387484482903849,
+  "url": "/models/ling-mini-2-0"
+ },
+ {
+  "slug": "deepseek-r1-distill-qwen-1-5b",
+  "ii": 3.283302087053539,
+  "url": "/models/deepseek-r1-distill-qwen-1-5b"
+ },
+ {
+  "slug": "deepseek-v2",
+  "ii": 3.267381815176345,
+  "url": "/models/deepseek-v2"
+ },
+ {
+  "slug": "claude-2",
+  "ii": 3.267381815176345,
+  "url": "/models/claude-2"
+ },
+ {
+  "slug": "mistral-small-2402",
+  "ii": 3.2492948303095317,
+  "url": "/models/mistral-small-2402"
+ },
+ {
+  "slug": "mistral-medium",
+  "ii": 3.2222356601605546,
+  "url": "/models/mistral-medium"
+ },
+ {
+  "slug": "gpt-35-turbo",
+  "ii": 3.2019972942436867,
+  "url": "/models/gpt-35-turbo"
+ },
+ {
+  "slug": "llama-3-instruct-70b",
+  "ii": 3.096838623590334,
+  "url": "/models/llama-3-instruct-70b"
+ },
+ {
+  "slug": "qwen-chat-72b",
+  "ii": 3.0440088739789624,
+  "url": "/models/qwen-chat-72b"
+ },
+ {
+  "slug": "arctic-instruct",
+  "ii": 3.0440088739789624,
+  "url": "/models/arctic-instruct"
+ },
+ {
+  "slug": "lfm-40b",
+  "ii": 2.9846993733203697,
+  "url": "/models/lfm-40b"
+ },
+ {
+  "slug": "llama-3-2-instruct-11b-vision",
+  "ii": 2.9524662088235054,
+  "url": "/models/llama-3-2-instruct-11b-vision"
+ },
+ {
+  "slug": "qwen3-5-0-8b-non-reasoning",
+  "ii": 2.9267487920713435,
+  "url": "/models/qwen3-5-0-8b-non-reasoning"
+ },
+ {
+  "slug": "palm-2",
+  "ii": 2.8264384027844183,
+  "url": "/models/palm-2"
+ },
+ {
+  "slug": "gemini-1-0-pro",
+  "ii": 2.738876578651047,
+  "url": "/models/gemini-1-0-pro"
+ },
+ {
+  "slug": "deepseek-coder-v2-lite",
+  "ii": 2.7176629408782063,
+  "url": "/models/deepseek-coder-v2-lite"
+ },
+ {
+  "slug": "sarvam-m-reasoning",
+  "ii": 2.634897162424974,
+  "url": "/models/sarvam-m-reasoning"
+ },
+ {
+  "slug": "llama-2-chat-70b",
+  "ii": 2.6145196731385245,
+  "url": "/models/llama-2-chat-70b"
+ },
+ {
+  "slug": "deepseek-llm-67b-chat",
+  "ii": 2.6145196731385245,
+  "url": "/models/deepseek-llm-67b-chat"
+ },
+ {
+  "slug": "llama-2-chat-13b",
+  "ii": 2.601981049161792,
+  "url": "/models/llama-2-chat-13b"
+ },
+ {
+  "slug": "command-r-plus-04-2024",
+  "ii": 2.593632960290559,
+  "url": "/models/command-r-plus-04-2024"
+ },
+ {
+  "slug": "openchat-35",
+  "ii": 2.566562384829053,
+  "url": "/models/openchat-35"
+ },
+ {
+  "slug": "dbrx",
+  "ii": 2.562405786122499,
+  "url": "/models/dbrx"
+ },
+ {
+  "slug": "exaone-4-0-1-2b-reasoning",
+  "ii": 2.505180587593852,
+  "url": "/models/exaone-4-0-1-2b-reasoning"
+ },
+ {
+  "slug": "olmo-3-7b-instruct",
+  "ii": 2.4042898651220748,
+  "url": "/models/olmo-3-7b-instruct"
+ },
+ {
+  "slug": "exaone-4-0-1-2b",
+  "ii": 2.3656029999408825,
+  "url": "/models/exaone-4-0-1-2b"
+ },
+ {
+  "slug": "lfm2-5-1-2b-thinking",
+  "ii": 2.3405794125693062,
+  "url": "/models/lfm2-5-1-2b-thinking"
+ },
+ {
+  "slug": "jamba-1-7-mini",
+  "ii": 2.3265220570198033,
+  "url": "/models/jamba-1-7-mini"
+ },
+ {
+  "slug": "lfm2-2-6b",
+  "ii": 2.3031912052131367,
+  "url": "/models/lfm2-2-6b"
+ },
+ {
+  "slug": "lfm2-5-1-2b-instruct",
+  "ii": 2.2992189441866913,
+  "url": "/models/lfm2-5-1-2b-instruct"
+ },
+ {
+  "slug": "jamba-1-5-mini",
+  "ii": 2.2888457536390225,
+  "url": "/models/jamba-1-5-mini"
+ },
+ {
+  "slug": "granite-4-0-h-nano-1b",
+  "ii": 2.2490952321117086,
+  "url": "/models/granite-4-0-h-nano-1b"
+ },
+ {
+  "slug": "qwen3-1.7b-instruct-reasoning",
+  "ii": 2.2223182100585497,
+  "url": "/models/qwen3-1.7b-instruct-reasoning"
+ },
+ {
+  "slug": "jamba-1-6-mini",
+  "ii": 2.1398929553636608,
+  "url": "/models/jamba-1-6-mini"
+ },
+ {
+  "slug": "mixtral-8x7b-instruct",
+  "ii": 2.007360521208229,
+  "url": "/models/mixtral-8x7b-instruct"
+ },
+ {
+  "slug": "gemma-3-270m",
+  "ii": 1.9873520483509928,
+  "url": "/models/gemma-3-270m"
+ },
+ {
+  "slug": "apertus-70b-instruct",
+  "ii": 1.9790799415030778,
+  "url": "/models/apertus-70b-instruct"
+ },
+ {
+  "slug": "granite-4-0-micro",
+  "ii": 1.951673633419523,
+  "url": "/models/granite-4-0-micro"
+ },
+ {
+  "slug": "deephermes-3-llama-3-1-8b-preview",
+  "ii": 1.8620161361798069,
+  "url": "/models/deephermes-3-llama-3-1-8b-preview"
+ },
+ {
+  "slug": "mistral-7b-instruct",
+  "ii": 1.7061499529751836,
+  "url": "/models/mistral-7b-instruct"
+ },
+ {
+  "slug": "claude-instant",
+  "ii": 1.7061499529751836,
+  "url": "/models/claude-instant"
+ },
+ {
+  "slug": "command-r-03-2024",
+  "ii": 1.7061499529751836,
+  "url": "/models/command-r-03-2024"
+ },
+ {
+  "slug": "qwen-chat-14b",
+  "ii": 1.7061499529751836,
+  "url": "/models/qwen-chat-14b"
+ },
+ {
+  "slug": "llama-65b",
+  "ii": 1.7061499529751836,
+  "url": "/models/llama-65b"
+ },
+ {
+  "slug": "granite-4-0-nano-1b",
+  "ii": 1.6348736398124981,
+  "url": "/models/granite-4-0-nano-1b"
+ },
+ {
+  "slug": "molmo2-8b",
+  "ii": 1.5937384257224552,
+  "url": "/models/molmo2-8b"
+ },
+ {
+  "slug": "lfm2-8b-a1b",
+  "ii": 1.3387119056386823,
+  "url": "/models/lfm2-8b-a1b"
+ },
+ {
+  "slug": "granite-3-3-8b-instruct",
+  "ii": 1.3105749004861915,
+  "url": "/models/granite-3-3-8b-instruct"
+ },
+ {
+  "slug": "qwen3-1.7b-instruct",
+  "ii": 1.080777067283391,
+  "url": "/models/qwen3-1.7b-instruct"
+ },
+ {
+  "slug": "qwen3-0.6b-instruct",
+  "ii": 1.0,
+  "url": "/models/qwen3-0.6b-instruct"
+ },
+ {
+  "slug": "lfm2-1-2b",
+  "ii": 1.0,
+  "url": "/models/lfm2-1-2b"
+ },
+ {
+  "slug": "gemma-3-4b",
+  "ii": 1.0,
+  "url": "/models/gemma-3-4b"
+ },
+ {
+  "slug": "lfm2-5-vl-1-6b",
+  "ii": 1.0,
+  "url": "/models/lfm2-5-vl-1-6b"
+ },
+ {
+  "slug": "qwen3-0.6b-instruct-reasoning",
+  "ii": 1.0,
+  "url": "/models/qwen3-0.6b-instruct-reasoning"
+ },
+ {
+  "slug": "granite-4-0-350m",
+  "ii": 1.0,
+  "url": "/models/granite-4-0-350m"
+ },
+ {
+  "slug": "llama-3-2-instruct-1b",
+  "ii": 1.0,
+  "url": "/models/llama-3-2-instruct-1b"
+ },
+ {
+  "slug": "tiny-aya-global",
+  "ii": 1.0,
+  "url": "/models/tiny-aya-global"
+ },
+ {
+  "slug": "llama-3-instruct-8b",
+  "ii": 1.0,
+  "url": "/models/llama-3-instruct-8b"
+ },
+ {
+  "slug": "apertus-8b-instruct",
+  "ii": 1.0,
+  "url": "/models/apertus-8b-instruct"
+ },
+ {
+  "slug": "granite-4-0-h-350m",
+  "ii": 1.0,
+  "url": "/models/granite-4-0-h-350m"
+ },
+ {
+  "slug": "gemma-3n-e4b",
+  "ii": 1.0,
+  "url": "/models/gemma-3n-e4b"
+ },
+ {
+  "slug": "gemma-3n-e2b",
+  "ii": 1.0,
+  "url": "/models/gemma-3n-e2b"
+ },
+ {
+  "slug": "gemma-3-1b",
+  "ii": 1.0,
+  "url": "/models/gemma-3-1b"
+ },
+ {
+  "slug": "claude-sonnet-5-low",
+  "ii": null,
+  "url": "/models/claude-sonnet-5-low"
+ },
+ {
+  "slug": "exaone-4-5-33b-non-reasoning",
+  "ii": null,
+  "url": "/models/exaone-4-5-33b-non-reasoning"
+ },
+ {
+  "slug": "gpt-4o-mini-realtime-dec-2024",
+  "ii": null,
+  "url": "/models/gpt-4o-mini-realtime-dec-2024"
+ },
+ {
+  "slug": "gpt-5-4-pro",
+  "ii": null,
+  "url": "/models/gpt-5-4-pro"
+ },
+ {
+  "slug": "gpt-3-5-turbo-0613",
+  "ii": null,
+  "url": "/models/gpt-3-5-turbo-0613"
+ },
+ {
+  "slug": "claude-sonnet-5-xhigh",
+  "ii": null,
+  "url": "/models/claude-sonnet-5-xhigh"
+ },
+ {
+  "slug": "gemini-3-deep-think",
+  "ii": null,
+  "url": "/models/gemini-3-deep-think"
+ },
+ {
+  "slug": "claude-sonnet-5-high",
+  "ii": null,
+  "url": "/models/claude-sonnet-5-high"
+ },
+ {
+  "slug": "midm-250-pro-rsnsft",
+  "ii": null,
+  "url": "/models/midm-250-pro-rsnsft"
+ },
+ {
+  "slug": "gpt-4o-realtime-dec-2024",
+  "ii": null,
+  "url": "/models/gpt-4o-realtime-dec-2024"
+ },
+ {
+  "slug": "gpt-5-5-pro",
+  "ii": null,
+  "url": "/models/gpt-5-5-pro"
+ },
+ {
+  "slug": "cogito-v2-1-reasoning",
+  "ii": null,
+  "url": "/models/cogito-v2-1-reasoning"
+ },
+ {
+  "slug": "claude-sonnet-5-medium",
+  "ii": null,
+  "url": "/models/claude-sonnet-5-medium"
  }
 ]

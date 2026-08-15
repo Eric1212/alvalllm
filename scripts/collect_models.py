@@ -43,6 +43,7 @@ DOCS = {
     "OC_GO.json": "https://opencode.ai/docs/go",
 }
 LAB_PAGE = "https://opencode.ai/fr/data/google/gemini-flash-latest"
+AA_MODELS_URL = "https://artificialanalysis.ai/models"
 
 
 def bidi(frame: dict, timeout: int = 30) -> dict:
@@ -268,6 +269,94 @@ def extract_official(data: dict) -> list:
     return data.get("data", [])
 
 
+def fetch_aa_html(url: str) -> str:
+    """HTML complet d'une page AA via ffsr (onglet TAB)."""
+    go(url)
+    return get_html()
+
+
+def _decode_rsc_blobs(html: str) -> list:
+    """Blobs RSC de Next.js (self.__next_f.push) décodés en texte."""
+    blobs = re.findall(r'self\.__next_f\.push\(\[1,\"(.*?)\"\]\)', html, re.S)
+    return [b.encode("utf-8").decode("unicode_escape", errors="replace") for b in blobs]
+
+
+def extract_aa_first_slugs(html: str) -> list:
+    """Slugs des modèles présents dans le RSC de la page /models.
+    Chaque \"shortName\": = un modèle -> slug = dernier \"slug\":\"X\" avant."""
+    blobs = _decode_rsc_blobs(html)
+    slugs = []
+    for b in blobs:
+        for pos in [m.start() for m in re.finditer(r'"shortName":', b)]:
+            avant = b[max(0, pos - 300):pos]
+            found = re.findall(r'"slug":"([a-zA-Z0-9.-]+)"', avant)
+            if found:
+                slugs.append(found[-1])
+    # Dédoublonner, garder l'ordre
+    return list(dict.fromkeys(slugs))
+
+
+def extract_aa_models(html: str) -> list:
+    """Extrait les modèles AA (slug + intelligenceIndex) d'une page de détail.
+    Repère le blob RSC qui contient la base complète (>100 modèles) :
+    chaque \"shortName\": = un modèle -> slug = dernier slug avant,
+    ii = premier \"intelligenceIndex\":N après. Retourne [{slug, ii, url}]."""
+    blobs = _decode_rsc_blobs(html)
+    # Le blob avec le plus de modèles = la base complète
+    best = max(blobs, key=lambda b: len(re.findall(r'"shortName":', b)))
+    if len(re.findall(r'"shortName":', best)) < 100:
+        raise RuntimeError(
+            f"Page AA sans base complète ({len(re.findall(chr(34)+'shortName'+chr(34)+':', best))} modèles)")
+
+    modeles = {}
+    for pos in [m.start() for m in re.finditer(r'"shortName":', best)]:
+        avant = best[max(0, pos - 300):pos]
+        found = re.findall(r'"slug":"([a-zA-Z0-9.-]+)"', avant)
+        if not found:
+            continue
+        slug = found[-1]
+        apres = best[pos:pos + 2500]
+        ii_m = re.search(r'"intelligenceIndex":([0-9.]+|null)', apres)
+        ii = float(ii_m.group(1)) if ii_m and ii_m.group(1) != "null" else None
+        if slug not in modeles:
+            modeles[slug] = ii
+
+    return [{"slug": s, "ii": ii, "url": f"/models/{s}"}
+            for s, ii in sorted(modeles.items(),
+                                key=lambda x: (-x[1] if x[1] is not None else 0.0))]
+
+
+def collect_aa() -> None:
+    """Récupère les II d'Artificial Analysis via ffsr et écrit data/AA_II.json.
+    Stratégie auto-adaptative : on lit /models pour obtenir des slugs récents,
+    puis on ouvre la page de détail du 1er slug (toute page de détail contient
+    la base complète des 608 modèles dans son RSC)."""
+    import time
+
+    print("Collecte des II AA via ffsr (HTML)...")
+
+    # 1. Page /models -> 28 slugs récents
+    html = fetch_aa_html(AA_MODELS_URL)
+    time.sleep(2)
+    slugs = extract_aa_first_slugs(html)
+    if not slugs:
+        print("  AVERTISSEMENT: aucun slug trouvé sur /models, abandon.")
+        return
+    print(f"  {len(slugs)} modèles sur /models, premier: {slugs[0]}")
+
+    # 2. Page de détail du premier slug -> base complète (608)
+    detail_url = f"https://artificialanalysis.ai/models/{slugs[0]}"
+    html_detail = fetch_aa_html(detail_url)
+    time.sleep(2)
+    modeles = extract_aa_models(html_detail)
+
+    (DATA / "AA_II.json").write_text(
+        json.dumps(modeles, ensure_ascii=False, indent=1))
+    n_ii = sum(1 for m in modeles if m["ii"] is not None)
+    n_null = len(modeles) - n_ii
+    print(f"Écrit data/AA_II.json ({len(modeles)} modèles, {n_ii} avec II, {n_null} null)")
+
+
 def main() -> int:
     for fname in ENDPOINTS:
         mods = build_models(fname)
@@ -277,6 +366,9 @@ def main() -> int:
 
     # Collecte des labs -> OC_LABS.json
     collect_labs()
+
+    # Collecte des II AA -> AA_II.json
+    collect_aa()
     return 0
 
 
@@ -367,6 +459,9 @@ def main() -> int:
 
     # Collecte des labs -> OC_LABS.json
     collect_labs()
+
+    # Collecte des II AA -> AA_II.json
+    collect_aa()
     return 0
 
 
