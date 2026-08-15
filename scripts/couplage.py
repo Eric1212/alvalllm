@@ -467,6 +467,38 @@ def fallback_ii(rows: list, modele: dict, labs: dict) -> float:
     return min(valides) if valides else -1
 
 
+def resolve_lab(nom: str, labs: dict) -> str:
+    """Résout le lab d'un modèle en testant les variantes STRUCTURELLES
+    présentes dans OC_LABS (jamais de devinette par préfixe) :
+
+      1. clé exacte                       (gemini-3.7-flash)
+      2. sans -free si le nom porte -free (routage gratuit : nemotron-3-ultra-free
+                                          -> nemotron-3-ultra)
+      3. +preview si la clé nom-preview   (gemini-3.1-pro -> -preview)
+      4. +0 si la clé nom-0               (claude-sonnet-4 -> -0, le site
+                                          web suit la logique "4.0" vs API "4")
+      5. -preview si le nom porte -preview et la clé sans existe
+      6. -0 si le nom porte -0 et la clé sans existe
+
+    Retourne '' si aucune variante ne matche."""
+    # 1. clé exacte (nom tel quel, -free compris)
+    if nom in labs:
+        return labs[nom]
+
+    base = nom[:-5] if nom.endswith("-free") else nom
+    if base != nom and base in labs:
+        return labs[base]
+    if base + "-preview" in labs:
+        return labs[base + "-preview"]
+    if base + "-0" in labs:
+        return labs[base + "-0"]
+    if base.endswith("-preview") and base[:-8] in labs:
+        return labs[base[:-8]]
+    if base.endswith("-0") and base[:-2] in labs:
+        return labs[base[:-2]]
+    return ""
+
+
 def main():
     oc = charger_opencode()
     labs = charger_labs()
@@ -483,12 +515,7 @@ def main():
             continue
         seen.add(nom_lower)
         
-        lab = ""
-        # Direct match
-        lab = labs.get(nom_lower, "")
-        # If model ends with -free, try without -free suffix
-        if not lab and nom_lower.endswith("-free"):
-            lab = labs.get(nom_lower[:-5], "")
+        lab = resolve_lab(nom_lower, labs)
         # Résolution via le slug AA couplé : 'nvidia-nemotron-3-ultra'
         # -> OC_LABS a 'nemotron-3-ultra-550b-a55b': nvidia. Le préfixe
         # lab ('nvidia-') est retiré du slug AA pour retrouver la clé.
