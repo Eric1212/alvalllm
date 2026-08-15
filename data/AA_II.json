@@ -620,11 +620,6 @@
   "url": "/models/claude-4-1-opus-thinking"
  },
  {
-  "slug": "kat-coder-pro-v2",
-  "ii": 34.514189754348024,
-  "url": "/models/kat-coder-pro-v2"
- },
- {
   "slug": "minimax-m2-5",
   "ii": 34.474081034775786,
   "url": "/models/minimax-m2-5"
@@ -673,6 +668,11 @@
   "slug": "gpt-5-6-luna-low",
   "ii": 33.8545605251116,
   "url": "/models/gpt-5-6-luna-low"
+ },
+ {
+  "slug": "kat-coder-pro-v2",
+  "ii": 33.7297083092471,
+  "url": "/models/kat-coder-pro-v2"
  },
  {
   "slug": "kimi-k2-thinking",

@@ -227,7 +227,7 @@
    "prix_in": 0.14,
    "prix_out": 0.28,
    "prix_cache": 0.028,
-   "gratuit": 0,
+   "gratuit": 1,
    "frontier": 0
   },
   {
@@ -347,7 +347,7 @@
    "prix_in": 0.14,
    "prix_out": 0.58,
    "prix_cache": 0.035,
-   "gratuit": 0,
+   "gratuit": 1,
    "frontier": 0
   },
   {
@@ -514,10 +514,10 @@
    "nom": "nemotron-3-ultra-free",
    "lab": "",
    "ii": 38.3185469149774,
-   "prix_in": 0.14,
-   "prix_out": 0.28,
-   "prix_cache": 0.0028,
-   "gratuit": 0,
+   "prix_in": 2.0,
+   "prix_out": 10.0,
+   "prix_cache": 0.5,
+   "gratuit": 1,
    "frontier": 0
   },
   {
@@ -527,7 +527,7 @@
    "prix_in": 0.14,
    "prix_out": 0.28,
    "prix_cache": 0.0028,
-   "gratuit": 0,
+   "gratuit": 1,
    "frontier": 0
   },
   {
@@ -664,10 +664,10 @@
    "nom": "nemotron-3.5-lightning-free",
    "lab": "nvidia",
    "ii": 23.632637599256,
-   "prix_in": 0.14,
-   "prix_out": 0.28,
-   "prix_cache": 0.0028,
-   "gratuit": 0,
+   "prix_in": 2.0,
+   "prix_out": 10.0,
+   "prix_cache": 0.5,
+   "gratuit": 1,
    "frontier": 0
   },
   {
@@ -714,10 +714,10 @@
    "nom": "laguna-s-2.1-free",
    "lab": "poolside",
    "ii": 20.14001622182779,
-   "prix_in": 0.14,
-   "prix_out": 0.28,
-   "prix_cache": 0.0028,
-   "gratuit": 0,
+   "prix_in": 2.0,
+   "prix_out": 10.0,
+   "prix_cache": 0.5,
+   "gratuit": 1,
    "frontier": 0
   }
  ],

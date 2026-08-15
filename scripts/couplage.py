@@ -496,7 +496,9 @@ def main():
             "prix_in": r.get("input", 0),
             "prix_out": r.get("output", 0),
             "prix_cache": r.get("cache_read", 0),
-            "gratuit": 1 if r.get("input", 0) == 0 else 0,
+            # Gratuit si le prix est 0 OU si le slug contient "free"
+            # (les -free opencode : gratuit même en gardant le prix de base)
+            "gratuit": 1 if r.get("input", 0) == 0 or "free" in r["nom"].lower() else 0,
             "frontier": 0,
         })
 

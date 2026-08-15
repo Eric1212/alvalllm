@@ -2,7 +2,7 @@
  {
   "id": "claude-fable-5",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 10.0,
   "output": 50.0,
@@ -11,7 +11,7 @@
  {
   "id": "claude-opus-5",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 5.0,
   "output": 25.0,
@@ -20,7 +20,7 @@
  {
   "id": "claude-opus-4-8",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 5.0,
   "output": 25.0,
@@ -29,7 +29,7 @@
  {
   "id": "claude-opus-4-7",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 5.0,
   "output": 25.0,
@@ -38,7 +38,7 @@
  {
   "id": "claude-opus-4-6",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 5.0,
   "output": 25.0,
@@ -47,7 +47,7 @@
  {
   "id": "claude-opus-4-5",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 5.0,
   "output": 25.0,
@@ -56,7 +56,7 @@
  {
   "id": "claude-sonnet-5",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 2.0,
   "output": 10.0,
@@ -65,7 +65,7 @@
  {
   "id": "claude-sonnet-4-6",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 3.0,
   "output": 15.0,
@@ -74,7 +74,7 @@
  {
   "id": "claude-sonnet-4-5",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 6.0,
   "output": 22.5,
@@ -83,7 +83,7 @@
  {
   "id": "claude-sonnet-4",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 2.0,
   "output": 10.0,
@@ -92,7 +92,7 @@
  {
   "id": "claude-haiku-4-5",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.0,
   "output": 5.0,
@@ -101,7 +101,7 @@
  {
   "id": "gemini-3.6-flash",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.5,
   "output": 7.5,
@@ -110,7 +110,7 @@
  {
   "id": "gemini-3.7-flash",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.5,
   "output": 7.5,
@@ -119,7 +119,7 @@
  {
   "id": "gemini-3.5-flash-lite",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.3,
   "output": 2.5,
@@ -128,7 +128,7 @@
  {
   "id": "gemini-3.5-flash",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.5,
   "output": 9.0,
@@ -137,7 +137,7 @@
  {
   "id": "gemini-3.1-pro",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 4.0,
   "output": 18.0,
@@ -146,7 +146,7 @@
  {
   "id": "gemini-3-flash",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.5,
   "output": 3.0,
@@ -155,7 +155,7 @@
  {
   "id": "gpt-5.6-sol",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 10.0,
   "output": 45.0,
@@ -164,7 +164,7 @@
  {
   "id": "gpt-5.6-terra",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 4.0,
   "output": 18.0,
@@ -173,7 +173,7 @@
  {
   "id": "gpt-5.6-luna",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.4,
   "output": 1.8,
@@ -182,7 +182,7 @@
  {
   "id": "gpt-5.5",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 10.0,
   "output": 45.0,
@@ -191,7 +191,7 @@
  {
   "id": "gpt-5.5-pro",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 30.0,
   "output": 180.0,
@@ -200,7 +200,7 @@
  {
   "id": "gpt-5.4",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 5.0,
   "output": 22.5,
@@ -209,7 +209,7 @@
  {
   "id": "gpt-5.4-pro",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 30.0,
   "output": 180.0,
@@ -218,7 +218,7 @@
  {
   "id": "gpt-5.4-mini",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.75,
   "output": 4.5,
@@ -227,7 +227,7 @@
  {
   "id": "gpt-5.4-nano",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.2,
   "output": 1.25,
@@ -236,7 +236,7 @@
  {
   "id": "gpt-5.3-codex-spark",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.75,
   "output": 14.0,
@@ -245,7 +245,7 @@
  {
   "id": "gpt-5.3-codex",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.75,
   "output": 14.0,
@@ -254,7 +254,7 @@
  {
   "id": "gpt-5.2",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.75,
   "output": 14.0,
@@ -263,7 +263,7 @@
  {
   "id": "gpt-5.2-codex",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.75,
   "output": 14.0,
@@ -272,7 +272,7 @@
  {
   "id": "gpt-5.1",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.07,
   "output": 8.5,
@@ -281,7 +281,7 @@
  {
   "id": "gpt-5.1-codex-max",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.25,
   "output": 10.0,
@@ -290,7 +290,7 @@
  {
   "id": "gpt-5.1-codex",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.07,
   "output": 8.5,
@@ -299,7 +299,7 @@
  {
   "id": "gpt-5.1-codex-mini",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.25,
   "output": 2.0,
@@ -308,7 +308,7 @@
  {
   "id": "gpt-5",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.07,
   "output": 8.5,
@@ -317,7 +317,7 @@
  {
   "id": "gpt-5-codex",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.07,
   "output": 8.5,
@@ -326,7 +326,7 @@
  {
   "id": "gpt-5-nano",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.05,
   "output": 0.4,
@@ -335,7 +335,7 @@
  {
   "id": "grok-build-0.1",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.0,
   "output": 2.0,
@@ -344,7 +344,7 @@
  {
   "id": "grok-4.6",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 4.0,
   "output": 12.0,
@@ -353,7 +353,7 @@
  {
   "id": "grok-4.5",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 4.0,
   "output": 12.0,
@@ -362,7 +362,7 @@
  {
   "id": "muse-spark-1.2",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.25,
   "output": 4.25,
@@ -371,7 +371,7 @@
  {
   "id": "deepseek-v4-pro",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.74,
   "output": 3.48,
@@ -380,7 +380,7 @@
  {
   "id": "deepseek-v4-flash",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.14,
   "output": 0.28,
@@ -389,7 +389,7 @@
  {
   "id": "glm-5.2",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.4,
   "output": 4.4,
@@ -398,7 +398,7 @@
  {
   "id": "glm-5.1",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.4,
   "output": 4.4,
@@ -407,7 +407,7 @@
  {
   "id": "glm-5",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 1.0,
   "output": 3.2,
@@ -416,7 +416,7 @@
  {
   "id": "minimax-m3",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.3,
   "output": 1.2,
@@ -425,7 +425,7 @@
  {
   "id": "minimax-m2.7",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.3,
   "output": 1.2,
@@ -434,7 +434,7 @@
  {
   "id": "minimax-m2.5",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.3,
   "output": 1.2,
@@ -443,7 +443,7 @@
  {
   "id": "kimi-k3",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 3.0,
   "output": 15.0,
@@ -452,7 +452,7 @@
  {
   "id": "kimi-k2.7-code",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.95,
   "output": 4.0,
@@ -461,7 +461,7 @@
  {
   "id": "kimi-k2.6",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.95,
   "output": 4.0,
@@ -470,7 +470,7 @@
  {
   "id": "kimi-k2.5",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.6,
   "output": 3.0,
@@ -479,7 +479,7 @@
  {
   "id": "qwen3.6-plus",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.5,
   "output": 3.0,
@@ -488,7 +488,7 @@
  {
   "id": "qwen3.5-plus",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.2,
   "output": 1.2,
@@ -497,7 +497,7 @@
  {
   "id": "big-pickle",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 2.0,
   "output": 10.0,
@@ -506,7 +506,7 @@
  {
   "id": "deepseek-v4-flash-free",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.14,
   "output": 0.28,
@@ -515,7 +515,7 @@
  {
   "id": "mimo-v2.5-free",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.14,
   "output": 0.28,
@@ -524,7 +524,7 @@
  {
   "id": "hy3-free",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
   "input": 0.14,
   "output": 0.58,
@@ -533,28 +533,28 @@
  {
   "id": "nemotron-3-ultra-free",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
-  "input": 0.14,
-  "output": 0.28,
-  "cache_read": 0.0028
+  "input": 2.0,
+  "output": 10.0,
+  "cache_read": 0.5
  },
  {
   "id": "nemotron-3.5-lightning-free",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
-  "input": 0.14,
-  "output": 0.28,
-  "cache_read": 0.0028
+  "input": 2.0,
+  "output": 10.0,
+  "cache_read": 0.5
  },
  {
   "id": "laguna-s-2.1-free",
   "object": "model",
-  "created": 1786760260,
+  "created": 1786767344,
   "owned_by": "opencode",
-  "input": 0.14,
-  "output": 0.28,
-  "cache_read": 0.0028
+  "input": 2.0,
+  "output": 10.0,
+  "cache_read": 0.5
  }
 ]

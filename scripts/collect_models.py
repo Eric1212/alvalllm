@@ -183,9 +183,14 @@ def price(s: str):
         return None
 
 
-def build_models(fname: str) -> list:
+def build_models(fname: str, base_prices: dict = None) -> list:
     """Construit la liste finale des modèles pour un fichier :
-    ids officiels + prix docs (input/output/cache_read), drop cache_write."""
+    ids officiels + prix docs (input/output/cache_read), drop cache_write.
+
+    base_prices (optionnel) : mapping {id -> (input, output, cache_read)}
+    des prix de base valides, fusionnés sur TOUS les fichiers. Sert au
+    fallback des modèles '-free' : un -free sans prix dans son doc prend
+    le prix de sa base même si celle-ci vit dans un autre fichier."""
     url = ENDPOINTS[fname]
     doc = DOCS[fname]
 
@@ -216,18 +221,6 @@ def build_models(fname: str) -> list:
         if m.get("input") not in (None, 0.0):
             doc_price_map[mid] = (m.get("input"), m.get("output"), m.get("cache_read"))
 
-    # Hardcoded fallback prices for base models known to have prices
-    # but not present in current doc/official endpoint data
-    HARDCODED_BASE_PRICES = {
-        "hy3": (0.14, 0.58, 0.035),
-        "mimo-v2.5": (0.14, 0.28, 0.0028),
-        "nemotron-3.5-lightning": (0.14, 0.28, 0.0028),
-        "nemotron-3-ultra": (0.14, 0.28, 0.0028),
-        "laguna-s-2.1": (0.14, 0.28, 0.0028),
-        "mimo-v2.5": (0.14, 0.28, 0.0028),
-    }
-    doc_price_map.update(HARDCODED_BASE_PRICES)
-
     out = []
     for m in mods:
         mid = m["id"]
@@ -246,6 +239,14 @@ def build_models(fname: str) -> list:
             base_id = mid[:-5]
             if base_id in doc_price_map:
                 p = doc_price_map[base_id]
+            elif base_prices and base_id in base_prices:
+                p = base_prices[base_id]
+            elif base_prices:
+                # L'id brut (mimo-v2.5) peut différer de la clé normalisée
+                # (mimo-v2-5) dans base_prices -> essayer la normalisation.
+                nid = norm_name(base_id)
+                if nid in base_prices:
+                    p = base_prices[nid]
         # Fallback prices when not found in docs
         FALLBACK = {"input": 2.0, "output": 10.0, "cache_read": 0.5}
         if p is None:
@@ -357,21 +358,6 @@ def collect_aa() -> None:
     print(f"Écrit data/AA_II.json ({len(modeles)} modèles, {n_ii} avec II, {n_null} null)")
 
 
-def main() -> int:
-    for fname in ENDPOINTS:
-        mods = build_models(fname)
-        (DATA / fname).write_text(json.dumps(mods, ensure_ascii=False, indent=1))
-        n_prix = sum(1 for m in mods if m["input"] is not None)
-        print(f"Écrit data/{fname} ({len(mods)} modèles, {n_prix} avec prix)")
-
-    # Collecte des labs -> OC_LABS.json
-    collect_labs()
-
-    # Collecte des II AA -> AA_II.json
-    collect_aa()
-    return 0
-
-
 def collect_labs() -> None:
     """Récupère le mapping modèle -> lab via ffsr (breadcrumb + pages lab)
     et écrit data/OC_LABS.json.
@@ -451,8 +437,34 @@ def collect_labs() -> None:
 
 
 def main() -> int:
+    # Prix de base globaux (fusionnés sur tous les fichiers) pour le
+    # fallback des modèles '-free' : un -free dans ZEN peut prendre le
+    # prix de sa base qui vit dans GO (ex. mimo-v2.5-free -> mimo-v2.5).
+    base_prices = {}
     for fname in ENDPOINTS:
-        mods = build_models(fname)
+        url = ENDPOINTS[fname]
+        doc = DOCS[fname]
+        data = fetch_official(url)
+        mods = extract_official(data)
+        html = get_html(doc)
+        name2id = parse_endpoint_ids(html)
+        txt = get_txt(doc)
+        prices = parse_prices(txt)
+        # Prix du doc (via mapping nom->slug)
+        for mid, p in prices.items():
+            if p and p[0] not in (None, 0.0):
+                key = mid
+                if key in name2id:
+                    key = name2id[key]
+                base_prices[key] = p
+        # Prix des endpoints officiels
+        for m in mods:
+            mid = m["id"]
+            if m.get("input") not in (None, 0.0):
+                base_prices[mid] = (m.get("input"), m.get("output"), m.get("cache_read"))
+
+    for fname in ENDPOINTS:
+        mods = build_models(fname, base_prices)
         (DATA / fname).write_text(json.dumps(mods, ensure_ascii=False, indent=1))
         n_prix = sum(1 for m in mods if m["input"] is not None)
         print(f"Écrit data/{fname} ({len(mods)} modèles, {n_prix} avec prix)")
