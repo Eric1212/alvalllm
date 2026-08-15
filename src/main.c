@@ -206,14 +206,15 @@ static int afficher_table(const Parametres *p, const Base *b,
         n++;
     }
 
-    printf("%-32s %6s %7s %8s %8s\n",
-           "Modèle", "II ", "CAP", "$/1M", "VAL");
-    printf("%s\n", "------------------------------------------------------------------");
+    printf("%-12s %-32s %6s %7s %8s %8s\n",
+           "LAB", "LLM", "II ", "CAP", "$/1M", "VAL");
+    printf("%s\n", "------------------------------------------------------------------------------------");
     for (i = 0; i < b->nb_modeles; i++) {
         const Modele *m = &b->modeles[i];
         double cp, cap, val;
         const char *col = "";
         char buf[32], buf2[32], buf3[32], buf4[32];
+        const char *lab;
 
         if (!modele_passe(m, filtre)) continue;
 
@@ -229,12 +230,14 @@ static int afficher_table(const Parametres *p, const Base *b,
             else if (q >= 0.25) col = C_JAUNE;
         }
 
+        lab = m->lab[0] ? m->lab : "?";
+
         fmt_ii(buf3, sizeof(buf3), m->ii);
         fmt_milliers(buf2, sizeof(buf2), cap);
         fmt_milliers(buf, sizeof(buf), val);
         snprintf(buf4, sizeof(buf4), "%.4f", cp);
-        printf("%s%-32s %6s %7s %8s %8s%s\n",
-               col, m->nom, buf3, buf2, buf4, buf, C_RESET);
+        printf("%s%-12s %-32s %6s %7s %8s %8s%s\n",
+               col, lab, m->nom, buf3, buf2, buf4, buf, C_RESET);
     }
     return 0;
 }
